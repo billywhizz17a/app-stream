@@ -41,7 +41,7 @@ function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                  <p className="text-gray-400">contact@appstream.com</p>
+                  <p className="text-gray-400">billywhizz17a@gmail.com</p>
                 </div>
               </div>
             </div>
