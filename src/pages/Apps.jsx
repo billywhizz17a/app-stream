@@ -61,13 +61,27 @@ function Apps() {
               )}
               <div className="p-6">
                 <div className="flex items-center gap-4 mb-4">
-                  {app.icon && (
-                    <img
-                      src={`${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`}
-                      alt={`${app.name} icon`}
-                      className="w-16 h-16 rounded-xl object-cover border border-slate-600"
-                    />
-                  )}
+                  {(() => {
+                    const iconSrc = app.icon
+                      ? `${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`
+                      : (app.screenshots && app.screenshots.length > 0)
+                        ? `${import.meta.env.BASE_URL}images/${app.id}/screenshots/${app.screenshots[0]}`
+                        : null
+                    if (iconSrc) {
+                      return (
+                        <img
+                          src={iconSrc}
+                          alt={`${app.name} icon`}
+                          className="w-16 h-16 rounded-xl object-cover border border-slate-600"
+                        />
+                      )
+                    }
+                    return (
+                      <div className="w-16 h-16 rounded-xl bg-slate-700 flex items-center justify-center">
+                        <span className="text-2xl font-bold text-white">{app.name?.charAt(0)}</span>
+                      </div>
+                    )
+                  })()}
                   <h2 className="text-2xl font-bold text-white">{app.name}</h2>
                 </div>
                 <div className="flex items-center gap-2 mb-4">
@@ -103,15 +117,19 @@ function Apps() {
                 {(() => {
                   const now = new Date()
                   const launchDate = app.launch_date ? new Date(app.launch_date) : null
-                  const isLaunched = !launchDate || launchDate <= now
+                  const isLaunched = launchDate && launchDate <= now
 
                   if (!isLaunched) {
-                    const daysUntil = Math.ceil((launchDate - now) / (1000 * 60 * 60 * 24))
+                    const daysUntil = launchDate ? Math.ceil((launchDate - now) / (1000 * 60 * 60 * 24)) : null
                     return (
                       <div className="mt-4">
                         <div className="flex items-center gap-2 text-gray-400 text-sm mb-3">
                           <Clock size={16} />
-                          <span>Launching in {daysUntil} day{daysUntil !== 1 ? 's' : ''} — {launchDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                          {daysUntil !== null ? (
+                            <span>Launching in {daysUntil} day{daysUntil !== 1 ? 's' : ''} — {launchDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                          ) : (
+                            <span>Coming soon</span>
+                          )}
                         </div>
                         <div className="flex gap-3">
                           {app.google_play_url && (
