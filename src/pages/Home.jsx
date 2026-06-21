@@ -195,7 +195,7 @@ function Home() {
         )}
 
         {/* Feature highlights */}
-        <div className="grid md:grid-cols-3 gap-8 mt-20">
+        <div className="grid md:grid-cols-3 gap-8 mt-12">
           <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition-colors">
             <div className="bg-blue-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
               <Zap className="text-blue-400" size={24} />
@@ -229,7 +229,7 @@ function Home() {
 
         {/* News Section */}
         {!loading && news.length > 0 && (
-          <div className="mt-20">
+          <div className="mt-12">
             <div className="flex items-center gap-3 mb-8">
               <Newspaper className="text-blue-400" size={28} />
               <h2 className="text-3xl font-bold text-white">Latest News</h2>
@@ -257,7 +257,7 @@ function Home() {
           </div>
         )}
 
-        <div className="mt-20 text-center">
+        <div className="mt-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to get started?</h2>
           <p className="text-gray-400 mb-8">Contact us today to learn more about our services.</p>
           <Link to="/contact" className="inline-block bg-slate-700 hover:bg-slate-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
