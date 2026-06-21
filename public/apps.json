@@ -1,0 +1,44 @@
+[
+  {
+    "id": "app_001",
+    "name": "UK News Now",
+    "platform": "Android",
+    "category": "General",
+    "description": "the app collects and stores evidence of domestic & narsitic abuse. it also has resources and journals along with an ai companion",
+    "features": [
+      "Covert",
+      "Discreate",
+      "Functional"
+    ],
+    "app_store_url": "",
+    "google_play_url": "https://play.google.com/apps/test/com.billywhizz17a.uknews/14",
+    "target_audience": "Victims of abuse",
+    "hashtags": [
+      "#market leader"
+    ],
+    "launch_date": "",
+    "images": []
+  },
+  {
+    "id": "app_002",
+    "name": "MindScape",
+    "platform": "Both",
+    "category": "Health",
+    "description": "uses light therapy and tones to help people with c-ptsd, depression, anxiety etc. It stimulates the vagus nerves etc",
+    "features": [],
+    "app_store_url": "",
+    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.mindscape",
+    "target_audience": "Meditation & healing",
+    "hashtags": [
+      "#health",
+      "#meditation",
+      "#healing",
+      "#depression",
+      "#cptsd",
+      "#anxiety",
+      "#mental health"
+    ],
+    "launch_date": "",
+    "images": []
+  }
+]
