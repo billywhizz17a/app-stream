@@ -17,7 +17,14 @@
       "#market leader"
     ],
     "launch_date": "",
-    "images": []
+    "images": [
+      "g1.png",
+      "g2.png",
+      "g3.png",
+      "g4.png",
+      "g5.png",
+      "g6.png"
+    ]
   },
   {
     "id": "app_002",
@@ -39,6 +46,10 @@
       "#mental health"
     ],
     "launch_date": "",
-    "images": []
+    "images": [
+      "PS1.jpg",
+      "ps2.jpg",
+      "ps3.png"
+    ]
   }
 ]
