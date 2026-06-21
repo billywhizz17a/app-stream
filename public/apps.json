@@ -17,7 +17,8 @@
       "#market leader"
     ],
     "launch_date": "",
-    "images": [
+    "icon": "",
+    "screenshots": [
       "g1.png",
       "g2.png",
       "g3.png",
@@ -46,7 +47,8 @@
       "#mental health"
     ],
     "launch_date": "",
-    "images": [
+    "icon": "",
+    "screenshots": [
       "PS1.jpg",
       "ps2.jpg",
       "ps3.png"

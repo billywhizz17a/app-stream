@@ -47,10 +47,10 @@ function Apps() {
         <div className="grid md:grid-cols-2 gap-8">
           {apps.map((app) => (
             <div key={app.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 overflow-hidden hover:border-blue-500 transition-colors">
-              {app.images && app.images.length > 0 && (
+              {app.screenshots && app.screenshots.length > 0 && (
                 <div className="relative h-64 bg-slate-900">
                   <img
-                    src={`${import.meta.env.BASE_URL}images/${app.id}/${app.images[0]}`}
+                    src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${app.screenshots[0]}`}
                     alt={app.name}
                     className="w-full h-full object-cover"
                   />
@@ -60,7 +60,16 @@ function Apps() {
                 </div>
               )}
               <div className="p-6">
-                <h2 className="text-2xl font-bold text-white mb-2">{app.name}</h2>
+                <div className="flex items-center gap-4 mb-4">
+                  {app.icon && (
+                    <img
+                      src={`${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`}
+                      alt={`${app.name} icon`}
+                      className="w-16 h-16 rounded-xl object-cover border border-slate-600"
+                    />
+                  )}
+                  <h2 className="text-2xl font-bold text-white">{app.name}</h2>
+                </div>
                 <div className="flex items-center gap-2 mb-4">
                   <Tag className="text-gray-500" size={16} />
                   <span className="text-gray-400 text-sm">{app.category}</span>
@@ -78,12 +87,12 @@ function Apps() {
                   </div>
                 )}
 
-                {app.images && app.images.length > 1 && (
+                {app.screenshots && app.screenshots.length > 1 && (
                   <div className="flex gap-2 mb-4 overflow-x-auto">
-                    {app.images.slice(1, 5).map((img, i) => (
+                    {app.screenshots.slice(1, 5).map((img, i) => (
                       <img
                         key={i}
-                        src={`${import.meta.env.BASE_URL}images/${app.id}/${img}`}
+                        src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${img}`}
                         alt={`${app.name} screenshot ${i + 2}`}
                         className="w-20 h-20 object-cover rounded-lg border border-slate-600 flex-shrink-0"
                       />
