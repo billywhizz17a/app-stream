@@ -1,4 +1,19 @@
 function AppIcon({ app, size = 64, className = "" }) {
+  const iconSrc = app?.icon
+    ? `${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`
+    : null
+
+  if (iconSrc) {
+    return (
+      <img
+        src={iconSrc}
+        alt={`${app.name} icon`}
+        className={`flex-shrink-0 rounded-2xl object-cover shadow-lg select-none ${className}`}
+        style={{ width: size, height: size }}
+      />
+    )
+  }
+
   const initials = app?.name
     ?.split(' ')
     .map((w) => w[0])
