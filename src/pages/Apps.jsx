@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Download, ExternalLink, Tag } from 'lucide-react'
+import { Download, ExternalLink, Tag, Clock } from 'lucide-react'
 
 function Apps() {
   const [apps, setApps] = useState([])
@@ -100,28 +100,60 @@ function Apps() {
                   </div>
                 )}
 
-                <div className="flex gap-3 mt-4">
-                  {app.google_play_url && (
-                    <a
-                      href={app.google_play_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    >
-                      <Download size={16} /> Google Play
-                    </a>
-                  )}
-                  {app.app_store_url && (
-                    <a
-                      href={app.app_store_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    >
-                      <Download size={16} /> App Store
-                    </a>
-                  )}
-                </div>
+                {(() => {
+                  const now = new Date()
+                  const launchDate = app.launch_date ? new Date(app.launch_date) : null
+                  const isLaunched = !launchDate || launchDate <= now
+
+                  if (!isLaunched) {
+                    const daysUntil = Math.ceil((launchDate - now) / (1000 * 60 * 60 * 24))
+                    return (
+                      <div className="mt-4">
+                        <div className="flex items-center gap-2 text-gray-400 text-sm mb-3">
+                          <Clock size={16} />
+                          <span>Launching in {daysUntil} day{daysUntil !== 1 ? 's' : ''} — {launchDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                        </div>
+                        <div className="flex gap-3">
+                          {app.google_play_url && (
+                            <span className="flex items-center gap-2 bg-slate-700/50 text-gray-500 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed">
+                              <Download size={16} /> Google Play
+                            </span>
+                          )}
+                          {app.app_store_url && (
+                            <span className="flex items-center gap-2 bg-slate-700/50 text-gray-500 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed">
+                              <Download size={16} /> App Store
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    )
+                  }
+
+                  return (
+                    <div className="flex gap-3 mt-4">
+                      {app.google_play_url && (
+                        <a
+                          href={app.google_play_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                        >
+                          <Download size={16} /> Google Play
+                        </a>
+                      )}
+                      {app.app_store_url && (
+                        <a
+                          href={app.app_store_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                        >
+                          <Download size={16} /> App Store
+                        </a>
+                      )}
+                    </div>
+                  )
+                })()}
               </div>
             </div>
           ))}

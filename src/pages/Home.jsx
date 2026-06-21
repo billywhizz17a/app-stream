@@ -1,7 +1,27 @@
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Zap, Shield, MessageSquare, ArrowRight } from 'lucide-react'
+import { Zap, Shield, MessageSquare, ArrowRight, Newspaper, Calendar } from 'lucide-react'
 
 function Home() {
+  const [news, setNews] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}news.json`)
+      .then(res => res.json())
+      .then(data => {
+        setNews(data)
+        setLoading(false)
+      })
+      .catch(() => setLoading(false))
+  }, [])
+
+  const formatDate = (dateStr) => {
+    if (!dateStr) return ''
+    const d = new Date(dateStr)
+    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+  }
+
   return (
     <div className="min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -50,6 +70,36 @@ function Home() {
             </p>
           </div>
         </div>
+
+        {/* News Section */}
+        {!loading && news.length > 0 && (
+          <div className="mt-20">
+            <div className="flex items-center gap-3 mb-8">
+              <Newspaper className="text-blue-400" size={28} />
+              <h2 className="text-3xl font-bold text-white">Latest News</h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {news.slice(0, 6).map((item, i) => (
+                <div key={i} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 p-6 hover:border-blue-500 transition-colors">
+                  {item.app_name && (
+                    <span className="inline-block text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded mb-3 font-medium">
+                      {item.app_name}
+                    </span>
+                  )}
+                  <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
+                    <Calendar size={14} />
+                    <span>{formatDate(item.date)}</span>
+                    {item.phase && (
+                      <span className="text-gray-600">· {item.phase}</span>
+                    )}
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-400 text-sm line-clamp-4 whitespace-pre-line">{item.content}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="mt-20 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to get started?</h2>
