@@ -27,17 +27,10 @@ function Home() {
   }
 
   const now = new Date()
-  const isAppLaunched = (a) => a.launch_date && new Date(a.launch_date) <= now
-  const upcomingApps = apps.filter(a => !a.launch_date || new Date(a.launch_date) > now)
-  const launchedApps = apps.filter(isAppLaunched)
+  const upcomingApps = apps.filter(a => a.launch_date && new Date(a.launch_date) > now)
+  const launchedApps = apps.filter(a => !a.launch_date || new Date(a.launch_date) <= now)
   const featuredApps = launchedApps.slice(0, 3)
   const nextLaunch = upcomingApps[0]
-
-  const getIconSrc = (app) => {
-    if (app.icon) return `${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`
-    if (app.screenshots && app.screenshots.length > 0) return `${import.meta.env.BASE_URL}images/${app.id}/screenshots/${app.screenshots[0]}`
-    return null
-  }
 
   const handleWaitlist = (e) => {
     e.preventDefault()
@@ -134,15 +127,15 @@ function Home() {
                     </div>
                   ) : (
                     <div className="h-44 bg-slate-900 flex items-center justify-center">
-                      {getIconSrc(app) && (
-                        <img src={getIconSrc(app)} alt={app.name} className="w-20 h-20 rounded-xl object-cover" />
+                      {app.icon && (
+                        <img src={`${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`} alt={app.name} className="w-20 h-20 rounded-xl object-cover" />
                       )}
                     </div>
                   )}
                   <div className="p-5">
                     <div className="flex items-center gap-3 mb-2">
-                      {getIconSrc(app) && (
-                        <img src={getIconSrc(app)} alt={app.name} className="w-10 h-10 rounded-lg object-cover border border-slate-600" />
+                      {app.icon && (
+                        <img src={`${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`} alt={app.name} className="w-10 h-10 rounded-lg object-cover border border-slate-600" />
                       )}
                       <div>
                         <h3 className="text-lg font-bold text-white">{app.name}</h3>
@@ -151,7 +144,7 @@ function Home() {
                     </div>
                     <p className="text-gray-400 text-sm line-clamp-2">{app.description}</p>
                     <div className="flex items-center gap-2 mt-3">
-                      {isAppLaunched(app) && (app.google_play_url || app.app_store_url) && (
+                      {(app.google_play_url || app.app_store_url) && (
                         <span className="text-xs text-green-400 flex items-center gap-1">
                           <Download size={12} /> Available now
                         </span>
@@ -173,13 +166,12 @@ function Home() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {upcomingApps.map((app) => {
-                const iconSrc = getIconSrc(app)
-                const days = app.launch_date ? Math.ceil((new Date(app.launch_date) - now) / (1000 * 60 * 60 * 24)) : null
+                const days = Math.ceil((new Date(app.launch_date) - now) / (1000 * 60 * 60 * 24))
                 return (
                   <Link key={app.id} to={`/apps/${app.id}`} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 p-6 hover:border-amber-500 transition-colors">
                     <div className="flex items-center gap-3 mb-4">
-                      {iconSrc ? (
-                        <img src={iconSrc} alt={app.name} className="w-12 h-12 rounded-xl object-cover border border-slate-600" />
+                      {app.icon ? (
+                        <img src={`${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`} alt={app.name} className="w-12 h-12 rounded-xl object-cover border border-slate-600" />
                       ) : (
                         <div className="w-12 h-12 rounded-xl bg-slate-700 flex items-center justify-center">
                           <span className="text-xl font-bold text-white">{app.name?.charAt(0)}</span>
@@ -193,11 +185,7 @@ function Home() {
                     <p className="text-gray-400 text-sm line-clamp-2 mb-4">{app.description}</p>
                     <div className="flex items-center gap-2 text-amber-400 text-sm">
                       <Clock size={14} />
-                      {days !== null ? (
-                        <span>Launching in {days} day{days !== 1 ? 's' : ''}</span>
-                      ) : (
-                        <span>Coming soon</span>
-                      )}
+                      <span>Launching in {days} day{days !== 1 ? 's' : ''}</span>
                     </div>
                   </Link>
                 )
