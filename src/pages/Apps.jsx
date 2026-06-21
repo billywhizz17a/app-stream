@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Download, ExternalLink, Tag, Clock } from 'lucide-react'
+import { Download, ExternalLink, Tag, Clock, ArrowRight } from 'lucide-react'
 
 function Apps() {
   const [apps, setApps] = useState([])
@@ -46,7 +46,7 @@ function Apps() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {apps.map((app) => (
-            <div key={app.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 overflow-hidden hover:border-blue-500 transition-colors">
+            <Link key={app.id} to={`/apps/${app.id}`} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 overflow-hidden hover:border-blue-500 transition-colors block">
               {app.screenshots && app.screenshots.length > 0 && (
                 <div className="relative h-64 bg-slate-900">
                   <img
@@ -155,7 +155,7 @@ function Apps() {
                   )
                 })()}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
