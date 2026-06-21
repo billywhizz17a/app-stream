@@ -1,25 +1,5 @@
 [
   {
-    "id": "app_003",
-    "name": "KC Legacy Booking",
-    "platform": "Both",
-    "category": "General",
-    "description": "Booking app to get your car gleaming",
-    "features": [],
-    "app_store_url": "",
-    "google_play_url": "",
-    "target_audience": "Anyone",
-    "hashtags": [],
-    "launch_date": null,
-    "icon": "klc1.png",
-    "screenshots": [
-      "Screenshot_20260619_120838_KC Legacy Booking.jpg",
-      "Screenshot_20260619_120851_KC Legacy Booking.jpg",
-      "Screenshot_20260619_120919_KC Legacy Booking.jpg",
-      "header.jpg"
-    ]
-  },
-  {
     "id": "app_002",
     "name": "UK News Now",
     "platform": "Both",
