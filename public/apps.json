@@ -3,18 +3,23 @@
     "id": "app_001",
     "name": "UK News Now",
     "platform": "Android",
-    "category": "General",
-    "description": "the app collects and stores evidence of domestic & narsitic abuse. it also has resources and journals along with an ai companion",
+    "category": "News",
+    "description": "Stay informed with the latest UK and world news. Curated headlines, breaking alerts, and personalised feeds in a clean, easy-to-read app.",
     "features": [
-      "Covert",
-      "Discreate",
-      "Functional"
+      "Curated UK & world headlines",
+      "Breaking news alerts",
+      "Personalised news feed",
+      "Offline reading mode",
+      "Clean, accessible design"
     ],
     "app_store_url": "",
     "google_play_url": "https://play.google.com/apps/test/com.billywhizz17a.uknews/14",
-    "target_audience": "Victims of abuse",
+    "target_audience": "News readers in the UK",
     "hashtags": [
-      "#market leader"
+      "#news",
+      "#uknews",
+      "#breakingnews",
+      "#headlines"
     ],
     "launch_date": "",
     "icon": "",
@@ -32,8 +37,14 @@
     "name": "MindScape",
     "platform": "Both",
     "category": "Health",
-    "description": "uses light therapy and tones to help people with c-ptsd, depression, anxiety etc. It stimulates the vagus nerves etc",
-    "features": [],
+    "description": "A wellness companion that uses calming light therapy, sound tones, and guided breathing to help ease anxiety, support better sleep, and promote emotional balance.",
+    "features": [
+      "Calming light therapy sessions",
+      "Soothing sound tones & frequencies",
+      "Guided breathing exercises",
+      "Sleep & relaxation modes",
+      "Daily wellness check-ins"
+    ],
     "app_store_url": "",
     "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.mindscape",
     "target_audience": "Meditation & healing",
@@ -41,10 +52,10 @@
       "#health",
       "#meditation",
       "#healing",
-      "#depression",
-      "#cptsd",
       "#anxiety",
-      "#mental health"
+      "#mentalhealth",
+      "#wellness",
+      "#sleep"
     ],
     "launch_date": "",
     "icon": "",
