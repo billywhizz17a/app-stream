@@ -60,6 +60,36 @@ function Home() {
           </div>
         </div>
 
+        {/* News Section */}
+        {!loading && news.length > 0 && (
+          <div className="mt-12">
+            <div className="flex items-center gap-3 mb-8">
+              <Newspaper className="text-blue-400" size={28} />
+              <h2 className="text-3xl font-bold text-white">Latest News</h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {news.slice(0, 6).map((item, i) => (
+                <div key={i} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 p-6 hover:border-blue-500 transition-colors">
+                  {item.app_name && (
+                    <span className="inline-block text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded mb-3 font-medium">
+                      {item.app_name}
+                    </span>
+                  )}
+                  <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
+                    <Calendar size={14} />
+                    <span>{formatDate(item.date)}</span>
+                    {item.phase && (
+                      <span className="text-gray-600">· {item.phase}</span>
+                    )}
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-400 text-sm line-clamp-4 whitespace-pre-line">{item.content}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Launch Banner */}
         {nextLaunch && (
           <div className="mt-12 bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 backdrop-blur-sm">
@@ -195,7 +225,7 @@ function Home() {
         )}
 
         {/* Feature highlights */}
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
+        <div className="grid md:grid-cols-3 gap-8 mt-20">
           <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition-colors">
             <div className="bg-blue-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
               <Zap className="text-blue-400" size={24} />
@@ -227,37 +257,7 @@ function Home() {
           </div>
         </div>
 
-        {/* News Section */}
-        {!loading && news.length > 0 && (
-          <div className="mt-12">
-            <div className="flex items-center gap-3 mb-8">
-              <Newspaper className="text-blue-400" size={28} />
-              <h2 className="text-3xl font-bold text-white">Latest News</h2>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {news.slice(0, 6).map((item, i) => (
-                <div key={i} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 p-6 hover:border-blue-500 transition-colors">
-                  {item.app_name && (
-                    <span className="inline-block text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded mb-3 font-medium">
-                      {item.app_name}
-                    </span>
-                  )}
-                  <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
-                    <Calendar size={14} />
-                    <span>{formatDate(item.date)}</span>
-                    {item.phase && (
-                      <span className="text-gray-600">· {item.phase}</span>
-                    )}
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-gray-400 text-sm line-clamp-4 whitespace-pre-line">{item.content}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        <div className="mt-12 text-center">
+        <div className="mt-20 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to get started?</h2>
           <p className="text-gray-400 mb-8">Contact us today to learn more about our services.</p>
           <Link to="/contact" className="inline-block bg-slate-700 hover:bg-slate-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
