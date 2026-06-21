@@ -54,14 +54,9 @@ function AppDetail() {
 
   const now = new Date()
   const launchDate = app.launch_date ? new Date(app.launch_date) : null
-  const isLaunched = launchDate && launchDate <= now
-  const daysUntil = launchDate ? Math.ceil((launchDate - now) / (1000 * 60 * 60 * 24)) : null
+  const isLaunched = !launchDate || launchDate <= now
+  const daysUntil = launchDate ? Math.ceil((launchDate - now) / (1000 * 60 * 60 * 24)) : 0
   const allImages = app.screenshots || []
-  const iconSrc = app.icon
-    ? `${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`
-    : (allImages.length > 0)
-      ? `${import.meta.env.BASE_URL}images/${app.id}/screenshots/${allImages[0]}`
-      : null
 
   return (
     <div className="min-h-screen">
@@ -75,9 +70,9 @@ function AppDetail() {
           <div className="flex flex-col md:flex-row">
             {/* App Icon */}
             <div className="md:w-48 flex items-center justify-center p-8 md:border-r border-slate-700">
-              {iconSrc ? (
+              {app.icon ? (
                 <img
-                  src={iconSrc}
+                  src={`${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`}
                   alt={`${app.name} icon`}
                   className="w-32 h-32 rounded-2xl object-cover border border-slate-600"
                 />
@@ -119,11 +114,7 @@ function AppDetail() {
                 <div>
                   <div className="flex items-center gap-2 text-gray-400 text-sm mb-4">
                     <Clock size={16} />
-                    {daysUntil !== null ? (
-                      <span>Launching in {daysUntil} day{daysUntil !== 1 ? 's' : ''} — {formatDate(app.launch_date)}</span>
-                    ) : (
-                      <span>Coming soon — launch date to be announced</span>
-                    )}
+                    <span>Launching in {daysUntil} day{daysUntil !== 1 ? 's' : ''} — {formatDate(app.launch_date)}</span>
                   </div>
                   <form onSubmit={handleWaitlist} className="flex flex-col sm:flex-row gap-3">
                     <input
