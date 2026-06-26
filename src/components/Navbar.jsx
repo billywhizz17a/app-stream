@@ -18,7 +18,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center self-start z-50 -mt-12">
-            <img src={`${import.meta.env.BASE_URL}as4.png`} alt="App Stream" className="h-56 sm:h-72 w-auto object-contain drop-shadow-2xl -mb-36 -ml-8 sm:-ml-16" />
+            <img src={`${import.meta.env.BASE_URL}as4.png`} alt="App Stream" className="h-44 sm:h-56 w-auto object-contain drop-shadow-2xl -mb-28 -ml-8 sm:-ml-16" />
           </Link>
 
           <div className="hidden md:flex items-center gap-1">
