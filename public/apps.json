@@ -59,5 +59,34 @@
       "Screenshot_20260628_214920_Kalo.jpg",
       "Screenshot_20260628_215000_Kalo.jpg"
     ]
+  },
+  {
+    "id": "app_002",
+    "name": "UK News Now",
+    "platform": "Both",
+    "category": "News & Magazines",
+    "description": "The app displays news articles with images.",
+    "features": [
+      "Display of news articles",
+      "Images accompanying news articles"
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "General public interested in UK news",
+    "hashtags": [
+      "#UKnews",
+      "#NewsApp",
+      "#CurrentEvents"
+    ],
+    "launch_date": "2026-07-12",
+    "icon": "news.png",
+    "screenshots": [
+      "g2.png",
+      "g3.png",
+      "g4.png",
+      "g5.png",
+      "g6.png",
+      "generated-image-4-1782303692774.png"
+    ]
   }
 ]
