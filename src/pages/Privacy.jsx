@@ -5,7 +5,7 @@ function Privacy() {
   return (
     <div className="min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700">
+        <div className="bg-slate-900/40 p-8 rounded-2xl border border-slate-800">
           <div className="flex items-center gap-3 mb-8">
             <div className="bg-blue-500/20 w-12 h-12 rounded-lg flex items-center justify-center">
               <Shield className="text-blue-400" size={24} />
