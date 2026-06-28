@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { Download, Tag, Clock, ArrowLeft, Check, Mail, Smartphone, Apple, ArrowRight, QrCode, Newspaper } from 'lucide-react'
+import { Download, Tag, Clock, ArrowLeft, Check, Mail, Smartphone, Apple, ArrowRight, QrCode, Newspaper, X } from 'lucide-react'
 import AppIcon from '../components/AppIcon'
 import { QRCodeSVG } from 'qrcode.react'
 
@@ -12,6 +12,7 @@ function AppDetail() {
   const [waitlisted, setWaitlisted] = useState(false)
   const [activeImage, setActiveImage] = useState(0)
   const [newsItems, setNewsItems] = useState([])
+  const [selectedNews, setSelectedNews] = useState(null)
 
   useEffect(() => {
     Promise.all([
@@ -331,7 +332,7 @@ function AppDetail() {
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               {newsItems.map((item, i) => (
-                <div key={i} className="bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
+                <div key={i} onClick={() => setSelectedNews(item)} className="cursor-pointer bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
                   <div className="flex items-center gap-3 mb-4">
                     {app.icon && (
                       <img src={`${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`} alt={app.name} className="w-10 h-10 rounded-xl object-cover flex-shrink-0" />
@@ -344,23 +345,60 @@ function AppDetail() {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                   {item.summary && (
-                    <p className="text-blue-100/70 text-sm mb-2 font-medium">{item.summary}</p>
+                    <p className="text-blue-100/70 text-sm mb-2 font-medium line-clamp-2">{item.summary}</p>
                   )}
                   {item.date && (
                     <p className="text-gray-500 text-xs mb-3">{new Date(item.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
                   )}
-                  <p className="text-gray-400 text-sm whitespace-pre-line leading-relaxed line-clamp-6">{item.content}</p>
-                  {item.source_url && (
-                    <a href={item.source_url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm font-medium">
-                      Read more <ArrowRight size={14} />
-                    </a>
-                  )}
+                  <p className="text-gray-400 text-sm line-clamp-3 leading-relaxed">{item.content}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-blue-400 text-sm font-medium">
+                    Read more <ArrowRight size={14} />
+                  </span>
                 </div>
               ))}
             </div>
           </div>
         )}
-      </div>
+
+      {/* News Modal */}
+      {selectedNews && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={() => setSelectedNews(null)}>
+          <div className="bg-slate-900 border-2 border-blue-400/40 rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+            <div className="sticky top-0 bg-slate-900/95 backdrop-blur border-b border-slate-800 p-5 flex items-center justify-between z-10">
+              <div className="flex items-center gap-3">
+                {app && app.icon && (
+                  <img src={`${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`} alt={app.name} className="w-10 h-10 rounded-xl object-cover" />
+                )}
+                <div>
+                  {selectedNews.app_name && (
+                    <span className="inline-block text-xs bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full font-medium border border-blue-500/20">
+                      {selectedNews.app_name}
+                    </span>
+                  )}
+                </div>
+              </div>
+              <button onClick={() => setSelectedNews(null)} className="text-gray-400 hover:text-white transition-colors p-1">
+                <X size={24} />
+              </button>
+            </div>
+            <div className="p-6">
+              {selectedNews.date && (
+                <p className="text-gray-500 text-sm mb-4">{new Date(selectedNews.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+              )}
+              <h2 className="text-2xl font-bold text-white mb-3">{selectedNews.title}</h2>
+              {selectedNews.summary && (
+                <p className="text-blue-100/70 text-base mb-4 font-medium">{selectedNews.summary}</p>
+              )}
+              <div className="text-gray-300 text-sm whitespace-pre-line leading-relaxed">{selectedNews.content}</div>
+              {selectedNews.source_url && (
+                <a href={selectedNews.source_url} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm font-medium">
+                  Read full article <ArrowRight size={14} />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
