@@ -332,18 +332,26 @@ function AppDetail() {
             <div className="grid md:grid-cols-2 gap-6">
               {newsItems.map((item, i) => (
                 <div key={i} className="bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
-                  {item.app_name && (
-                    <span className="inline-block text-xs bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full mb-3 font-medium border border-blue-500/20">
-                      {item.app_name}
-                    </span>
-                  )}
+                  <div className="flex items-center gap-3 mb-4">
+                    {app.icon && (
+                      <img src={`${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`} alt={app.name} className="w-10 h-10 rounded-xl object-cover flex-shrink-0" />
+                    )}
+                    {item.app_name && (
+                      <span className="inline-block text-xs bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full font-medium border border-blue-500/20">
+                        {item.app_name}
+                      </span>
+                    )}
+                  </div>
                   <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-gray-400 text-sm mb-3">{item.summary}</p>
+                  {item.summary && (
+                    <p className="text-blue-100/70 text-sm mb-2 font-medium">{item.summary}</p>
+                  )}
                   {item.date && (
                     <p className="text-gray-500 text-xs mb-3">{new Date(item.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
                   )}
+                  <p className="text-gray-400 text-sm whitespace-pre-line leading-relaxed line-clamp-6">{item.content}</p>
                   {item.source_url && (
-                    <a href={item.source_url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm font-medium">
+                    <a href={item.source_url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm font-medium">
                       Read more <ArrowRight size={14} />
                     </a>
                   )}
