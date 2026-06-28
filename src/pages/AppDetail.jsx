@@ -213,13 +213,13 @@ function AppDetail() {
             {app.features && app.features.length > 0 && (
               <div>
                 <h2 className="text-2xl font-bold text-white mb-4">Key Features</h2>
-                <div className="grid sm:grid-cols-2 gap-3">
+                <div className={app.features.length > 12 ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2" : "grid sm:grid-cols-2 gap-3"}>
                   {app.features.map((feature, i) => (
-                    <div key={i} className="flex items-start gap-3 bg-slate-900/40 border border-slate-800 rounded-xl p-4">
-                      <div className="bg-blue-500/10 w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 border border-blue-500/20">
-                        <Check className="text-blue-400" size={18} />
+                    <div key={i} className={app.features.length > 12 ? "flex items-center gap-2 bg-slate-900/40 border border-slate-800 rounded-lg px-3 py-2" : "flex items-start gap-3 bg-slate-900/40 border border-slate-800 rounded-xl p-4"}>
+                      <div className={app.features.length > 12 ? "bg-blue-500/10 w-6 h-6 rounded flex items-center justify-center flex-shrink-0 border border-blue-500/20" : "bg-blue-500/10 w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 border border-blue-500/20"}>
+                        <Check className="text-blue-400" size={app.features.length > 12 ? 14 : 18} />
                       </div>
-                      <span className="text-gray-300 text-sm leading-relaxed">{feature}</span>
+                      <span className={app.features.length > 12 ? "text-gray-300 text-xs leading-snug" : "text-gray-300 text-sm leading-relaxed"}>{feature}</span>
                     </div>
                   ))}
                 </div>
