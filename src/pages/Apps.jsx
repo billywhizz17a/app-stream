@@ -140,8 +140,8 @@ function Apps() {
           })}
 
           {/* Placeholder cards to fill the grid to a multiple of 4 */}
-          {apps.length > 0 && apps.length % 4 !== 0 && (
-            Array.from({ length: 4 - (apps.length % 4) }).map((_, i) => (
+          {apps.length > 0 && apps.length < 8 && (
+            Array.from({ length: 8 - apps.length }).map((_, i) => (
               <div
                 key={`placeholder-${i}`}
                 className="flex flex-col bg-slate-900/60 border-2 border-slate-600 border-dashed rounded-2xl overflow-hidden opacity-60"
