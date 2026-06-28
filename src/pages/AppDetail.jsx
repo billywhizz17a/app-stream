@@ -173,7 +173,7 @@ function AppDetail() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8 items-start">
           {/* Main content - screenshots */}
           <div className="lg:col-span-2 space-y-8">
             {/* Screenshot Gallery */}
@@ -215,7 +215,7 @@ function AppDetail() {
           <div className="lg:col-span-1 space-y-6">
             {/* Details card */}
             <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-white mb-4">App Details</h3>
+              <h2 className="text-2xl font-bold text-white mb-4">App Details</h2>
               <dl className="space-y-3 text-sm">
                 <div className="flex justify-between">
                   <dt className="text-gray-500">Platform</dt>
