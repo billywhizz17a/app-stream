@@ -138,42 +138,62 @@ function Apps() {
               </Link>
             )
           })}
-        </div>
 
-        {/* Placeholder cards to fill the grid */}
-        {apps.length > 0 && apps.length % 4 !== 0 && (
-          <>
-            {Array.from({ length: 4 - (apps.length % 4) }).map((_, i) => (
+          {/* Placeholder cards to fill the grid to a multiple of 4 */}
+          {apps.length > 0 && apps.length % 4 !== 0 && (
+            Array.from({ length: 4 - (apps.length % 4) }).map((_, i) => (
               <div
                 key={`placeholder-${i}`}
-                className="group flex flex-col bg-slate-900/40 border border-slate-800 border-dashed rounded-2xl overflow-hidden opacity-50"
+                className="flex flex-col bg-slate-900/60 border border-slate-800 border-dashed rounded-2xl overflow-hidden opacity-40"
               >
-                <div className="relative h-44 bg-slate-950/50 overflow-hidden flex-shrink-0">
+                {/* Screenshot Banner - same h-44 as real cards */}
+                <div className="relative h-44 bg-slate-950 overflow-hidden flex-shrink-0">
                   <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
                     <Smartphone className="text-slate-700" size={32} />
                   </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent" />
+                  <div className="absolute top-3 right-3">
+                    <span className="flex items-center gap-1 bg-slate-700/90 backdrop-blur-sm text-gray-400 px-2.5 py-1 rounded-full text-xs font-medium">
+                      <Clock size={12} /> Soon
+                    </span>
+                  </div>
                 </div>
+
+                {/* Card Body - same structure as real cards */}
                 <div className="flex flex-col flex-grow p-5 relative">
+                  {/* Icon placeholder - same size/position as real cards */}
                   <div className="absolute -top-8 left-5 ring-4 ring-slate-900 rounded-2xl">
                     <div className="w-14 h-14 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center">
                       <Smartphone className="text-slate-600" size={24} />
                     </div>
                   </div>
+
+                  {/* Name + platform - same spacing */}
                   <div className="mt-6 mb-3">
-                    <div className="h-5 w-32 bg-slate-800 rounded mb-2" />
-                    <div className="h-3 w-20 bg-slate-800/60 rounded" />
+                    <div className="h-5 w-28 bg-slate-800 rounded mb-2" />
+                    <div className="flex items-center gap-2">
+                      <div className="h-3 w-16 bg-slate-800/60 rounded" />
+                      <span className="text-gray-700">·</span>
+                      <div className="h-3 w-12 bg-slate-800/60 rounded" />
+                    </div>
                   </div>
-                  <div className="h-3 w-full bg-slate-800/40 rounded mb-2" />
-                  <div className="h-3 w-2/3 bg-slate-800/40 rounded mb-4 flex-grow" />
+
+                  {/* Description - same height */}
+                  <div className="flex-grow mb-4">
+                    <div className="h-3 w-full bg-slate-800/40 rounded mb-1.5" />
+                    <div className="h-3 w-2/3 bg-slate-800/40 rounded" />
+                  </div>
+
+                  {/* Footer - same border and layout */}
                   <div className="pt-4 border-t border-slate-800 flex items-center justify-between flex-shrink-0">
                     <span className="text-gray-600 text-xs font-medium">Coming soon</span>
-                    <span className="text-gray-600 text-sm font-medium">Soon</span>
+                    <span className="text-gray-600 text-sm font-medium">—</span>
                   </div>
                 </div>
               </div>
-            ))}
-          </>
-        )}
+            ))
+          )}
+        </div>
       </div>
     </div>
   )
