@@ -62,7 +62,7 @@ function Apps() {
             const hasScreenshot = app.screenshots && app.screenshots.length > 0
 
             return (
-              <div key={app.id} className="flex flex-col">
+              <div key={app.id} className="flex flex-col h-full">
                 {/* Status badge above card */}
                 <div className="mb-2 flex justify-start">
                   {launched ? (
@@ -77,7 +77,7 @@ function Apps() {
                 </div>
               <Link
                 to={`/apps/${app.id}`}
-                className="group flex flex-col bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl overflow-hidden hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300 hover:-translate-y-1"
+                className="group flex flex-col h-full bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl overflow-hidden hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Screenshot Banner */}
                 <div className="relative h-56 bg-slate-950 overflow-hidden flex-shrink-0">
@@ -120,7 +120,7 @@ function Apps() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 mb-4 flex-grow">
+                  <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 mb-4 min-h-[2.5rem]">
                     {app.description}
                   </p>
 
@@ -144,14 +144,14 @@ function Apps() {
           {/* Placeholder cards to fill the grid to a multiple of 4 */}
           {apps.length > 0 && apps.length < 8 && (
             Array.from({ length: 8 - apps.length }).map((_, i) => (
-              <div key={`placeholder-${i}`} className="flex flex-col">
+              <div key={`placeholder-${i}`} className="flex flex-col h-full">
                 <div className="mb-2 flex justify-start">
                   <span className="flex items-center gap-1 bg-slate-700/90 backdrop-blur-sm text-gray-400 px-2.5 py-1 rounded-full text-xs font-medium">
                     <Clock size={12} /> Soon
                   </span>
                 </div>
               <div
-                className="flex flex-col bg-slate-900/60 border-2 border-blue-400/40 border-dashed rounded-2xl overflow-hidden opacity-60"
+                className="flex flex-col h-full bg-slate-900/60 border-2 border-blue-400/40 border-dashed rounded-2xl overflow-hidden opacity-60"
               >
                 {/* Screenshot Banner - same h-44 as real cards */}
                 <div className="relative h-56 bg-slate-950 overflow-hidden flex-shrink-0">
@@ -186,7 +186,7 @@ function Apps() {
                   </div>
 
                   {/* Description - same height */}
-                  <div className="flex-grow mb-4">
+                  <div className="min-h-[2.5rem] mb-4">
                     <div className="h-3 w-full bg-slate-800/40 rounded mb-1.5" />
                     <div className="h-3 w-2/3 bg-slate-800/40 rounded" />
                   </div>
