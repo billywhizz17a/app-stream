@@ -143,7 +143,7 @@ function Apps() {
           })}
 
           {/* Placeholder cards to fill the grid to a multiple of 4 */}
-          {apps.length > 0 && apps.length < 8 && (
+          {apps.length < 8 && (
             Array.from({ length: 8 - apps.length }).map((_, i) => (
               <div key={`placeholder-${i}`} className="flex flex-col h-full">
                 <div className="mb-2 flex justify-start">
