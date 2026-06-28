@@ -46,7 +46,9 @@ function Home() {
               <span>Apps designed for everyday life</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">
-              Discover apps from <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">App Stream</span>
+              Discover apps from
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">App Stream</span>
             </h1>
             <p className="text-base md:text-lg text-gray-400 mb-6 leading-relaxed">
               A curated collection of thoughtful Android and iOS apps — from trusted news to wellness tools — built with care and clarity.
