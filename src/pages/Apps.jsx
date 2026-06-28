@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { Clock, ArrowRight, Smartphone, Apple, Check } from 'lucide-react'
 import AppIcon from '../components/AppIcon'
 
+// cache-bust: 2026-06-28T19:30
+
 function Apps() {
   const [apps, setApps] = useState([])
   const [loading, setLoading] = useState(true)
