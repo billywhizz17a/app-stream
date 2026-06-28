@@ -67,22 +67,35 @@ function Home() {
             </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {news.slice(0, 6).map((item, i) => (
-              <div key={i} className="bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
-                {item.app_name && (
-                  <span className="inline-block text-xs bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full mb-3 font-medium border border-blue-500/20">
-                    {item.app_name}
-                  </span>
-                )}
-                <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
-                  <Calendar size={14} />
-                  <span>{formatDate(item.date)}</span>
-                  {item.phase && <span className="text-gray-600">· {item.phase}</span>}
+            {news.slice(0, 6).map((item, i) => {
+              const newsApp = apps.find(a => a.id === item.app_id)
+              return (
+                <div key={i} className="bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-4">
+                    {newsApp && newsApp.icon && (
+                      <img src={`${import.meta.env.BASE_URL}images/${item.app_id}/icons/${newsApp.icon}`} alt={item.app_name} className="w-10 h-10 rounded-xl object-cover flex-shrink-0" />
+                    )}
+                    <div className="min-w-0">
+                      {item.app_name && (
+                        <span className="inline-block text-xs bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full font-medium border border-blue-500/20">
+                          {item.app_name}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
+                    <Calendar size={14} />
+                    <span>{formatDate(item.date)}</span>
+                    {item.phase && <span className="text-gray-600">· {item.phase}</span>}
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                  {item.summary && (
+                    <p className="text-blue-100/70 text-sm mb-2 font-medium">{item.summary}</p>
+                  )}
+                  <p className="text-gray-400 text-sm whitespace-pre-line leading-relaxed line-clamp-8">{item.content}</p>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-gray-400 text-sm line-clamp-4 whitespace-pre-line leading-relaxed">{item.content}</p>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </section>
       )}
