@@ -67,19 +67,19 @@
     "category": "News & Magazines",
     "description": "The app displays news articles with images.",
     "features": [
-      "Display of news articles",
-      "Images accompanying news articles"
+      "News feed",
+      "Image support"
     ],
     "app_store_url": "",
     "google_play_url": "",
     "target_audience": "General public interested in UK news",
     "hashtags": [
       "#UKnews",
-      "#NewsApp",
-      "#CurrentEvents"
+      "#newsapp",
+      "#currentevents"
     ],
     "launch_date": "2026-07-12",
-    "icon": "news.png",
+    "icon": "",
     "screenshots": [
       "g2.png",
       "g3.png",
