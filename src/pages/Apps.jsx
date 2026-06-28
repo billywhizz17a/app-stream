@@ -55,6 +55,22 @@ function Apps() {
           </p>
         </div>
 
+        {/* Status legend */}
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <span className="flex items-center gap-1.5 text-sm text-gray-400">
+            <span className="flex items-center gap-1 bg-green-500/90 text-white px-2.5 py-1 rounded-full text-xs font-medium">
+              <Check size={12} /> Live
+            </span>
+            Available now
+          </span>
+          <span className="flex items-center gap-1.5 text-sm text-gray-400">
+            <span className="flex items-center gap-1 bg-amber-500/90 text-white px-2.5 py-1 rounded-full text-xs font-medium">
+              <Clock size={12} /> Coming Soon
+            </span>
+            In development
+          </span>
+        </div>
+
         {/* App Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {apps.map((app) => {
@@ -85,20 +101,9 @@ function Apps() {
 
                 {/* Card Body */}
                 <div className="flex flex-col flex-grow p-5 relative">
-                  {/* Icon overlapping banner + status badge */}
-                  <div className="absolute -top-8 left-5 flex items-center gap-2">
-                    <div className="ring-4 ring-slate-900 rounded-2xl">
-                      <AppIcon app={app} size={56} />
-                    </div>
-                    {launched ? (
-                      <span className="flex items-center gap-1 bg-green-500/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-medium mt-8">
-                        <Check size={12} /> Live
-                      </span>
-                    ) : (
-                      <span className="flex items-center gap-1 bg-amber-500/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-medium mt-8">
-                        <Clock size={12} /> Coming Soon
-                      </span>
-                    )}
+                  {/* Icon overlapping banner */}
+                  <div className="absolute -top-8 left-5 ring-4 ring-slate-900 rounded-2xl">
+                    <AppIcon app={app} size={56} />
                   </div>
 
                   {/* Name + platform */}
