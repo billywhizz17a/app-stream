@@ -3,13 +3,25 @@
     "id": "app_001",
     "name": "Kalo",
     "platform": "Both",
-    "category": "General",
-    "description": "",
-    "features": [],
+    "category": "Health & Fitness",
+    "description": "Kalo is an all-in-one health and fitness app that offers a wide range of features, including calorie tracking, micronutrient analysis, mood tracking, sleep monitoring, exercise tracking, and more. It provides users with personalized recommendations for improvement based on their unique needs and goals. With its integrated cycle-aware nutrition and dynamic calorie adjustment capabilities, Kalo aims to support users in achieving holistic wellness.",
+    "features": [
+      "Calorie & Macro Tracking",
+      "Micronutrient Tracking (11+)",
+      "Cycle-Aware Nutrition with phase-based calorie adaptation",
+      "Exercise Tracking (with calorie burn)",
+      "Mood Tracking"
+    ],
     "app_store_url": "",
     "google_play_url": "",
-    "target_audience": "General audience",
-    "hashtags": [],
+    "target_audience": "Individuals seeking a comprehensive health and wellness platform to track their physical and emotional progress.",
+    "hashtags": [
+      "#HolisticWellness",
+      "#HealthAndFitness",
+      "#NutritionPlanning",
+      "#MentalHealthSupport",
+      "#EmotionalIntelligence"
+    ],
     "launch_date": "2026-07-19",
     "icon": "Kalo-3.png",
     "screenshots": [
