@@ -1,5 +1,44 @@
 [
   {
+    "id": "news_006",
+    "title": "Mobile App KC Legacy Booking Now Available on Both iOS and Android",
+    "summary": "New mobile app allows users to book and manage appointments with ease",
+    "content": "FOR IMMEDIATE RELEASE\n\nDateline: Kansas City, USA - February 22, 2023\n\nA new mobile application, KC Legacy Booking, has been launched for both iOS and Android devices. The app is designed to simplify the process of booking and managing appointments, providing users with a convenient and user-friendly experience.\n\nKC Legacy Booking allows users to easily search and book available appointment slots with their preferred service providers. The app also enables users to manage their appointments, including cancelling or rescheduling as needed. Additionally, the app provides push notifications to remind users of upcoming appointments.\n\n\"We are thrilled to bring this innovative solution to our community,\" said Emily J. Miller, CEO and Founder of KC Legacy Booking. \"Our goal is to make booking appointments a seamless experience for everyone, saving time and reducing stress.\" \n\nKC Legacy Booking is developed by KC Tech Solutions, a leading mobile app development company based in Kansas City.\n\nAbout KC Tech Solutions:\n\nKC Tech Solutions is a mobile app development company that specializes in creating innovative solutions for businesses and individuals. With a team of experienced developers and designers, the company has established itself as a trusted partner in the tech industry.\n\nFor more information about KC Legacy Booking or to schedule an interview with Emily J. Miller, please contact:\n\n[Name]\n[Email]\n[Phone Number]\n###",
+    "source_url": "",
+    "category": "App Spotlight",
+    "app_id": "app_004",
+    "app_name": "KC Legacy Booking",
+    "date": "2026-06-28T11:37:02.789013",
+    "phase": "Pre-Launch",
+    "created_at": "2026-06-28T11:37:02.789018"
+  },
+  {
+    "id": "news_005",
+    "title": "UK News Now Mobile App Launches to Provide Real-Time Updates on UK Current Events",
+    "summary": "New app aggregates top stories from reputable sources, offering personalized news feeds and breaking news alerts.",
+    "content": "FOR IMMEDIATE RELEASE\n\nDateline: London, United Kingdom - March 10, 2023\n\nA new mobile application, UK News Now, has been launched to provide individuals with instant access to the latest news and current events from across the United Kingdom. The app aggregates top stories from reputable sources, including major newspapers, news agencies, and online publications, offering a comprehensive view of UK news.\n\nThe app's key features include real-time news updates, personalized news feeds based on user interests, in-depth articles and analyses, breaking news alerts for critical stories, and search functionality for specific topics or keywords. These features enable users to stay informed about politics, business, sports, and other relevant topics.\n\n\"We are excited to launch UK News Now, which aims to provide a one-stop-shop for individuals seeking the latest news from the UK,\" said Emily Wilson, CEO of the company behind the app. \"Our goal is to make it easy for people to access reliable information on current events, and we believe that our app achieves this.\" \n\nThe company behind UK News Now has been developing the app over several months, working closely with a team of experienced journalists and developers to create an intuitive and user-friendly interface.\n\nAbout [Company Name]: [Company Name] is a leading provider of digital news solutions, committed to delivering high-quality content and innovative technologies that meet the evolving needs of consumers. With a focus on customer satisfaction and continuous improvement, we strive to be at the forefront of the industry.\n\nFor more information about UK News Now or to request an interview with Emily Wilson, please contact us:\n[Name]\n[Email]\n[Phone Number]\n###",
+    "source_url": "",
+    "category": "App Spotlight",
+    "app_id": "app_001",
+    "app_name": "UK News Now",
+    "date": "2026-06-26T14:04:48.820588",
+    "phase": "Pre-Launch",
+    "created_at": "2026-06-26T14:04:48.820595"
+  },
+  {
+    "id": "news_004",
+    "title": "New Mobile App Simplifies Car Wash and Detailing Bookings",
+    "summary": "KC Legacy Booking app offers users convenient online booking and review features for car wash and detailing services.",
+    "content": "FOR IMMEDIATE RELEASE\n\nDateline: Kansas City, USA - March 15, 2023\n\nA new mobile app is set to revolutionize the way people book car wash and detailing services. KC Legacy Booking, a user-friendly platform available on both iOS and Android devices, allows users to search for nearby service providers, book appointments online or on-the-go, view ratings and reviews, and manage their bookings and cancellations through the app.\n\nThe app's key features cater to a wide range of needs and preferences. Users can easily find car wash and detailing services in their area, browse provider profiles, and read reviews from other customers. The booking process is straightforward, with users able to schedule appointments online or via the app. Additionally, KC Legacy Booking sends notifications when bookings are confirmed, ensuring that users stay informed throughout the process.\n\n\"We're thrilled to bring this innovative solution to market,\" said Emily Wilson, CEO and Founder of KC Legacy Booking. \"Our goal is to make it easier for people to find and book quality car wash and detailing services, while also supporting local businesses in the process.\" \n\nKC Legacy Booking is a subsidiary of Legacy Automotive Group, a company dedicated to providing innovative solutions for the automotive industry. With its headquarters in Kansas City, USA, Legacy Automotive Group has established itself as a leader in the field.\n\nFor more information about KC Legacy Booking and its features, please contact Emily Wilson at (555) 123-4567 or [ewilson@klegacybooking.com](mailto:ewilson@klegacybooking.com).\n###",
+    "source_url": "",
+    "category": "App Spotlight",
+    "app_id": "app_003",
+    "app_name": "KC Legacy Booking",
+    "date": "2026-06-26T13:58:56.661990",
+    "phase": "Pre-Launch",
+    "created_at": "2026-06-26T13:58:56.662000"
+  },
+  {
     "id": "news_003",
     "title": "BREAKING: UK News Now Unveiled \u2014 The World's First News App with Covert Evidence Gathering & AI Abuse Support",
     "summary": "Revolutionary new app combines real-time UK & world news with covert evidence gathering, AI companion trained in domestic abuse support, and encrypted vault backup.",
