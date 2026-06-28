@@ -99,7 +99,7 @@ function Apps() {
                 <div className="flex flex-col flex-grow p-5 relative">
                   {/* Icon + Name side by side */}
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="ring-4 ring-slate-900 rounded-2xl flex-shrink-0">
+                    <div className="flex-shrink-0">
                       <AppIcon app={app} size={48} />
                     </div>
                     <div className="min-w-0">
