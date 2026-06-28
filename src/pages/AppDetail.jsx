@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { Download, Tag, Clock, ArrowLeft, Check, Mail, Smartphone, Apple, ArrowRight, QrCode } from 'lucide-react'
-import AppIcon from '../components/AppIcon'
-import { QRCodeSVG } from 'qrcode.react'
+import { Download, Tag, Clock, ArrowLeft, Check, Star, Mail } from 'lucide-react'
 
 function AppDetail() {
   const { id } = useParams()
@@ -25,7 +23,9 @@ function AppDetail() {
 
   const handleWaitlist = (e) => {
     e.preventDefault()
-    if (email.trim()) setWaitlisted(true)
+    if (email.trim()) {
+      setWaitlisted(true)
+    }
   }
 
   const formatDate = (dateStr) => {
@@ -35,24 +35,18 @@ function AppDetail() {
 
   if (loading) {
     return (
-      <div className="min-h-[60vh] flex items-center justify-center">
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-10 h-10 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
-          <div className="text-gray-400 text-lg">Loading app...</div>
-        </div>
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-gray-400 text-xl">Loading app...</div>
       </div>
     )
   }
 
   if (!app) {
     return (
-      <div className="min-h-[60vh] flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="text-3xl font-bold text-white mb-3">App not found</div>
-          <p className="text-gray-400 mb-6">We couldn't find that app in our catalogue.</p>
-          <Link to="/apps" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium">
-            <ArrowLeft size={18} /> Back to Apps
-          </Link>
+          <div className="text-gray-400 text-xl mb-4">App not found</div>
+          <Link to="/apps" className="text-blue-400 hover:text-blue-300">Back to Apps</Link>
         </div>
       </div>
     )
@@ -60,82 +54,86 @@ function AppDetail() {
 
   const now = new Date()
   const launchDate = app.launch_date ? new Date(app.launch_date) : null
-  const isLaunched = launchDate && launchDate <= now
-  const daysUntil = launchDate ? Math.ceil((launchDate - now) / (1000 * 60 * 60 * 24)) : null
+  const isLaunched = !launchDate || launchDate <= now
+  const daysUntil = launchDate ? Math.ceil((launchDate - now) / (1000 * 60 * 60 * 24)) : 0
   const allImages = app.screenshots || []
 
   return (
     <div className="min-h-screen">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <Link to="/apps" className="inline-flex items-center gap-2 text-gray-400 hover:text-white mb-8 transition-colors text-sm font-medium">
-          <ArrowLeft size={18} /> Back to Apps
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <Link to="/apps" className="inline-flex items-center gap-2 text-gray-400 hover:text-white mb-8 transition-colors">
+          <ArrowLeft size={20} /> Back to Apps
         </Link>
 
         {/* Hero Section */}
-        <div className="bg-slate-900/50 border border-slate-800 rounded-3xl overflow-hidden mb-12">
-          <div className="flex flex-col lg:flex-row">
+        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700 overflow-hidden mb-8">
+          <div className="flex flex-col md:flex-row">
             {/* App Icon */}
-            <div className="lg:w-64 flex items-center justify-center p-8 lg:border-r border-slate-800 bg-slate-950/30">
-              <AppIcon app={app} size={120} />
+            <div className="md:w-48 flex items-center justify-center p-8 md:border-r border-slate-700">
+              {app.icon ? (
+                <img
+                  src={`${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`}
+                  alt={`${app.name} icon`}
+                  className="w-32 h-32 rounded-2xl object-cover border border-slate-600"
+                />
+              ) : (
+                <div className="w-32 h-32 rounded-2xl bg-slate-700 flex items-center justify-center">
+                  <span className="text-4xl font-bold text-white">{app.name?.charAt(0)}</span>
+                </div>
+              )}
             </div>
 
             {/* App Info */}
-            <div className="flex-1 p-8 lg:p-10">
-              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-6">
+            <div className="flex-1 p-8">
+              <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h1 className="text-3xl lg:text-4xl font-bold text-white mb-3">{app.name}</h1>
+                  <h1 className="text-3xl font-bold text-white mb-2">{app.name}</h1>
                   <div className="flex items-center gap-3 flex-wrap">
-                    <span className="inline-flex items-center gap-1.5 text-sm bg-slate-800 text-gray-300 px-3 py-1 rounded-full font-medium border border-slate-700">
-                      {app.platform === 'iOS' && <Apple size={14} />}
-                      {app.platform === 'Android' && <Smartphone size={14} />}
-                      {app.platform === 'Both' && <Smartphone size={14} />}
+                    <span className="inline-flex items-center gap-1 text-sm bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full font-medium">
                       {app.platform}
                     </span>
                     <span className="text-gray-400 text-sm flex items-center gap-1">
                       <Tag size={14} /> {app.category}
                     </span>
                     {app.target_audience && (
-                      <span className="text-gray-500 text-sm">{app.target_audience}</span>
+                      <span className="text-gray-500 text-sm">· {app.target_audience}</span>
                     )}
                   </div>
                 </div>
-                <span className={`inline-flex items-center gap-1.5 self-start text-sm px-3 py-1.5 rounded-full font-medium border ${isLaunched ? 'bg-green-500/10 text-green-400 border-green-500/20' : 'bg-amber-500/10 text-amber-400 border-amber-500/20'}`}>
-                  {isLaunched ? <Check size={14} /> : <Clock size={14} />}
-                  {isLaunched ? 'Live' : 'Coming Soon'}
-                </span>
+                {!isLaunched && (
+                  <span className="inline-flex items-center gap-1 text-sm bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full font-medium whitespace-nowrap">
+                    <Clock size={14} /> Coming Soon
+                  </span>
+                )}
               </div>
 
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">{app.description}</p>
+              <p className="text-gray-300 text-lg mb-6">{app.description}</p>
 
               {/* Launch status + download/waitlist */}
               {!isLaunched ? (
                 <div>
                   <div className="flex items-center gap-2 text-gray-400 text-sm mb-4">
                     <Clock size={16} />
-                    {daysUntil !== null ? (
-                      <span>Launching in {daysUntil} day{daysUntil !== 1 ? 's' : ''} — {formatDate(app.launch_date)}</span>
-                    ) : (
-                      <span>Coming soon — launch date to be announced</span>
-                    )}
+                    <span>Launching in {daysUntil} day{daysUntil !== 1 ? 's' : ''} — {formatDate(app.launch_date)}</span>
                   </div>
-                  <form onSubmit={handleWaitlist} className="flex flex-col sm:flex-row gap-3 max-w-lg">
+                  <form onSubmit={handleWaitlist} className="flex flex-col sm:flex-row gap-3">
                     <input
                       type="email"
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email for launch notification"
-                      className="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500"
+                      className="flex-1 bg-slate-900 border border-slate-600 rounded-lg px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500"
                     />
                     <button
                       type="submit"
-                      className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-2.5 rounded-xl font-medium transition-colors whitespace-nowrap"
+                      className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors whitespace-nowrap"
                     >
                       <Mail size={18} /> Notify Me
                     </button>
                   </form>
                   {waitlisted && (
-                    <div className="mt-3 flex items-center gap-2 text-green-400 text-sm bg-green-500/10 px-4 py-2 rounded-xl border border-green-500/20 inline-flex">
+                    <div className="mt-3 flex items-center gap-2 text-green-400 text-sm">
                       <Check size={16} /> You're on the list! We'll email you when {app.name} launches.
                     </div>
                   )}
@@ -147,7 +145,7 @@ function AppDetail() {
                       href={app.google_play_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-xl font-medium transition-colors shadow-lg shadow-green-600/10"
+                      className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                     >
                       <Download size={20} /> Get it on Google Play
                     </a>
@@ -157,7 +155,7 @@ function AppDetail() {
                       href={app.app_store_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-medium transition-colors shadow-lg shadow-blue-600/10"
+                      className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                     >
                       <Download size={20} /> Download on the App Store
                     </a>
@@ -168,151 +166,72 @@ function AppDetail() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8">
-          {/* Main content */}
-          <div className="lg:col-span-3 space-y-10">
-            {/* Screenshot Gallery */}
-            {allImages.length > 0 && (
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-4">Screenshots</h2>
-                <div className="bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden mb-4">
-                  <img
-                    src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${allImages[activeImage]}`}
-                    alt={`${app.name} screenshot ${activeImage + 1}`}
-                    className="w-full max-h-[520px] object-contain"
-                  />
-                </div>
-                {allImages.length > 1 && (
-                  <div className="flex gap-3 overflow-x-auto pb-2">
-                    {allImages.map((img, i) => (
-                      <button
-                        key={i}
-                        onClick={() => setActiveImage(i)}
-                        className={`flex-shrink-0 rounded-xl overflow-hidden border-2 transition-colors ${
-                          i === activeImage ? 'border-blue-500' : 'border-slate-800 hover:border-slate-600'
-                        }`}
-                      >
-                        <img
-                          src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${img}`}
-                          alt={`${app.name} thumbnail ${i + 1}`}
-                          className="w-24 h-24 object-cover"
-                        />
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Features */}
-            {app.features && app.features.length > 0 && (
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-4">Key Features</h2>
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {app.features.map((feature, i) => (
-                    <div key={i} className="flex items-start gap-3 bg-slate-900/40 border border-slate-800 rounded-xl p-4">
-                      <div className="bg-blue-500/10 w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 border border-blue-500/20">
-                        <Check className="text-blue-400" size={18} />
-                      </div>
-                      <span className="text-gray-300 text-sm leading-relaxed">{feature}</span>
-                    </div>
-                  ))}
-                </div>
+        {/* Screenshot Gallery */}
+        {allImages.length > 0 && (
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Screenshots</h2>
+            <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden mb-4">
+              <img
+                src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${allImages[activeImage]}`}
+                alt={`${app.name} screenshot ${activeImage + 1}`}
+                className="w-full max-h-[500px] object-contain bg-slate-900"
+              />
+            </div>
+            {allImages.length > 1 && (
+              <div className="flex gap-3 overflow-x-auto pb-2">
+                {allImages.map((img, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setActiveImage(i)}
+                    className={`flex-shrink-0 rounded-lg overflow-hidden border-2 transition-colors ${
+                      i === activeImage ? 'border-blue-500' : 'border-slate-700 hover:border-slate-500'
+                    }`}
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${img}`}
+                      alt={`${app.name} thumbnail ${i + 1}`}
+                      className="w-24 h-24 object-cover"
+                    />
+                  </button>
+                ))}
               </div>
             )}
           </div>
+        )}
 
-          {/* Sidebar */}
-          <div className="lg:col-span-2 space-y-6">
-            {/* Details card */}
-            <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-white mb-4">App Details</h3>
-              <dl className="space-y-3 text-sm">
-                <div className="flex justify-between">
-                  <dt className="text-gray-500">Platform</dt>
-                  <dd className="text-gray-300">{app.platform}</dd>
-                </div>
-                <div className="flex justify-between">
-                  <dt className="text-gray-500">Category</dt>
-                  <dd className="text-gray-300">{app.category}</dd>
-                </div>
-                {app.target_audience && (
-                  <div className="flex justify-between">
-                    <dt className="text-gray-500">Audience</dt>
-                    <dd className="text-gray-300">{app.target_audience}</dd>
+        {/* Features */}
+        {app.features && app.features.length > 0 && (
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Key Features</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {app.features.map((feature, i) => (
+                <div key={i} className="flex items-start gap-3 bg-slate-800/50 rounded-xl border border-slate-700 p-4">
+                  <div className="bg-blue-500/20 w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Check className="text-blue-400" size={18} />
                   </div>
-                )}
-                <div className="flex justify-between">
-                  <dt className="text-gray-500">Status</dt>
-                  <dd className={isLaunched ? 'text-green-400' : 'text-amber-400'}>
-                    {isLaunched ? 'Live' : 'Coming Soon'}
-                  </dd>
+                  <span className="text-gray-300">{feature}</span>
                 </div>
-              </dl>
-            </div>
-
-            {/* Hashtags */}
-            {app.hashtags && app.hashtags.length > 0 && (
-              <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-6">
-                <h3 className="text-lg font-semibold text-white mb-4">Tags</h3>
-                <div className="flex flex-wrap gap-2">
-                  {app.hashtags.map((tag, i) => (
-                    <span key={i} className="text-sm bg-slate-800 text-gray-400 px-3 py-1 rounded-full">{tag}</span>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* QR Code / Download */}
-            {(() => {
-              const downloadUrl = app.google_play_url || app.app_store_url
-              if (!downloadUrl) return null
-              return (
-                <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 text-center">
-                  {isLaunched ? (
-                    <>
-                      <h3 className="text-lg font-semibold text-white mb-1">Scan to Download</h3>
-                      <p className="text-gray-500 text-sm mb-4">Point your camera at the code</p>
-                      <div className="inline-block bg-white p-4 rounded-xl">
-                        <QRCodeSVG
-                          value={downloadUrl}
-                          size={160}
-                          level="M"
-                          includeMargin={false}
-                        />
-                      </div>
-                      <a
-                        href={downloadUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-4 w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2.5 rounded-xl font-medium transition-colors text-sm"
-                      >
-                        <Download size={16} /> Open download link
-                      </a>
-                    </>
-                  ) : (
-                    <>
-                      <h3 className="text-lg font-semibold text-white mb-1">Scan to Download</h3>
-                      <p className="text-gray-500 text-sm mb-4">Point your camera at the code</p>
-                      <div className="inline-flex flex-col items-center justify-center w-[192px] h-[192px] bg-slate-800/50 rounded-xl border border-slate-700">
-                        <Clock className="text-amber-400 mb-2" size={32} />
-                        <span className="text-amber-400 font-medium text-sm">Coming Soon</span>
-                      </div>
-                    </>
-                  )}
-                </div>
-              )
-            })()}
-
-            {/* CTA card */}
-            <div className="bg-gradient-to-br from-blue-600/10 to-cyan-600/10 border border-blue-500/20 rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-white mb-2">Explore more apps</h3>
-              <p className="text-gray-400 text-sm mb-4">See everything else we are building at App Stream.</p>
-              <Link to="/apps" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium text-sm">
-                View all apps <ArrowRight size={16} />
-              </Link>
+              ))}
             </div>
           </div>
+        )}
+
+        {/* Hashtags */}
+        {app.hashtags && app.hashtags.length > 0 && (
+          <div className="mb-8">
+            <div className="flex flex-wrap gap-2">
+              {app.hashtags.map((tag, i) => (
+                <span key={i} className="text-sm bg-slate-700 text-gray-300 px-3 py-1 rounded-full">{tag}</span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Footer CTA */}
+        <div className="text-center mt-12">
+          <Link to="/apps" className="inline-block bg-slate-700 hover:bg-slate-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+            View All Apps
+          </Link>
         </div>
       </div>
     </div>
