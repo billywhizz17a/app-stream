@@ -139,6 +139,41 @@ function Apps() {
             )
           })}
         </div>
+
+        {/* Placeholder cards to fill the grid */}
+        {apps.length > 0 && apps.length % 4 !== 0 && (
+          <>
+            {Array.from({ length: 4 - (apps.length % 4) }).map((_, i) => (
+              <div
+                key={`placeholder-${i}`}
+                className="group flex flex-col bg-slate-900/40 border border-slate-800 border-dashed rounded-2xl overflow-hidden opacity-50"
+              >
+                <div className="relative h-44 bg-slate-950/50 overflow-hidden flex-shrink-0">
+                  <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+                    <Smartphone className="text-slate-700" size={32} />
+                  </div>
+                </div>
+                <div className="flex flex-col flex-grow p-5 relative">
+                  <div className="absolute -top-8 left-5 ring-4 ring-slate-900 rounded-2xl">
+                    <div className="w-14 h-14 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center">
+                      <Smartphone className="text-slate-600" size={24} />
+                    </div>
+                  </div>
+                  <div className="mt-6 mb-3">
+                    <div className="h-5 w-32 bg-slate-800 rounded mb-2" />
+                    <div className="h-3 w-20 bg-slate-800/60 rounded" />
+                  </div>
+                  <div className="h-3 w-full bg-slate-800/40 rounded mb-2" />
+                  <div className="h-3 w-2/3 bg-slate-800/40 rounded mb-4 flex-grow" />
+                  <div className="pt-4 border-t border-slate-800 flex items-center justify-between flex-shrink-0">
+                    <span className="text-gray-600 text-xs font-medium">Coming soon</span>
+                    <span className="text-gray-600 text-sm font-medium">Soon</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </>
+        )}
       </div>
     </div>
   )
