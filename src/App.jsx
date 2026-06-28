@@ -9,7 +9,7 @@ import Contact from './pages/Contact'
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800">
+      <div className="min-h-screen bg-slate-900">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
