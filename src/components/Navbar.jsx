@@ -14,7 +14,7 @@ function Navbar() {
   ]
 
   return (
-    <nav className="bg-slate-900 sticky top-0 z-50 overflow-visible">
+    <nav className="bg-slate-900 sticky top-0 z-50 overflow-visible relative">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-900/0 to-slate-900/0 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
