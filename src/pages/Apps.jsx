@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Download, ExternalLink, Tag, Clock, ArrowRight } from 'lucide-react'
+import { Clock, ArrowRight, Smartphone, Apple, Check } from 'lucide-react'
+import AppIcon from '../components/AppIcon'
 
 function Apps() {
   const [apps, setApps] = useState([])
@@ -16,153 +17,127 @@ function Apps() {
       .catch(() => setLoading(false))
   }, [])
 
+  const now = new Date()
+  const isAppLaunched = (a) => a.launch_date && new Date(a.launch_date) <= now
+
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-gray-400 text-xl">Loading apps...</div>
+      <div className="min-h-[60vh] flex items-center justify-center">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-10 h-10 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
+          <div className="text-gray-400 text-lg">Loading apps...</div>
+        </div>
       </div>
     )
   }
 
   if (apps.length === 0) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-gray-400 text-xl">No apps available yet. Check back soon!</div>
+      <div className="min-h-[60vh] flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-gray-300 text-xl mb-2">No apps available yet.</div>
+          <div className="text-gray-500 text-sm">Check back soon — we're working on something great.</div>
+        </div>
       </div>
     )
   }
 
   return (
     <div className="min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Our <span className="text-blue-400">Apps</span>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Apps</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Discover our collection of innovative applications designed to make your life better.
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Browse our collection of thoughtful apps. Each one is built to solve a real problem and work beautifully on your device.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {apps.map((app) => (
-            <Link key={app.id} to={`/apps/${app.id}`} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 overflow-hidden hover:border-blue-500 transition-colors block">
-              {app.screenshots && app.screenshots.length > 0 && (
-                <div className="relative h-64 bg-slate-900">
-                  <img
-                    src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${app.screenshots[0]}`}
-                    alt={app.name}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-blue-500/90 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    {app.platform}
-                  </div>
-                </div>
-              )}
-              <div className="p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  {app.icon && (
+        {/* App Cards */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {apps.map((app) => {
+            const launched = isAppLaunched(app)
+            const hasScreenshot = app.screenshots && app.screenshots.length > 0
+
+            return (
+              <Link
+                key={app.id}
+                to={`/apps/${app.id}`}
+                className="group flex flex-col bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1"
+              >
+                {/* Screenshot Banner */}
+                <div className="relative h-44 bg-slate-950 overflow-hidden flex-shrink-0">
+                  {hasScreenshot ? (
                     <img
-                      src={`${import.meta.env.BASE_URL}images/${app.id}/icons/${app.icon}`}
-                      alt={`${app.name} icon`}
-                      className="w-16 h-16 rounded-xl object-cover border border-slate-600"
+                      src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${app.screenshots[0]}`}
+                      alt={app.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900" />
                   )}
-                  <h2 className="text-2xl font-bold text-white">{app.name}</h2>
-                </div>
-                <div className="flex items-center gap-2 mb-4">
-                  <Tag className="text-gray-500" size={16} />
-                  <span className="text-gray-400 text-sm">{app.category}</span>
-                  {app.target_audience && (
-                    <span className="text-gray-500 text-sm">· {app.target_audience}</span>
-                  )}
-                </div>
-                <p className="text-gray-400 mb-4 line-clamp-3">{app.description}</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent" />
 
-                {app.hashtags && app.hashtags.length > 0 && (
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {app.hashtags.slice(0, 5).map((tag, i) => (
-                      <span key={i} className="text-xs bg-slate-700 text-gray-300 px-2 py-1 rounded">{tag}</span>
-                    ))}
+                  {/* Status badge */}
+                  <div className="absolute top-3 right-3">
+                    {launched ? (
+                      <span className="flex items-center gap-1 bg-green-500/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-medium">
+                        <Check size={12} /> Live
+                      </span>
+                    ) : (
+                      <span className="flex items-center gap-1 bg-amber-500/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-medium">
+                        <Clock size={12} /> Coming Soon
+                      </span>
+                    )}
                   </div>
-                )}
+                </div>
 
-                {app.screenshots && app.screenshots.length > 1 && (
-                  <div className="flex gap-2 mb-4 overflow-x-auto">
-                    {app.screenshots.slice(1, 5).map((img, i) => (
-                      <img
-                        key={i}
-                        src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${img}`}
-                        alt={`${app.name} screenshot ${i + 2}`}
-                        className="w-20 h-20 object-cover rounded-lg border border-slate-600 flex-shrink-0"
-                      />
-                    ))}
+                {/* Card Body */}
+                <div className="flex flex-col flex-grow p-5 relative">
+                  {/* Icon overlapping banner */}
+                  <div className="absolute -top-8 left-5 ring-4 ring-slate-900 rounded-2xl">
+                    <AppIcon app={app} size={56} />
                   </div>
-                )}
 
-                {(() => {
-                  const now = new Date()
-                  const launchDate = app.launch_date ? new Date(app.launch_date) : null
-                  const isLaunched = !launchDate || launchDate <= now
-
-                  if (!isLaunched) {
-                    const daysUntil = Math.ceil((launchDate - now) / (1000 * 60 * 60 * 24))
-                    return (
-                      <div className="mt-4">
-                        <div className="flex items-center gap-2 text-gray-400 text-sm mb-3">
-                          <Clock size={16} />
-                          <span>Launching in {daysUntil} day{daysUntil !== 1 ? 's' : ''} — {launchDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
-                        </div>
-                        <div className="flex gap-3">
-                          {app.google_play_url && (
-                            <span className="flex items-center gap-2 bg-slate-700/50 text-gray-500 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed">
-                              <Download size={16} /> Google Play
-                            </span>
-                          )}
-                          {app.app_store_url && (
-                            <span className="flex items-center gap-2 bg-slate-700/50 text-gray-500 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed">
-                              <Download size={16} /> App Store
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    )
-                  }
-
-                  return (
-                    <div className="flex gap-3 mt-4">
-                      {app.google_play_url && (
-                        <a
-                          href={app.google_play_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                        >
-                          <Download size={16} /> Google Play
-                        </a>
-                      )}
-                      {app.app_store_url && (
-                        <a
-                          href={app.app_store_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                        >
-                          <Download size={16} /> App Store
-                        </a>
-                      )}
+                  {/* Name + platform */}
+                  <div className="mt-6 mb-3">
+                    <h2 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors mb-1">
+                      {app.name}
+                    </h2>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs text-gray-500 font-medium">{app.category}</span>
+                      <span className="text-gray-700">·</span>
+                      <span className="flex items-center gap-1 text-xs text-gray-500">
+                        {app.platform === 'iOS' && <Apple size={12} />}
+                        {app.platform === 'Android' && <Smartphone size={12} />}
+                        {app.platform === 'Both' && <Smartphone size={12} />}
+                        {app.platform}
+                      </span>
                     </div>
-                  )
-                })()}
-              </div>
-            </Link>
-          ))}
-        </div>
+                  </div>
 
-        <div className="mt-16 text-center">
-          <Link to="/contact" className="inline-block bg-slate-700 hover:bg-slate-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
-            Contact Us
-          </Link>
+                  {/* Description */}
+                  <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 mb-4 flex-grow">
+                    {app.description}
+                  </p>
+
+                  {/* Footer */}
+                  <div className="pt-4 border-t border-slate-800 flex items-center justify-between flex-shrink-0">
+                    {!launched ? (
+                      <span className="text-amber-400/80 text-xs font-medium">Coming soon</span>
+                    ) : (
+                      <span className="text-green-400/80 text-xs font-medium">Live</span>
+                    )}
+                    <span className="text-blue-400 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                      View <ArrowRight size={14} />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            )
+          })}
         </div>
       </div>
     </div>

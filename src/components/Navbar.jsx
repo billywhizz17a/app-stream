@@ -14,55 +14,66 @@ function Navbar() {
   ]
 
   return (
-    <nav className="bg-slate-900/80 backdrop-blur-sm border-b border-slate-800 sticky top-0 z-50">
+    <nav className="bg-slate-950/80 backdrop-blur-md border-b border-slate-800/60 sticky top-0 z-50 overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center">
-            <img src={`${import.meta.env.BASE_URL}as4.png`} alt="App Stream" className="h-16 w-64 object-contain" />
+          <Link to="/" className="flex items-center self-start z-50 -mt-12">
+            <img src={`${import.meta.env.BASE_URL}as4.png`} alt="App Stream" className="h-44 sm:h-56 w-auto object-contain drop-shadow-2xl -mb-28 -ml-8 sm:-ml-16" />
           </Link>
 
-          <div className="hidden md:flex items-center gap-6">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`text-sm font-medium transition-colors ${
-                  location.pathname === item.path
-                    ? 'text-blue-400'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="hidden md:flex items-center gap-1">
+            {navItems.map((item) => {
+              const active = location.pathname === item.path
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                    active
+                      ? 'text-white'
+                      : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
+                  }`}
+                >
+                  {item.name}
+                  {active && (
+                    <span className="absolute inset-0 bg-slate-800/80 rounded-lg -z-10 border border-slate-700/50" />
+                  )}
+                </Link>
+              )
+            })}
           </div>
 
           <button
-            className="md:hidden text-gray-300"
+            className="md:hidden text-gray-400 hover:text-white p-2 rounded-lg hover:bg-slate-800/50 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {isOpen && (
-          <div className="md:hidden pb-4">
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="py-2 space-y-1">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className={`block py-2 text-sm font-medium transition-colors ${
+                className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors ${
                   location.pathname === item.path
-                    ? 'text-blue-400'
-                    : 'text-gray-300 hover:text-white'
+                    ? 'bg-slate-800/80 text-white border border-slate-700/50'
+                    : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
                 }`}
               >
                 {item.name}
               </Link>
             ))}
           </div>
-        )}
+        </div>
       </div>
     </nav>
   )

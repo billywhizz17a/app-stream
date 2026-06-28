@@ -1,91 +1,32 @@
 [
   {
-    "id": "app_003",
-    "name": "KC Legacy Booking",
-    "platform": "Both",
-    "category": "Travel",
-    "description": "Booking app to get your car gleaming",
-    "features": [
-      "Search for nearby car wash and detailing services",
-      "Book appointments online or on-the-go",
-      "View service provider ratings and reviews",
-      "Get notified when your appointment is scheduled",
-      "Manage bookings and cancellations through the app"
-    ],
-    "app_store_url": "",
-    "google_play_url": "",
-    "target_audience": "Anyone",
-    "hashtags": [
-      "#CarWashNearMe",
-      "#DetailingServices",
-      "#AutomotiveBookingApp",
-      "#LocalBusinessSupport",
-      "#ConvenienceAtYourFingerTips"
-    ],
-    "launch_date": null,
-    "icon": "klc1.png",
-    "screenshots": [
-      "PS1.jpg",
-      "Screenshot_20260619_120838_KC Legacy Booking.jpg",
-      "Screenshot_20260619_120851_KC Legacy Booking.jpg",
-      "Screenshot_20260619_120919_KC Legacy Booking.jpg",
-      "header.jpg",
-      "ps2.jpg",
-      "ps3.png"
-    ]
-  },
-  {
     "id": "app_001",
     "name": "UK News Now",
-    "platform": "Both",
-    "category": "News & Magazines",
-    "description": "Stay informed about the latest news from the United Kingdom with UK News Now. Our app aggregates top stories from reputable sources, providing you with a comprehensive view of current events. Get instant access to news, analysis, and opinions on politics, business, sports, and more.",
+    "platform": "Android",
+    "category": "News",
+    "description": "Stay informed with the latest UK and world news whilst discreetly gathering evidence. Beyond curated headlines and breaking alerts, UK News Now doubles as a covert evidence gathering app with an AI companion trained in domestic and narcissistic abuse support. Features include timestamped, geotagged journal entries, silent recording and silent photo capture whilst browsing the news page, and secure backup to an encrypted vault stored on a remote server.",
     "features": [
-      "Real-time news updates",
-      "Personalized news feeds based on interests",
-      "In-depth articles and analyses",
-      "Breaking news alerts for critical stories",
-      "Search functionality for specific topics or keywords"
+      "Curated UK & world headlines with breaking news alerts",
+      "Covert evidence gathering with AI companion trained in domestic & narcissistic abuse support",
+      "Timestamped, geotagged journal entries",
+      "Silent recording & silent photo capture whilst browsing the news page",
+      "Secure encrypted vault backup stored on a remote server"
     ],
     "app_store_url": "",
-    "google_play_url": "",
-    "target_audience": "Individuals interested in staying up-to-date with UK news, current events, and breaking stories",
+    "google_play_url": "https://play.google.com/apps/test/com.billywhizz17a.uknews/14",
+    "target_audience": "News readers in the UK",
     "hashtags": [
-      "#UKNews",
-      "#BreakingNews",
-      "#CurrentEvents",
-      "#NewsApp",
-      "#StayInformed"
+      "#news",
+      "#uknews",
+      "#breakingnews",
+      "#headlines",
+      "#evidence",
+      "#domesticabuse",
+      "#safety",
+      "#vault"
     ],
-    "launch_date": "2026-07-19",
-    "icon": "",
-    "screenshots": []
-  },
-  {
-    "id": "app_002",
-    "name": "MindScape",
-    "platform": "Both",
-    "category": "Health & Fitness",
-    "description": "MindScape is a comprehensive mind mapping and meditation app that helps users cultivate calm, clarity, and focus. With guided sessions and customizable tracks, MindScape empowers you to take control of your mental well-being and achieve a state of inner peace.",
-    "features": [
-      "Guided meditation sessions for stress relief and relaxation",
-      "Customizable mind mapping tools for visualizing thoughts and goals",
-      "Breathing exercises and calming sounds for anxiety reduction",
-      "Tracking features to monitor progress and set achievable goals",
-      "Community support with discussion forums and expert advice"
-    ],
-    "app_store_url": "",
-    "google_play_url": "",
-    "target_audience": "Individuals seeking mental wellness and stress relief through guided meditation and mindfulness exercises.",
-    "hashtags": [
-      "#Mindfulness",
-      "#MeditationApp",
-      "#StressRelief",
-      "#MentalWellness",
-      "#SelfCare"
-    ],
-    "launch_date": "2026-07-10",
-    "icon": "",
+    "launch_date": "",
+    "icon": "g1.png",
     "screenshots": [
       "g2.png",
       "g3.png",
@@ -95,19 +36,59 @@
     ]
   },
   {
-    "id": "app_004",
+    "id": "app_002",
+    "name": "MindScape",
+    "platform": "Both",
+    "category": "Health",
+    "description": "A wellness companion that uses calming light therapy, sound tones, and guided breathing to help ease anxiety, support better sleep, and promote emotional balance.",
+    "features": [
+      "Calming light therapy sessions",
+      "Soothing sound tones & frequencies",
+      "Guided breathing exercises",
+      "Sleep & relaxation modes",
+      "Daily wellness check-ins"
+    ],
+    "app_store_url": "",
+    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.mindscape",
+    "target_audience": "Meditation & healing",
+    "hashtags": [
+      "#health",
+      "#meditation",
+      "#healing",
+      "#anxiety",
+      "#mentalhealth",
+      "#wellness",
+      "#sleep"
+    ],
+    "launch_date": "",
+    "icon": "mindscape.png",
+    "screenshots": [
+      "PS1.jpg",
+      "ps2.jpg",
+      "ps3.png"
+    ]
+  },
+  {
+    "id": "app_003",
     "name": "KC Legacy Booking",
     "platform": "Both",
     "category": "General",
-    "description": "Auto-generated by App Promoter",
-    "features": [],
+    "description": "Booking app to get your car gleaming",
+    "features": [
+      "Mobile-optimised booking \u2014 schedule appointments anytime, anywhere",
+      "Instant booking confirmation with reference tracking",
+      "View available packages and pricing upfront",
+      "Photo gallery of previous work",
+      "Works on both Android and iOS devices"
+    ],
     "app_store_url": "",
-    "google_play_url": "",
-    "target_audience": "General audience",
+    "google_play_url": "https://KCLegacy.pythonanywhere.com/booking",
+    "target_audience": "Anyone",
     "hashtags": [],
-    "launch_date": "2026-06-28",
-    "icon": "pstore icon.png",
+    "launch_date": "2026-01-01",
+    "icon": "klc1.png",
     "screenshots": [
+      "header.jpg",
       "Screenshot_20260619_120838_KC Legacy Booking.jpg",
       "Screenshot_20260619_120851_KC Legacy Booking.jpg",
       "Screenshot_20260619_120919_KC Legacy Booking.jpg"
