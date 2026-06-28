@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { Download, Tag, Clock, ArrowLeft, Check, Mail, Smartphone, Apple, ArrowRight, QrCode } from 'lucide-react'
+import { Download, Tag, Clock, ArrowLeft, Check, Mail, Smartphone, Apple, ArrowRight, QrCode, Newspaper } from 'lucide-react'
 import AppIcon from '../components/AppIcon'
 import { QRCodeSVG } from 'qrcode.react'
 
@@ -11,13 +11,17 @@ function AppDetail() {
   const [email, setEmail] = useState('')
   const [waitlisted, setWaitlisted] = useState(false)
   const [activeImage, setActiveImage] = useState(0)
+  const [newsItems, setNewsItems] = useState([])
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}apps.json`)
-      .then(res => res.json())
-      .then(data => {
+    Promise.all([
+      fetch(`${import.meta.env.BASE_URL}apps.json`).then(res => res.json()),
+      fetch(`${import.meta.env.BASE_URL}news.json`).then(res => res.json()).catch(() => [])
+    ]).then(([data, news]) => {
         const found = data.find(a => a.id === id)
         setApp(found)
+        const filtered = (news || []).filter(n => n.app_id === id)
+        setNewsItems(filtered)
         setLoading(false)
       })
       .catch(() => setLoading(false))
@@ -314,6 +318,40 @@ function AppDetail() {
             </div>
           </div>
         </div>
+
+        {/* Latest News & Press Releases for this app */}
+        {newsItems.length > 0 && (
+          <div className="mt-12">
+            <div className="flex items-center gap-3 mb-6">
+              <Newspaper className="text-blue-400" size={28} />
+              <div>
+                <h2 className="text-3xl font-bold text-white">Latest News & Press Releases</h2>
+                <p className="text-gray-400 text-sm">Updates and announcements for {app.name}</p>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {newsItems.map((item, i) => (
+                <div key={i} className="bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
+                  {item.app_name && (
+                    <span className="inline-block text-xs bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full mb-3 font-medium border border-blue-500/20">
+                      {item.app_name}
+                    </span>
+                  )}
+                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-400 text-sm mb-3">{item.summary}</p>
+                  {item.date && (
+                    <p className="text-gray-500 text-xs mb-3">{new Date(item.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+                  )}
+                  {item.source_url && (
+                    <a href={item.source_url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm font-medium">
+                      Read more <ArrowRight size={14} />
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
