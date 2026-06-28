@@ -68,7 +68,7 @@ function Apps() {
                 className="group flex flex-col bg-slate-900/60 border-2 border-slate-600 rounded-2xl overflow-hidden hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Screenshot Banner */}
-                <div className="relative h-44 bg-slate-950 overflow-hidden flex-shrink-0">
+                <div className="relative h-56 bg-slate-950 overflow-hidden flex-shrink-0">
                   {hasScreenshot ? (
                     <img
                       src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${app.screenshots[0]}`}
@@ -147,7 +147,7 @@ function Apps() {
                 className="flex flex-col bg-slate-900/60 border-2 border-slate-600 border-dashed rounded-2xl overflow-hidden opacity-60"
               >
                 {/* Screenshot Banner - same h-44 as real cards */}
-                <div className="relative h-44 bg-slate-950 overflow-hidden flex-shrink-0">
+                <div className="relative h-56 bg-slate-950 overflow-hidden flex-shrink-0">
                   <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
                     <Smartphone className="text-slate-700" size={32} />
                   </div>
