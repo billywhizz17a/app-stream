@@ -173,9 +173,9 @@ function AppDetail() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8">
-          {/* Main content */}
-          <div className="lg:col-span-3 space-y-10">
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Main content - screenshots */}
+          <div className="lg:col-span-2 space-y-8">
             {/* Screenshot Gallery */}
             {allImages.length > 0 && (
               <div>
@@ -184,23 +184,23 @@ function AppDetail() {
                   <img
                     src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${allImages[activeImage]}`}
                     alt={`${app.name} screenshot ${activeImage + 1}`}
-                    className="w-full max-h-[520px] object-contain"
+                    className="w-full max-h-[480px] object-contain"
                   />
                 </div>
                 {allImages.length > 1 && (
-                  <div className="flex gap-3 overflow-x-auto pb-2">
+                  <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
                     {allImages.map((img, i) => (
                       <button
                         key={i}
                         onClick={() => setActiveImage(i)}
-                        className={`flex-shrink-0 rounded-xl overflow-hidden border-2 transition-colors ${
+                        className={`rounded-lg overflow-hidden border-2 transition-colors aspect-square ${
                           i === activeImage ? 'border-blue-500' : 'border-slate-800 hover:border-slate-600'
                         }`}
                       >
                         <img
                           src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${img}`}
                           alt={`${app.name} thumbnail ${i + 1}`}
-                          className="w-24 h-24 object-cover"
+                          className="w-full h-full object-cover"
                         />
                       </button>
                     ))}
@@ -212,7 +212,7 @@ function AppDetail() {
           </div>
 
           {/* Sidebar */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-1 space-y-6">
             {/* Details card */}
             <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-6">
               <h3 className="text-lg font-semibold text-white mb-4">App Details</h3>
