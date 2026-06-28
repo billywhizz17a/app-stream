@@ -34,7 +34,7 @@ function Contact() {
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-6">
-            <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700">
+            <div className="bg-slate-900/40 p-6 rounded-2xl border border-slate-800">
               <div className="flex items-start gap-4">
                 <div className="bg-blue-500/20 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Mail className="text-blue-400" size={24} />
@@ -48,7 +48,7 @@ function Contact() {
 
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700">
+          <div className="bg-slate-900/40 p-8 rounded-2xl border border-slate-800">
             {submitted ? (
               <div className="text-center py-12">
                 <div className="bg-green-500/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
