@@ -80,25 +80,25 @@ function Apps() {
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent" />
 
-                  {/* Status badge */}
-                  <div className="absolute top-3 right-3">
-                    {launched ? (
-                      <span className="flex items-center gap-1 bg-green-500/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-medium">
-                        <Check size={12} /> Live
-                      </span>
-                    ) : (
-                      <span className="flex items-center gap-1 bg-amber-500/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-medium">
-                        <Clock size={12} /> Coming Soon
-                      </span>
-                    )}
-                  </div>
+
                 </div>
 
                 {/* Card Body */}
                 <div className="flex flex-col flex-grow p-5 relative">
-                  {/* Icon overlapping banner */}
-                  <div className="absolute -top-8 left-5 ring-4 ring-slate-900 rounded-2xl">
-                    <AppIcon app={app} size={56} />
+                  {/* Icon overlapping banner + status badge */}
+                  <div className="absolute -top-8 left-5 flex items-center gap-2">
+                    <div className="ring-4 ring-slate-900 rounded-2xl">
+                      <AppIcon app={app} size={56} />
+                    </div>
+                    {launched ? (
+                      <span className="flex items-center gap-1 bg-green-500/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-medium mt-8">
+                        <Check size={12} /> Live
+                      </span>
+                    ) : (
+                      <span className="flex items-center gap-1 bg-amber-500/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-medium mt-8">
+                        <Clock size={12} /> Coming Soon
+                      </span>
+                    )}
                   </div>
 
                   {/* Name + platform */}
