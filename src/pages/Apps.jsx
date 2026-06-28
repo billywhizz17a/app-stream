@@ -55,22 +55,6 @@ function Apps() {
           </p>
         </div>
 
-        {/* Status legend */}
-        <div className="flex items-center justify-center gap-4 mb-8">
-          <span className="flex items-center gap-1.5 text-sm text-gray-400">
-            <span className="flex items-center gap-1 bg-green-500/90 text-white px-2.5 py-1 rounded-full text-xs font-medium">
-              <Check size={12} /> Live
-            </span>
-            Available now
-          </span>
-          <span className="flex items-center gap-1.5 text-sm text-gray-400">
-            <span className="flex items-center gap-1 bg-amber-500/90 text-white px-2.5 py-1 rounded-full text-xs font-medium">
-              <Clock size={12} /> Coming Soon
-            </span>
-            In development
-          </span>
-        </div>
-
         {/* App Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {apps.map((app) => {
@@ -78,8 +62,20 @@ function Apps() {
             const hasScreenshot = app.screenshots && app.screenshots.length > 0
 
             return (
+              <div key={app.id} className="flex flex-col">
+                {/* Status badge above card */}
+                <div className="mb-2 flex justify-start">
+                  {launched ? (
+                    <span className="flex items-center gap-1 bg-green-500/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-medium">
+                      <Check size={12} /> Live
+                    </span>
+                  ) : (
+                    <span className="flex items-center gap-1 bg-amber-500/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-medium">
+                      <Clock size={12} /> Coming Soon
+                    </span>
+                  )}
+                </div>
               <Link
-                key={app.id}
                 to={`/apps/${app.id}`}
                 className="group flex flex-col bg-slate-900/60 border-2 border-slate-600 rounded-2xl overflow-hidden hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1"
               >
@@ -141,14 +137,20 @@ function Apps() {
                   </div>
                 </div>
               </Link>
+              </div>
             )
           })}
 
           {/* Placeholder cards to fill the grid to a multiple of 4 */}
           {apps.length > 0 && apps.length < 8 && (
             Array.from({ length: 8 - apps.length }).map((_, i) => (
+              <div key={`placeholder-${i}`} className="flex flex-col">
+                <div className="mb-2 flex justify-start">
+                  <span className="flex items-center gap-1 bg-slate-700/90 backdrop-blur-sm text-gray-400 px-2.5 py-1 rounded-full text-xs font-medium">
+                    <Clock size={12} /> Soon
+                  </span>
+                </div>
               <div
-                key={`placeholder-${i}`}
                 className="flex flex-col bg-slate-900/60 border-2 border-slate-600 border-dashed rounded-2xl overflow-hidden opacity-60"
               >
                 {/* Screenshot Banner - same h-44 as real cards */}
@@ -195,6 +197,7 @@ function Apps() {
                     <span className="text-gray-600 text-sm font-medium">—</span>
                   </div>
                 </div>
+              </div>
               </div>
             ))
           )}
