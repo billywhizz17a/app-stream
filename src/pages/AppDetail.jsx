@@ -360,6 +360,8 @@ function AppDetail() {
           </div>
         )}
 
+      </div>
+
       {/* News Modal */}
       {selectedNews && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={() => setSelectedNews(null)}>
