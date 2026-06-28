@@ -97,25 +97,25 @@ function Apps() {
 
                 {/* Card Body */}
                 <div className="flex flex-col flex-grow p-5 relative">
-                  {/* Icon overlapping banner */}
-                  <div className="absolute -top-8 left-5 ring-4 ring-slate-900 rounded-2xl">
-                    <AppIcon app={app} size={56} />
-                  </div>
-
-                  {/* Name + platform */}
-                  <div className="mt-6 mb-3">
-                    <h2 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors mb-1">
-                      {app.name}
-                    </h2>
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs text-gray-500 font-medium">{app.category}</span>
-                      <span className="text-gray-700">·</span>
-                      <span className="flex items-center gap-1 text-xs text-gray-500">
-                        {app.platform === 'iOS' && <Apple size={12} />}
-                        {app.platform === 'Android' && <Smartphone size={12} />}
-                        {app.platform === 'Both' && <Smartphone size={12} />}
-                        {app.platform}
-                      </span>
+                  {/* Icon + Name side by side */}
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="ring-4 ring-slate-900 rounded-2xl flex-shrink-0">
+                      <AppIcon app={app} size={48} />
+                    </div>
+                    <div className="min-w-0">
+                      <h2 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors truncate">
+                        {app.name}
+                      </h2>
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-xs text-gray-500 font-medium">{app.category}</span>
+                        <span className="text-gray-700">·</span>
+                        <span className="flex items-center gap-1 text-xs text-gray-500">
+                          {app.platform === 'iOS' && <Apple size={12} />}
+                          {app.platform === 'Android' && <Smartphone size={12} />}
+                          {app.platform === 'Both' && <Smartphone size={12} />}
+                          {app.platform}
+                        </span>
+                      </div>
                     </div>
                   </div>
 
@@ -168,20 +168,20 @@ function Apps() {
 
                 {/* Card Body - same structure as real cards */}
                 <div className="flex flex-col flex-grow p-5 relative">
-                  {/* Icon placeholder - same size/position as real cards */}
-                  <div className="absolute -top-8 left-5 ring-4 ring-slate-900 rounded-2xl">
-                    <div className="w-14 h-14 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center">
-                      <Smartphone className="text-slate-600" size={24} />
+                  {/* Icon + Name placeholder side by side */}
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="ring-4 ring-slate-900 rounded-2xl flex-shrink-0">
+                      <div className="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center">
+                        <Smartphone className="text-slate-600" size={20} />
+                      </div>
                     </div>
-                  </div>
-
-                  {/* Name + platform - same spacing */}
-                  <div className="mt-6 mb-3">
-                    <div className="h-5 w-28 bg-slate-800 rounded mb-2" />
-                    <div className="flex items-center gap-2">
-                      <div className="h-3 w-16 bg-slate-800/60 rounded" />
-                      <span className="text-gray-700">·</span>
-                      <div className="h-3 w-12 bg-slate-800/60 rounded" />
+                    <div className="min-w-0">
+                      <div className="h-5 w-28 bg-slate-800 rounded mb-2" />
+                      <div className="flex items-center gap-1.5">
+                        <div className="h-3 w-16 bg-slate-800/60 rounded" />
+                        <span className="text-gray-700">·</span>
+                        <div className="h-3 w-12 bg-slate-800/60 rounded" />
+                      </div>
                     </div>
                   </div>
 
