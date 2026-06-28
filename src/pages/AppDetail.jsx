@@ -209,22 +209,6 @@ function AppDetail() {
               </div>
             )}
 
-            {/* Features */}
-            {app.features && app.features.length > 0 && (
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-4">Key Features</h2>
-                <div className={app.features.length > 12 ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3" : "grid sm:grid-cols-2 gap-3"}>
-                  {app.features.map((feature, i) => (
-                    <div key={i} className={app.features.length > 12 ? "flex flex-col items-center gap-2 bg-slate-900/40 border border-slate-800 rounded-xl p-4 text-center" : "flex items-start gap-3 bg-slate-900/40 border border-slate-800 rounded-xl p-4"}>
-                      <div className={app.features.length > 12 ? "bg-blue-500/10 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 border border-blue-500/20" : "bg-blue-500/10 w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 border border-blue-500/20"}>
-                        <Check className="text-blue-400" size={app.features.length > 12 ? 20 : 18} />
-                      </div>
-                      <span className={app.features.length > 12 ? "text-gray-300 text-sm leading-snug" : "text-gray-300 text-sm leading-relaxed"}>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
 
           {/* Sidebar */}
@@ -319,6 +303,23 @@ function AppDetail() {
             </div>
           </div>
         </div>
+
+        {/* Features — full width outside the grid */}
+        {app.features && app.features.length > 0 && (
+          <div className="mt-10">
+            <h2 className="text-2xl font-bold text-white mb-6">Key Features</h2>
+            <div className={app.features.length > 12 ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4" : "grid sm:grid-cols-2 gap-4"}>
+              {app.features.map((feature, i) => (
+                <div key={i} className={app.features.length > 12 ? "flex flex-col items-center gap-3 bg-slate-900/40 border border-slate-800 rounded-xl p-5 text-center" : "flex items-start gap-3 bg-slate-900/40 border border-slate-800 rounded-xl p-5"}>
+                  <div className={app.features.length > 12 ? "bg-blue-500/10 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 border border-blue-500/20" : "bg-blue-500/10 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 border border-blue-500/20"}>
+                    <Check className="text-blue-400" size={app.features.length > 12 ? 24 : 20} />
+                  </div>
+                  <span className={app.features.length > 12 ? "text-gray-300 text-sm leading-snug" : "text-gray-300 text-sm leading-relaxed"}>{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Latest News & Press Releases for this app */}
         {newsItems.length > 0 && (
