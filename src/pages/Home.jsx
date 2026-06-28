@@ -77,7 +77,7 @@ function Home() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {news.slice(0, 6).map((item, i) => (
-              <div key={i} className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition-colors">
+              <div key={i} className="bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
                 {item.app_name && (
                   <span className="inline-block text-xs bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full mb-3 font-medium border border-blue-500/20">
                     {item.app_name}
@@ -108,7 +108,7 @@ function Home() {
             { icon: Shield, title: 'Privacy First', desc: 'We keep your data where it belongs — with you. No unnecessary tracking or selling.', color: 'green' },
             { icon: Heart, title: 'Made with Care', desc: 'From wellness tools to news, each app is crafted to genuinely help its users.', color: 'rose' },
           ].map((item) => (
-            <div key={item.title} className="bg-slate-900/40 border border-slate-800 p-6 rounded-2xl hover:border-slate-700 transition-colors">
+            <div key={item.title} className="bg-slate-900/60 border-2 border-blue-400/60 p-6 rounded-2xl hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
               <div className={`bg-${item.color}-500/10 w-12 h-12 rounded-xl flex items-center justify-center mb-4 border border-${item.color}-500/20`}>
                 <item.icon className={`text-${item.color}-400`} size={24} />
               </div>
