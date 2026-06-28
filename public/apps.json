@@ -1,1 +1,31 @@
-[]
+[
+  {
+    "id": "app_001",
+    "name": "Kalo",
+    "platform": "Both",
+    "category": "Productivity",
+    "description": "Kalo is a comprehensive mobile app designed to help users track and manage their expenses, income, and budget in one place. With Kalo, you can easily categorize your spending, set financial goals, and receive personalized recommendations to improve your financial health.",
+    "features": [
+      "Personalized expense tracking with automated categorization",
+      "Customizable budgeting with real-time spending analysis",
+      "Financial goal setting with progress tracking and alerts",
+      "Bill reminders and payment scheduling",
+      "Integration with popular banking and financial institutions for seamless data import"
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "Professionals managing their personal and business finances, as well as individuals seeking to optimize their financial management",
+    "hashtags": [
+      "#financialmanagement",
+      "#personalfinance",
+      "#budgeting",
+      "#expensetracking",
+      "#savemoney"
+    ],
+    "launch_date": "2026-07-19",
+    "icon": "Kalo-3.png",
+    "screenshots": [
+      "Kalo.png"
+    ]
+  }
+]
