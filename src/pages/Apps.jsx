@@ -171,7 +171,7 @@ function Apps() {
                   {/* Icon + Name placeholder side by side */}
                   <div className="flex items-center gap-3 mb-3">
                     <div className="ring-4 ring-slate-900 rounded-2xl flex-shrink-0">
-                      <div className="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-2xl bg-slate-800 border border-blue-400/40 flex items-center justify-center">
                         <Smartphone className="text-slate-600" size={20} />
                       </div>
                     </div>
