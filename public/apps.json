@@ -1,1 +1,63 @@
-[]
+[
+  {
+    "id": "app_001",
+    "name": "Kalo",
+    "platform": "Both",
+    "category": "Health & Fitness",
+    "description": "Kalo is a mobile app that allows users to track various health and fitness metrics, including calorie and macro intake, micronutrients, exercise, sleep, mood, and more. It also provides features such as meal planning, recipe search, and community challenges.",
+    "features": [
+      "Calorie & Macro Tracking",
+      "Micronutrient Tracking (11+)",
+      "Monthly Meal Plan Generator",
+      "Recipe Search (diet/health filters)",
+      "Cupboard Cooker (match % scoring)",
+      "Cycle Tracking - integrated with nutrition",
+      "Cycle-Aware Nutrition - phase-based calorie adaptation",
+      "Mood Tracking",
+      "Craving Decoder",
+      "Sleep Tracking",
+      "Fasting Timer",
+      "Exercise Tracking (with calorie burn)",
+      "Dynamic Calorie Adjustment - auto-adjusts from exercise",
+      "BMR / TDEE / Activity Breakdown",
+      "Water Tracking",
+      "Streak Tracking",
+      "Community Challenges (badges)",
+      "Rewards System",
+      "AI Coach - context-aware (cycle+sleep+mood)",
+      "Bio-Rhythm Calculator - physical/emotional/intellectual",
+      "Correlation Insights (cross-metric)",
+      "Body Measurement Tracker",
+      "Medication Tracker",
+      "Photo Food Logging",
+      "Shopping List (auto from meal plan)",
+      "Health Scanner",
+      "YouTube Exercise Integration",
+      "Smartwatch / Health Connect",
+      "Daily Reminders",
+      "Psychology / Behavioural Tools - 28-day curriculum + daily quizzes",
+      "Diet Filters (6 diet + 7 health)",
+      "Recipe Images (curated per-item)"
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "Individuals interested in tracking their health and fitness metrics",
+    "hashtags": [
+      "#healthandfitness",
+      "#weightloss",
+      "#nutrition",
+      "#wellness",
+      "#fitnesstracking"
+    ],
+    "launch_date": "2026-07-19",
+    "icon": "Kalo 1.png",
+    "screenshots": [
+      "Screenshot_20260628_214852_Kalo.jpg",
+      "Screenshot_20260628_214901_Kalo.jpg",
+      "Screenshot_20260628_214920_Kalo.jpg",
+      "Screenshot_20260628_215000_Kalo.jpg",
+      "Screenshot_20260628_215526_Kalo.jpg",
+      "Screenshot_20260628_215725_Kalo.jpg"
+    ]
+  }
+]
