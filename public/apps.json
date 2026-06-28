@@ -65,10 +65,10 @@
     "name": "UK News Now",
     "platform": "Both",
     "category": "News & Magazines",
-    "description": "The app displays news articles with images.",
+    "description": "The app displays news articles with headlines and images.",
     "features": [
       "News feed",
-      "Image support"
+      "Article display with headlines and images"
     ],
     "app_store_url": "",
     "google_play_url": "",
