@@ -52,22 +52,13 @@ function Home() {
             <p className="text-base md:text-lg text-gray-400 mb-6 leading-relaxed">
               A curated collection of thoughtful Android and iOS apps — from trusted news to wellness tools — built with care and clarity.
             </p>
-            <div className="flex justify-center gap-3 flex-wrap">
-              <Link to="/apps" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl font-medium transition-all shadow-lg shadow-blue-600/20">
-                Browse Apps <ArrowRight size={18} />
-              </Link>
-              <Link to="/contact" className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-5 py-2.5 rounded-xl font-medium transition-all">
-                Get in Touch
-              </Link>
-            </div>
           </div>
-
         </div>
       </section>
 
       {/* News Section */}
       {!loading && news.length > 0 && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
           <div className="flex items-center gap-3 mb-6">
             <Newspaper className="text-blue-400" size={28} />
             <div>
@@ -95,6 +86,20 @@ function Home() {
           </div>
         </section>
       )}
+
+      {/* CTA Buttons */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <div className="text-center">
+          <div className="flex justify-center gap-3 flex-wrap">
+            <Link to="/apps" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl font-medium transition-all shadow-lg shadow-blue-600/20">
+              Browse Apps <ArrowRight size={18} />
+            </Link>
+            <Link to="/contact" className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-5 py-2.5 rounded-xl font-medium transition-all">
+              Get in Touch
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Why App Stream */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
