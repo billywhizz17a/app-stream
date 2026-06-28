@@ -64,19 +64,29 @@
     "id": "app_002",
     "name": "UK News Now",
     "platform": "Both",
-    "category": "News & Magazines",
-    "description": "The app displays news articles with headlines and images.",
+    "category": "Utilities",
+    "description": "UK News Now is a covert evidence gathering tool disguised as a news reader. It appears as a standard UK & world news app whilst silently capturing, logging, and securing evidence in the background. Features include curated UK & world headlines with breaking news alerts, covert evidence gathering with an AI companion trained in domestic & narcissistic abuse support, timestamped and geotagged journal entries for legally admissible evidence, silent recording and silent photo capture whilst browsing the news, and a secure encrypted vault with remote server backup.",
     "features": [
-      "News feed",
-      "Article display with headlines and images"
+      "Curated UK & world news headlines with breaking news alerts",
+      "Covert evidence gathering with AI companion for domestic & narcissistic abuse support",
+      "Timestamped and geotagged journal entries for legally admissible evidence",
+      "Silent audio recording whilst browsing the news page",
+      "Silent photo capture completely undetectable",
+      "Secure encrypted vault with remote server backup",
+      "Disguised as a standard news reader app"
     ],
     "app_store_url": "",
     "google_play_url": "",
-    "target_audience": "General public interested in UK news",
+    "target_audience": "Individuals in vulnerable domestic situations who need to gather evidence discreetly whilst staying informed about UK & world news",
     "hashtags": [
-      "#UKnews",
-      "#newsapp",
-      "#currentevents"
+      "UKNews",
+      "EvidenceGathering",
+      "DomesticAbuseSupport",
+      "NarcissisticAbuse",
+      "CovertSecurity",
+      "PersonalSafety",
+      "EncryptedVault",
+      "SilentRecording"
     ],
     "launch_date": "2026-07-12",
     "icon": "newsicon.png",
