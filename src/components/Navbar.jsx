@@ -14,7 +14,7 @@ function Navbar() {
   ]
 
   return (
-    <nav className="bg-slate-900 sticky top-0 z-50 overflow-visible relative">
+    <nav className="bg-transparent sticky top-0 z-50 overflow-visible relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center z-50">
