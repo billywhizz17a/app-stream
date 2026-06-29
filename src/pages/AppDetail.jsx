@@ -104,7 +104,7 @@ function AppDetail() {
                     )}
                   </div>
                 </div>
-                <span className={`inline-flex items-center gap-1.5 self-start text-sm px-3.5 py-1.5 rounded-full font-semibold border ${isLaunched ? 'bg-green-500/10 text-green-400 border-green-500/20 shadow-sm shadow-green-500/10' : 'bg-gradient-to-r from-amber-500/15 to-orange-500/15 text-amber-300 border-amber-500/30 shadow-sm shadow-amber-500/10'}`}>
+                <span className={`inline-flex items-center gap-1.5 self-start text-sm px-3.5 py-1.5 rounded-full font-semibold border whitespace-nowrap ${isLaunched ? 'bg-green-500/10 text-green-400 border-green-500/20 shadow-sm shadow-green-500/10' : 'bg-gradient-to-r from-amber-500/15 to-orange-500/15 text-amber-300 border-amber-500/30 shadow-sm shadow-amber-500/10'}`}>
                   {isLaunched ? <Check size={14} /> : <Clock size={14} />}
                   {isLaunched ? 'Live' : 'Coming Soon'}
                 </span>
@@ -115,7 +115,7 @@ function AppDetail() {
               {/* Launch status + download/waitlist */}
               {!isLaunched ? (
                 <div>
-                  <div className="flex items-center gap-2 text-gray-400 text-sm mb-4">
+                  <div className="flex items-center gap-2 text-gray-400 text-sm mb-4 whitespace-nowrap">
                     <Clock size={16} />
                     {daysUntil !== null ? (
                       <span>Launching in {daysUntil} day{daysUntil !== 1 ? 's' : ''} — {formatDate(app.launch_date)}</span>
@@ -232,8 +232,8 @@ function AppDetail() {
                   </div>
                 )}
                 <div className="flex justify-between">
-                  <dt className="text-gray-500">Status</dt>
-                  <dd className={isLaunched ? 'text-green-400' : 'text-amber-400'}>
+                  <dt className="text-gray-500 whitespace-nowrap">Status</dt>
+                  <dd className={`${isLaunched ? 'text-green-400' : 'text-amber-400'} whitespace-nowrap`}>
                     {isLaunched ? 'Live' : 'Coming Soon'}
                   </dd>
                 </div>
