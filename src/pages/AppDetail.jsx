@@ -104,7 +104,7 @@ function AppDetail() {
                     )}
                   </div>
                 </div>
-                <span className={`inline-flex items-center gap-1.5 self-start text-sm px-3 py-1.5 rounded-full font-medium border ${isLaunched ? 'bg-green-500/10 text-green-400 border-green-500/20' : 'bg-amber-500/10 text-amber-400 border-amber-500/20'}`}>
+                <span className={`inline-flex items-center gap-1.5 self-start text-sm px-3.5 py-1.5 rounded-full font-semibold border ${isLaunched ? 'bg-green-500/10 text-green-400 border-green-500/20 shadow-sm shadow-green-500/10' : 'bg-gradient-to-r from-amber-500/15 to-orange-500/15 text-amber-300 border-amber-500/30 shadow-sm shadow-amber-500/10'}`}>
                   {isLaunched ? <Check size={14} /> : <Clock size={14} />}
                   {isLaunched ? 'Live' : 'Coming Soon'}
                 </span>
@@ -283,9 +283,9 @@ function AppDetail() {
                     <>
                       <h3 className="text-lg font-semibold text-white mb-1">Scan to Download</h3>
                       <p className="text-gray-500 text-sm mb-4">Point your camera at the code</p>
-                      <div className="inline-flex flex-col items-center justify-center w-[192px] h-[192px] bg-slate-800/50 rounded-xl border border-slate-700">
-                        <Clock className="text-amber-400 mb-2" size={32} />
-                        <span className="text-amber-400 font-medium text-sm">Coming Soon</span>
+                      <div className="inline-flex flex-col items-center justify-center w-[192px] h-[192px] bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-xl border border-amber-500/20">
+                        <Clock className="text-amber-400 mb-2" size={36} />
+                        <span className="text-amber-300 font-semibold text-sm">Coming Soon</span>
                       </div>
                     </>
                   )}
