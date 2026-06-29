@@ -212,10 +212,10 @@ function AppDetail() {
           </div>
 
           {/* Sidebar */}
-          <div className="lg:col-span-1 space-y-6">
+          <div className="lg:col-span-1 space-y-6 lg:pt-[52px]">
             {/* Details card */}
             <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-6">
-              <h2 className="text-2xl font-bold text-white mb-4">App Details</h2>
+              <h3 className="text-lg font-semibold text-white mb-4">App Details</h3>
               <dl className="space-y-3 text-sm">
                 <div className="flex justify-between">
                   <dt className="text-gray-500">Platform</dt>
