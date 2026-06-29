@@ -167,5 +167,25 @@
       "ps2.jpg",
       "ps3.png"
     ]
+  },
+  {
+    "id": "app_005",
+    "name": "KC Legacy Booking",
+    "platform": "Both",
+    "category": "General",
+    "description": "",
+    "features": [],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "General audience",
+    "hashtags": [],
+    "launch_date": "2026-06-29",
+    "icon": "klc1.png",
+    "screenshots": [
+      "header.png",
+      "Screenshot_20260619_120838_KC Legacy Booking.jpg",
+      "Screenshot_20260619_120851_KC Legacy Booking.jpg",
+      "Screenshot_20260619_120919_KC Legacy Booking.jpg"
+    ]
   }
 ]
