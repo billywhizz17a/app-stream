@@ -53,11 +53,11 @@
     "icon": "Kalo 1.png",
     "screenshots": [
       "Screenshot_20260628_215526_Kalo.jpg",
-      "Screenshot_20260628_214852_Kalo.jpg",
+      "Screenshot_20260628_215725_Kalo.jpg",
       "Screenshot_20260628_214901_Kalo.jpg",
       "Screenshot_20260628_214920_Kalo.jpg",
-      "Screenshot_20260628_215000_Kalo.jpg",
-      "Screenshot_20260628_215725_Kalo.jpg"
+      "Screenshot_20260628_214852_Kalo.jpg",
+      "Screenshot_20260628_215000_Kalo.jpg"
     ]
   },
   {
@@ -97,6 +97,48 @@
       "g4.png",
       "g5.png",
       "g6.png"
+    ]
+  },
+  {
+    "id": "app_003",
+    "name": "Write AI",
+    "platform": "Both",
+    "category": "Productivity",
+    "description": "The app appears to be a note-taking and organization tool with features for editing, image upload, search, backup, tracking, analytics, health, share, map, authentication, and article management. It also includes features for message handling, push notifications, and secure data storage.",
+    "features": [
+      "Edit",
+      "Image upload",
+      "Search",
+      "Backup",
+      "Tracking",
+      "Analytics",
+      "Health",
+      "Share",
+      "Map",
+      "Authentication",
+      "Article management",
+      "Message handling",
+      "Push notifications"
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "Students or professionals seeking to optimize their workflow and productivity",
+    "hashtags": [
+      "#productivity",
+      "#note-taking",
+      "#organization",
+      "#workflowoptimization",
+      "#studentlife",
+      "#professionaldevelopment"
+    ],
+    "launch_date": "2026-07-20",
+    "icon": "icon.png",
+    "screenshots": [
+      "Screenshot_20260629_132202_WriteAI.jpg",
+      "Screenshot_20260629_132211_WriteAI.jpg",
+      "Screenshot_20260629_132229_WriteAI.jpg",
+      "Screenshot_20260629_132252_WriteAI.jpg",
+      "Screenshot_20260629_132328_WriteAI.jpg"
     ]
   }
 ]
