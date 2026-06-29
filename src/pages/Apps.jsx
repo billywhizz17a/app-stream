@@ -72,7 +72,7 @@ function Apps() {
                       <Check size={12} /> Live
                     </span>
                   ) : (
-                    <span className="flex items-center gap-1 bg-amber-500/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-medium">
+                    <span className="flex items-center gap-1.5 bg-gradient-to-r from-amber-500/90 to-orange-500/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg shadow-amber-500/20">
                       <Clock size={12} /> Coming Soon
                     </span>
                   )}
@@ -128,7 +128,7 @@ function Apps() {
                   {/* Footer */}
                   <div className="pt-4 border-t border-slate-800 flex items-center justify-between flex-shrink-0">
                     {!launched ? (
-                      <span className="text-amber-400/80 text-xs font-medium">Coming soon</span>
+                      <span className="flex items-center gap-1 text-amber-400/90 text-xs font-semibold"><Clock size={11} /> Coming soon</span>
                     ) : (
                       <span className="text-green-400/80 text-xs font-medium">Live</span>
                     )}
