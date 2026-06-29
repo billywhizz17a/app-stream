@@ -140,5 +140,32 @@
       "Screenshot_20260629_132252_WriteAI.jpg",
       "Screenshot_20260629_132328_WriteAI.jpg"
     ]
+  },
+  {
+    "id": "app_004",
+    "name": "MindScape",
+    "platform": "Both",
+    "category": "Education",
+    "description": "The app uses a full-screen WebView to display web content, suggesting it is designed for educational purposes. The presence of premium features and audio support implies that the app may offer interactive or multimedia content.",
+    "features": [
+      "Web-based content display",
+      "Premium features",
+      "Audio support"
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "Adults interested in learning through web-based content",
+    "hashtags": [
+      "#education",
+      "#learning",
+      "#webbasedcontent"
+    ],
+    "launch_date": "2026-07-13",
+    "icon": "Play Store.jpg",
+    "screenshots": [
+      "PS1.jpg",
+      "ps2.jpg",
+      "ps3.png"
+    ]
   }
 ]
