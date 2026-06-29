@@ -72,7 +72,7 @@ function Apps() {
                       <Check size={12} /> Live
                     </span>
                   ) : (
-                    <span className="flex items-center gap-1.5 bg-gradient-to-r from-amber-500/90 to-orange-500/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg shadow-amber-500/20">
+                      <span className="flex items-center gap-1.5 bg-gradient-to-r from-amber-500/90 to-orange-500/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg shadow-amber-500/20 whitespace-nowrap">
                       <Clock size={12} /> Coming Soon
                     </span>
                   )}
@@ -128,7 +128,7 @@ function Apps() {
                   {/* Footer */}
                   <div className="pt-4 border-t border-slate-800 flex items-center justify-between flex-shrink-0">
                     {!launched ? (
-                      <span className="flex items-center gap-1 text-amber-400/90 text-xs font-semibold"><Clock size={11} /> Coming soon</span>
+                      <span className="flex items-center gap-1 text-amber-400/90 text-xs font-semibold whitespace-nowrap"><Clock size={11} /> Coming soon</span>
                     ) : (
                       <span className="text-green-400/80 text-xs font-medium">Live</span>
                     )}
@@ -194,7 +194,7 @@ function Apps() {
 
                   {/* Footer - same border and layout */}
                   <div className="pt-4 border-t border-slate-800 flex items-center justify-between flex-shrink-0">
-                    <span className="text-gray-600 text-xs font-medium">Coming soon</span>
+                    <span className="text-gray-600 text-xs font-medium whitespace-nowrap">Coming soon</span>
                     <span className="text-gray-600 text-sm font-medium">—</span>
                   </div>
                 </div>
