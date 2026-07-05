@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Calendar, Newspaper, Clock, Rocket, Mail, Check, Sparkles, Shield, Heart, Smartphone, X } from 'lucide-react'
+import { ArrowRight, Calendar, Newspaper, Clock, Rocket, Mail, Check, Sparkles, Shield, Heart, Smartphone, X, Youtube } from 'lucide-react'
+import { SITE_CONFIG } from '../config'
 
 function Home() {
   const [news, setNews] = useState([])
@@ -169,6 +170,34 @@ function Home() {
                   Learn more →
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* YouTube Promotions */}
+      {SITE_CONFIG.youtubeUrl && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
+          <div className="bg-gradient-to-r from-red-600/10 to-rose-600/10 border border-red-500/20 rounded-2xl p-6 md:p-8 backdrop-blur-sm">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex items-center gap-4">
+                <div className="bg-red-500/10 w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 border border-red-500/20">
+                  <Youtube className="text-red-400" size={28} />
+                </div>
+                <div>
+                  <div className="text-sm text-red-400 font-medium mb-1">On YouTube</div>
+                  <h3 className="text-2xl font-bold text-white">Watch App Stream on YouTube</h3>
+                  <p className="text-gray-400 text-sm mt-1">Demos, launches, and behind-the-scenes of our apps.</p>
+                </div>
+              </div>
+              <a
+                href={SITE_CONFIG.youtubeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white px-6 py-3 rounded-xl font-medium transition-colors whitespace-nowrap"
+              >
+                <Youtube size={20} /> Visit our channel
+              </a>
             </div>
           </div>
         </section>
