@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import { Mail, Send } from 'lucide-react'
+import { Mail, Send, Youtube } from 'lucide-react'
 import { useState } from 'react'
+import { SITE_CONFIG } from '../config'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -45,6 +46,25 @@ function Contact() {
                 </div>
               </div>
             </div>
+
+            {SITE_CONFIG.youtubeUrl && (
+              <a
+                href={SITE_CONFIG.youtubeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-slate-900/40 p-6 rounded-2xl border border-slate-800 hover:border-red-500/40 transition-colors"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="bg-red-500/20 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Youtube className="text-red-400" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-1">YouTube</h3>
+                    <p className="text-gray-400">Watch demos and updates on our channel</p>
+                  </div>
+                </div>
+              </a>
+            )}
 
           </div>
 
