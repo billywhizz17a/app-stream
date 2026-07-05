@@ -92,8 +92,6 @@ function Apps() {
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900" />
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent" />
-
                 </div>
 
                 {/* Card Body */}
@@ -159,7 +157,6 @@ function Apps() {
                   <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
                     <Smartphone className="text-slate-700" size={32} />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent" />
                   <div className="absolute top-3 right-3">
                     <span className="flex items-center gap-1 bg-slate-700/90 backdrop-blur-sm text-gray-400 px-2.5 py-1 rounded-full text-xs font-medium">
                       <Clock size={12} /> Soon
