@@ -188,5 +188,31 @@
       "Screenshot_20260619_120919_KC Legacy Booking.jpg",
       "qr code.jpeg"
     ]
+  },
+  {
+    "id": "app_006",
+    "name": "UK News Now",
+    "platform": "Both",
+    "category": "News & Magazines",
+    "description": "The app appears to be a news aggregator that provides access to news articles, journal entries, and other content. It includes features such as image sharing, geolocation, and secure storage for sensitive information.",
+    "features": [
+      "News aggregation",
+      "Journal entry saving",
+      "Image sharing",
+      "Geolocation",
+      "Secure storage"
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "Individuals seeking news and information on various topics",
+    "hashtags": [
+      "#news",
+      "#journaling",
+      "#security",
+      "#geolocation"
+    ],
+    "launch_date": "2026-07-12",
+    "icon": "",
+    "screenshots": []
   }
 ]
