@@ -10,6 +10,7 @@
     "app_name": "",
     "date": "2026-07-06T14:30:05.308323",
     "phase": "",
+    "website_published": false,
     "created_at": "2026-07-06T14:30:05.308330"
   },
   {
@@ -23,6 +24,7 @@
     "app_name": "UK News Now",
     "date": "2026-07-06T14:26:06.120896",
     "phase": "Pre-Launch",
+    "website_published": false,
     "created_at": "2026-07-06T14:26:06.120899"
   },
   {
@@ -36,6 +38,7 @@
     "app_name": "",
     "date": "2026-06-29T22:48:00.559982",
     "phase": "",
+    "website_published": false,
     "created_at": "2026-06-29T22:48:00.559988"
   },
   {
@@ -49,6 +52,7 @@
     "app_name": "KC Legacy Booking",
     "date": "2026-06-29T22:45:00.284013",
     "phase": "Pre-Launch",
+    "website_published": false,
     "created_at": "2026-06-29T22:45:00.284020"
   },
   {
@@ -62,6 +66,7 @@
     "app_name": "",
     "date": "2026-06-29T17:30:35.912992",
     "phase": "",
+    "website_published": false,
     "created_at": "2026-06-29T17:30:35.912997"
   },
   {
@@ -75,6 +80,7 @@
     "app_name": "MindScape",
     "date": "2026-06-29T17:27:35.429577",
     "phase": "Pre-Launch",
+    "website_published": false,
     "created_at": "2026-06-29T17:27:35.429593"
   },
   {
@@ -88,6 +94,7 @@
     "app_name": "",
     "date": "2026-06-29T14:53:46.975356",
     "phase": "",
+    "website_published": false,
     "created_at": "2026-06-29T14:53:46.975362"
   },
   {
@@ -101,6 +108,7 @@
     "app_name": "Write AI",
     "date": "2026-06-29T14:50:35.322186",
     "phase": "Pre-Launch",
+    "website_published": false,
     "created_at": "2026-06-29T14:50:35.322193"
   },
   {
@@ -114,6 +122,7 @@
     "app_name": "UK News Now",
     "date": "2026-06-29T00:45:27.552048",
     "phase": "",
+    "website_published": false,
     "created_at": "2026-06-29T00:45:27.552053"
   },
   {
@@ -127,6 +136,7 @@
     "app_name": "UK News Now",
     "date": "2026-06-29T00:45:14.089166",
     "phase": "",
+    "website_published": false,
     "created_at": "2026-06-29T00:45:14.089175"
   },
   {
@@ -140,6 +150,7 @@
     "app_name": "UK News Now",
     "date": "2026-06-29T00:44:26.268663",
     "phase": "",
+    "website_published": false,
     "created_at": "2026-06-29T00:44:26.268669"
   },
   {
@@ -153,6 +164,7 @@
     "app_name": "UK News Now",
     "date": "2026-06-29T00:44:19.213096",
     "phase": "",
+    "website_published": false,
     "created_at": "2026-06-29T00:44:19.213104"
   },
   {
@@ -166,6 +178,7 @@
     "app_name": "UK News Now",
     "date": "2026-06-29T00:44:02.797618",
     "phase": "",
+    "website_published": false,
     "created_at": "2026-06-29T00:44:02.797643"
   },
   {
@@ -179,6 +192,7 @@
     "app_name": "",
     "date": "2026-06-28T23:21:19.817315",
     "phase": "",
+    "website_published": false,
     "created_at": "2026-06-28T23:21:19.817322"
   },
   {
@@ -192,6 +206,7 @@
     "app_name": "",
     "date": "2026-06-28T22:20:04.471403",
     "phase": "",
+    "website_published": false,
     "created_at": "2026-06-28T22:20:04.471410"
   }
 ]
