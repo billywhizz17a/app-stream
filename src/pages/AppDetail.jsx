@@ -146,15 +146,18 @@ function AppDetail() {
                   )}
                 </div>
               ) : (
-                <div className="flex gap-3 flex-wrap">
+                <div className="flex gap-3 flex-wrap items-center">
                   {app.google_play_url && (
                     <a
                       href={app.google_play_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-xl font-medium transition-colors shadow-lg shadow-green-600/10"
                     >
-                      <Download size={20} /> Get it on Google Play
+                      <img
+                        src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
+                        alt="Get it on Google Play"
+                        className="h-12 w-auto"
+                      />
                     </a>
                   )}
                   {app.app_store_url && (
@@ -162,9 +165,12 @@ function AppDetail() {
                       href={app.app_store_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-medium transition-colors shadow-lg shadow-blue-600/10"
                     >
-                      <Download size={20} /> Download on the App Store
+                      <img
+                        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                        alt="Download on the App Store"
+                        className="h-12 w-auto"
+                      />
                     </a>
                   )}
                 </div>
