@@ -36,6 +36,7 @@ jobs:
         run: |
           cp public/apps.json dist/
           cp public/news.json dist/
+          cp public/app-ads.txt dist/
           mkdir -p dist/images
           cp -r public/images/* dist/images/ 2>/dev/null || true
 
