@@ -224,21 +224,5 @@
       "AI_TextToImage_20260614_133242_1.png",
       "AI_TextToImage_20260614_133242_2.png"
     ]
-  },
-  {
-    "id": "app_006",
-    "name": "UK News Now",
-    "platform": "Both",
-    "category": "General",
-    "description": "",
-    "features": [],
-    "app_store_url": "",
-    "google_play_url": "",
-    "target_audience": "General audience",
-    "hashtags": [],
-    "launch_date": "2026-07-11",
-    "icon": "",
-    "video": "",
-    "screenshots": []
   }
 ]
