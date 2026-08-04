@@ -127,11 +127,16 @@ function Apps() {
 
                     {/* Footer */}
                     <div className="pt-4 border-t border-slate-800 flex items-center justify-between flex-shrink-0">
-                      {!launched ? (
-                        <span className="flex items-center gap-1 text-amber-400/90 text-xs font-semibold whitespace-nowrap"><Clock size={11} /> Coming soon</span>
-                      ) : (
-                        <span className="text-green-400/80 text-xs font-medium">Live</span>
-                      )}
+                      <div className="flex items-center gap-2">
+                        {!launched ? (
+                          <span className="flex items-center gap-1 text-amber-400/90 text-xs font-semibold whitespace-nowrap"><Clock size={11} /> Coming soon</span>
+                        ) : (
+                          <span className="text-green-400/80 text-xs font-medium">Live</span>
+                        )}
+                        {app.google_play_url && (
+                          <img src={`${import.meta.env.BASE_URL}google-play-badge.svg`} alt="Get it on Google Play" className="h-8 w-auto" />
+                        )}
+                      </div>
                       <span className="text-blue-400 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                         View <ArrowRight size={14} />
                       </span>
