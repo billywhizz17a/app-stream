@@ -16,9 +16,9 @@ function Navbar() {
   return (
     <nav className="bg-transparent overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center z-50">
-            <img src={`${import.meta.env.BASE_URL}as4.png`} alt="App Stream" className="h-12 w-auto object-contain" />
+            <img src={`${import.meta.env.BASE_URL}as4.png`} alt="App Stream" className="h-16 w-auto object-contain" />
           </Link>
 
           <div className="hidden md:flex items-center gap-1">
