@@ -29,6 +29,7 @@ function Privacy() {
                 <li>Name and contact information</li>
                 <li>Account credentials</li>
                 <li>Health and fitness data (steps, exercise, calories, heart rate, sleep, height, weight, nutrition) — accessed via Health Connect with user permission</li>
+                <li>Recipes and progression photos — stored securely and encrypted, accessible only to the user</li>
                 <li>Usage data and analytics</li>
                 <li>Communication preferences</li>
               </ul>
@@ -43,7 +44,9 @@ function Privacy() {
                 We implement industry-standard security measures to protect your information:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>End-to-end encryption for data transmission</li>
+                <li>End-to-end encryption for data transmission and storage</li>
+                <li>Firebase device registration — each device is registered and encoded so that only the authenticated user can access their data</li>
+                <li>Data is encrypted and blocked from outside users — no unauthorised access is permitted</li>
                 <li>Secure storage with access controls</li>
                 <li>Regular security audits and updates</li>
                 <li>Compliance with data protection regulations</li>
@@ -71,8 +74,11 @@ function Privacy() {
               </ul>
               <p className="mt-3">
                 This health data is accessed with your explicit permission and is used solely to
-                provide the features described above. You can revoke access to this data at any time through
-                your device's health permissions settings.
+                provide the features described above. Health data read from Health Connect remains on-device.
+                User-generated data, including recipes and progression photos, is stored securely on our
+                servers with encryption. Each device is registered with Firebase and encoded so that only
+                the authenticated user can access their own data — all data is blocked from outside users.
+                You can revoke access to health data at any time through your device's health permissions settings.
               </p>
             </section>
 
