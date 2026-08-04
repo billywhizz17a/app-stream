@@ -87,7 +87,8 @@ function Apps() {
                       <img
                         src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${app.screenshots[0]}`}
                         alt={app.name}
-                        className="w-full h-full object-cover object-top contrast-125 group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover object-top contrast-110 saturate-110 group-hover:scale-105 transition-transform duration-500"
+                        style={{ imageRendering: 'high-quality' }}
                       />
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900" />
