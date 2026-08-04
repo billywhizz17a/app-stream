@@ -28,6 +28,7 @@ function Privacy() {
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>Name and contact information</li>
                 <li>Account credentials</li>
+                <li>Health and fitness data (steps, exercise, calories, heart rate, sleep, height, weight, nutrition) — accessed via Health Connect with user permission</li>
                 <li>Usage data and analytics</li>
                 <li>Communication preferences</li>
               </ul>
