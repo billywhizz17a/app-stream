@@ -51,11 +51,27 @@ function Privacy() {
 
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">Health Data</h2>
-              <p>
-                App Stream does not access, collect, or use any health-related data from our users.
-                This includes data from health and fitness apps, medical records, or any other
-                health-related information. If this policy changes in the future, we will update
-                this disclosure and obtain appropriate consent where required.
+              <p className="mb-3">
+                Some of our apps, such as Kalo, access and collect health-related data through
+                Health Connect and similar platform APIs. This data is used to provide personalised
+                health and nutrition insights. The types of health data we may access include:
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li><strong>Steps</strong> — displayed on the home dashboard and used to calculate activity-based calorie adjustments for meal plans</li>
+                <li><strong>Exercise sessions</strong> — shown in the progress tracker and used to calculate calories burned for daily energy balance</li>
+                <li><strong>Active calories burned</strong> — displayed on the home screen and used to adjust daily calorie targets</li>
+                <li><strong>Total calories burned</strong> — displayed in the progress dashboard for a complete picture of daily energy expenditure</li>
+                <li><strong>Basal metabolic rate (BMR)</strong> — used to calculate personalised daily calorie targets for meal plans</li>
+                <li><strong>Heart rate</strong> — displayed in the health insights section to show correlations between cardiovascular health, nutrition, and exercise</li>
+                <li><strong>Sleep data</strong> — shown in the insights dashboard to analyse correlations between sleep quality, nutrition, and mood</li>
+                <li><strong>Height</strong> — used to calculate BMI and personalise calorie targets during profile setup</li>
+                <li><strong>Weight</strong> — tracked over time in the progress tracker, used for BMI calculation, and to adjust calorie targets</li>
+                <li><strong>Nutrition data</strong> — synced from Health Connect to display food intake alongside calorie burn for a complete energy balance view</li>
+              </ul>
+              <p className="mt-3">
+                This health data is accessed with your explicit permission and is used solely to
+                provide the features described above. You can revoke access to this data at any time through
+                your device's health permissions settings.
               </p>
             </section>
 
