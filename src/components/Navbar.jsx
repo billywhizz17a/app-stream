@@ -1,6 +1,6 @@
-import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,7 +18,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center z-50">
-            <img src={`${import.meta.env.BASE_URL}as4.png`} alt="App Stream" className="h-28 sm:h-32 w-auto object-contain drop-shadow-lg ml-4 -mb-16" />
+            <img src={`${import.meta.env.BASE_URL}as4.png`} alt="App Stream" className="h-20 sm:h-24 w-auto object-contain" />
           </Link>
 
           <div className="hidden md:flex items-center gap-1">
@@ -28,11 +28,10 @@ function Navbar() {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
-                    active
-                      ? 'text-white'
-                      : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
-                  }`}
+                  className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${active
+                    ? 'text-white'
+                    : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
+                    }`}
                 >
                   {item.name}
                   {active && (
@@ -53,9 +52,8 @@ function Navbar() {
         </div>
 
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+            }`}
         >
           <div className="py-2 space-y-1">
             {navItems.map((item) => (
@@ -63,11 +61,10 @@ function Navbar() {
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors ${
-                  location.pathname === item.path
-                    ? 'bg-slate-800/80 text-white border border-slate-700/50'
-                    : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
-                }`}
+                className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors ${location.pathname === item.path
+                  ? 'bg-slate-800/80 text-white border border-slate-700/50'
+                  : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
+                  }`}
               >
                 {item.name}
               </Link>
