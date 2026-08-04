@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import { ArrowRight, Calendar, Check, Clock, Heart, Mail, Newspaper, Rocket, Shield, Smartphone, Sparkles, X } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Calendar, Newspaper, Clock, Rocket, Mail, Check, Sparkles, Shield, Heart, Smartphone, X } from 'lucide-react'
 
 function Home() {
   const [news, setNews] = useState([])
@@ -39,7 +39,11 @@ function Home() {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:py-12 relative">
+        <div className="absolute inset-0 z-0">
+          <img src={`${import.meta.env.BASE_URL}hero.jpg`} alt="" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-900/80 to-slate-900" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:py-12 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 px-4 py-1.5 rounded-full text-sm font-medium mb-5">
               <Sparkles size={14} />
@@ -50,7 +54,7 @@ function Home() {
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">App Stream</span>
             </h1>
-            <p className="text-base md:text-lg text-gray-400 mb-6 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-300 mb-6 leading-relaxed">
               A curated collection of thoughtful Android and iOS apps — from trusted news to wellness tools — built with care and clarity.
             </p>
           </div>
