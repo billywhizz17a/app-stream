@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom'
-import { Shield, Eye, Lock } from 'lucide-react'
+import { Eye, Lock, Shield } from 'lucide-react'
 
 function Privacy() {
   return (
@@ -51,9 +50,19 @@ function Privacy() {
             </section>
 
             <section>
+              <h2 className="text-xl font-semibold text-white mb-3">Health Data</h2>
+              <p>
+                App Stream does not access, collect, or use any health-related data from our users.
+                This includes data from health and fitness apps, medical records, or any other
+                health-related information. If this policy changes in the future, we will update
+                this disclosure and obtain appropriate consent where required.
+              </p>
+            </section>
+
+            <section>
               <h2 className="text-xl font-semibold text-white mb-3">Data Usage</h2>
               <p>
-                We use your information to provide, maintain, and improve our services, 
+                We use your information to provide, maintain, and improve our services,
                 communicate with you, and ensure security and fraud prevention.
               </p>
             </section>
@@ -61,16 +70,33 @@ function Privacy() {
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">Data Sharing</h2>
               <p>
-                We do not sell your personal information. We may share data only with 
-                service providers who assist us in operating our platform, subject to 
+                We do not sell your personal information. We may share data only with
+                service providers who assist us in operating our platform, subject to
                 strict confidentiality obligations.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold text-white mb-3">Data Deletion</h2>
+              <p className="mb-3">
+                You have the right to request deletion of your personal data at any time.
+                To request data deletion, you can:
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Email us at <a href="mailto:support@appstream.uk" className="text-blue-400 hover:underline">support@appstream.uk</a> with the subject "Data Deletion Request"</li>
+                <li>Use our <a href="/contact" className="text-blue-400 hover:underline">contact form</a> to submit a deletion request</li>
+              </ul>
+              <p className="mt-3">
+                We will process your request within 30 days and confirm once your data has been
+                permanently deleted from our systems. Note that certain data may be retained where
+                required by law for legal, accounting, or security purposes.
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">Your Rights</h2>
               <p>
-                You have the right to access, correct, or delete your personal data. 
+                You have the right to access, correct, or delete your personal data.
                 Contact us to exercise these rights or for any privacy-related questions.
               </p>
             </section>
@@ -78,7 +104,7 @@ function Privacy() {
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">Contact Us</h2>
               <p>
-                For any questions about this Privacy Policy, please reach out through our 
+                For any questions about this Privacy Policy, please reach out through our
                 <a href="/contact" className="text-blue-400 hover:underline ml-1">contact page</a>.
               </p>
             </section>
