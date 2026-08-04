@@ -102,13 +102,13 @@ function Apps() {
                         <AppIcon app={app} size={56} />
                       </div>
                       <div className="min-w-0">
-                        <h2 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors truncate">
+                        <h2 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors truncate drop-shadow-sm">
                           {app.name}
                         </h2>
                         <div className="flex items-center gap-2">
-                          <span className="text-sm text-gray-500 font-medium">{app.category}</span>
+                          <span className="text-sm text-gray-300 font-medium">{app.category}</span>
                           <span className="text-gray-700">·</span>
-                          <span className="flex items-center gap-1 text-sm text-gray-500">
+                          <span className="flex items-center gap-1 text-sm text-gray-300">
                             {app.platform === 'iOS' && <Apple size={14} />}
                             {app.platform === 'Android' && <Smartphone size={14} />}
                             {app.platform === 'Both' && <Smartphone size={14} />}
@@ -119,7 +119,7 @@ function Apps() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-400 text-base leading-relaxed line-clamp-3 mb-4 min-h-[3.5rem]">
+                    <p className="text-gray-200 text-base leading-relaxed line-clamp-3 mb-4 min-h-[3.5rem]">
                       {app.description}
                     </p>
 
@@ -127,9 +127,9 @@ function Apps() {
                     <div className="pt-4 border-t border-slate-800 flex items-center justify-between flex-shrink-0">
                       <div className="flex items-center gap-3">
                         {!launched ? (
-                          <span className="flex items-center gap-1 text-amber-400/90 text-sm font-semibold whitespace-nowrap"><Clock size={14} /> Coming soon</span>
+                          <span className="flex items-center gap-1 text-amber-400 text-sm font-semibold whitespace-nowrap"><Clock size={14} /> Coming soon</span>
                         ) : (
-                          <span className="text-green-400/80 text-sm font-medium">Live</span>
+                          <span className="text-green-400 text-sm font-medium">Live</span>
                         )}
                         {app.google_play_url && (
                           <img src={`${import.meta.env.BASE_URL}google-play-badge.svg`} alt="Get it on Google Play" className="h-7 w-auto" />
