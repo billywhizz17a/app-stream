@@ -18,7 +18,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center z-50">
-            <img src={`${import.meta.env.BASE_URL}as4.png`} alt="App Stream" className="h-14 sm:h-16 w-auto object-contain" />
+            <img src={`${import.meta.env.BASE_URL}as4.png`} alt="App Stream" className="h-20 sm:h-24 w-auto object-contain" />
           </Link>
 
           <div className="hidden md:flex items-center gap-1">
@@ -29,8 +29,8 @@ function Navbar() {
                   key={item.path}
                   to={item.path}
                   className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${active
-                      ? 'text-white'
-                      : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
+                    ? 'text-white'
+                    : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
                     }`}
                 >
                   {item.name}
@@ -62,8 +62,8 @@ function Navbar() {
                 to={item.path}
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors ${location.pathname === item.path
-                    ? 'bg-slate-800/80 text-white border border-slate-700/50'
-                    : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
+                  ? 'bg-slate-800/80 text-white border border-slate-700/50'
+                  : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
                   }`}
               >
                 {item.name}
