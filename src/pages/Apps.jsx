@@ -124,7 +124,7 @@ function Apps() {
                           <span className="text-green-400 text-sm font-medium">Live</span>
                         )}
                         {app.google_play_url && (
-                          <img src={`${import.meta.env.BASE_URL}google-play-badge.svg`} alt="Get it on Google Play" className="h-10 w-auto" />
+                          <img src={`${import.meta.env.BASE_URL}google-play-badge.svg`} alt="Get it on Google Play" className="h-14 w-auto" />
                         )}
                       </div>
                     </div>
