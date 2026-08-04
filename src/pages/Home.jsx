@@ -57,6 +57,7 @@ function Home() {
             <p className="text-base md:text-lg text-gray-300 mb-6 leading-relaxed">
               A curated collection of thoughtful Android and iOS apps — from trusted news to wellness tools — built with care and clarity.
             </p>
+            <SocialIcons />
           </div>
         </div>
       </section>
