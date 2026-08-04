@@ -90,9 +90,14 @@ function Apps() {
                   <div className="flex flex-col flex-grow p-6 relative">
                     {/* Name + meta */}
                     <div className="mb-4">
-                      <h2 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors truncate drop-shadow-sm">
-                        {app.name}
-                      </h2>
+                      <div className="flex items-center justify-between gap-2">
+                        <h2 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors truncate drop-shadow-sm">
+                          {app.name}
+                        </h2>
+                        <span className="text-blue-400 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all whitespace-nowrap flex-shrink-0">
+                          View <ArrowRight size={14} />
+                        </span>
+                      </div>
                       <div className="flex items-center gap-2 mt-1">
                         <span className="text-sm text-gray-300 font-medium">{app.category}</span>
                         <span className="text-gray-700">·</span>
@@ -122,9 +127,6 @@ function Apps() {
                           <img src={`${import.meta.env.BASE_URL}google-play-badge.svg`} alt="Get it on Google Play" className="h-10 w-auto" />
                         )}
                       </div>
-                      <span className="text-blue-400 text-base font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
-                        View <ArrowRight size={16} />
-                      </span>
                     </div>
                   </div>
                 </Link>
