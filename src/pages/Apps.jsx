@@ -82,12 +82,12 @@ function Apps() {
                   className="group flex flex-col h-full bg-slate-900 border-2 border-blue-400/60 rounded-2xl overflow-hidden hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300 hover:-translate-y-1"
                 >
                   {/* Screenshot Banner */}
-                  <div className="relative h-96 bg-slate-950 overflow-hidden flex-shrink-0">
+                  <div className="relative h-96 bg-slate-950 overflow-hidden flex-shrink-0 flex items-center justify-center">
                     {hasScreenshot ? (
                       <img
                         src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${app.screenshots[0]}`}
                         alt={app.name}
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500"
                       />
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900" />
