@@ -1,5 +1,5 @@
+import { Github, Mail, Twitter } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { Mail, Twitter, Github } from 'lucide-react'
 
 function Footer() {
   return (
@@ -37,7 +37,7 @@ function Footer() {
             <h4 className="text-white font-semibold mb-4">Connect</h4>
             <div className="flex items-center gap-4">
               <a
-                href="mailto:billywhizz17a@gmail.com"
+                href="mailto:contact-us@appstream.uk"
                 className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-slate-700 transition-colors"
               >
                 <Mail size={18} />

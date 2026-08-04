@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { Mail, Send } from 'lucide-react'
 import { useState } from 'react'
 
@@ -41,7 +40,7 @@ function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                  <p className="text-gray-400">billywhizz17a@gmail.com</p>
+                  <p className="text-gray-400">contact-us@appstream.uk</p>
                 </div>
               </div>
             </div>
@@ -85,7 +84,7 @@ function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your@email.com"
+                    placeholder="contact-us@appstream.uk"
                   />
                 </div>
 
