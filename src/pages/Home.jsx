@@ -42,7 +42,6 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src={`${import.meta.env.BASE_URL}hero.jpg`} alt="" className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-900/80 to-slate-900" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:py-12 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
