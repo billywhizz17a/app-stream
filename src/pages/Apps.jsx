@@ -58,7 +58,7 @@ function Apps() {
         </div>
 
         {/* App Cards */}
-        <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
           {apps.map((app) => {
             const launched = isAppLaunched(app)
             const hasScreenshot = app.screenshots && app.screenshots.length > 0
@@ -146,8 +146,8 @@ function Apps() {
           })}
 
           {/* Placeholder cards to fill the grid to a multiple of 4 */}
-          {apps.length < 6 && (
-            Array.from({ length: 6 - apps.length }).map((_, i) => (
+          {apps.length < 4 && (
+            Array.from({ length: 4 - apps.length }).map((_, i) => (
               <div key={`placeholder-${i}`} className="flex flex-col h-full">
                 <div className="mb-2 flex justify-start">
                   <span className="flex items-center gap-1 bg-slate-700/90 backdrop-blur-sm text-gray-400 px-2.5 py-1 rounded-full text-xs font-medium">
