@@ -81,41 +81,27 @@ function Apps() {
                   to={`/apps/${app.id}`}
                   className="group flex flex-col h-full bg-slate-900 border-2 border-blue-400/60 rounded-2xl overflow-hidden hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300 hover:-translate-y-1"
                 >
-                  {/* Screenshot Banner */}
-                  <div className="relative h-72 bg-slate-950 overflow-hidden flex-shrink-0">
-                    {hasScreenshot ? (
-                      <img
-                        src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${app.screenshots[0]}`}
-                        alt={app.name}
-                        className="w-full h-full object-cover object-top contrast-110 saturate-110 group-hover:scale-105 transition-transform duration-500"
-                        style={{ imageRendering: 'high-quality' }}
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900" />
-                    )}
+                  {/* App Icon Banner */}
+                  <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-950 overflow-hidden flex-shrink-0 flex items-center justify-center">
+                    <AppIcon app={app} size={96} />
                   </div>
 
                   {/* Card Body */}
                   <div className="flex flex-col flex-grow p-6 relative">
-                    {/* Icon + Name side by side */}
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="flex-shrink-0">
-                        <AppIcon app={app} size={56} />
-                      </div>
-                      <div className="min-w-0">
-                        <h2 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors truncate drop-shadow-sm">
-                          {app.name}
-                        </h2>
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm text-gray-300 font-medium">{app.category}</span>
-                          <span className="text-gray-700">·</span>
-                          <span className="flex items-center gap-1 text-sm text-gray-300">
-                            {app.platform === 'iOS' && <Apple size={14} />}
-                            {app.platform === 'Android' && <Smartphone size={14} />}
-                            {app.platform === 'Both' && <Smartphone size={14} />}
-                            {app.platform}
-                          </span>
-                        </div>
+                    {/* Name + meta */}
+                    <div className="mb-4">
+                      <h2 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors truncate drop-shadow-sm">
+                        {app.name}
+                      </h2>
+                      <div className="flex items-center gap-2 mt-1">
+                        <span className="text-sm text-gray-300 font-medium">{app.category}</span>
+                        <span className="text-gray-700">·</span>
+                        <span className="flex items-center gap-1 text-sm text-gray-300">
+                          {app.platform === 'iOS' && <Apple size={14} />}
+                          {app.platform === 'Android' && <Smartphone size={14} />}
+                          {app.platform === 'Both' && <Smartphone size={14} />}
+                          {app.platform}
+                        </span>
                       </div>
                     </div>
 
@@ -159,10 +145,8 @@ function Apps() {
                   className="flex flex-col h-full bg-slate-900 border-2 border-blue-400/40 border-dashed rounded-2xl overflow-hidden opacity-60"
                 >
                   {/* Screenshot Banner - same h-44 as real cards */}
-                  <div className="relative h-72 bg-slate-950 overflow-hidden flex-shrink-0">
-                    <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-                      <Smartphone className="text-slate-700" size={32} />
-                    </div>
+                  <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-950 overflow-hidden flex-shrink-0 flex items-center justify-center">
+                    <Smartphone className="text-slate-700" size={48} />
                     <div className="absolute top-3 right-3">
                       <span className="flex items-center gap-1 bg-slate-700/90 backdrop-blur-sm text-gray-400 px-2.5 py-1 rounded-full text-xs font-medium">
                         <Clock size={12} /> Soon
