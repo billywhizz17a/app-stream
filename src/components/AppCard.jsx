@@ -74,7 +74,7 @@ function AppCard({ app, launched }) {
               <span className="text-green-400 text-sm font-medium">Live</span>
             )}
             {app.google_play_url && (
-              <img src={`${import.meta.env.BASE_URL}google-play-badge.svg`} alt="Get it on Google Play" className="h-12 w-auto" />
+              <img src={`${import.meta.env.BASE_URL}google-play-badge.svg`} alt="Get it on Google Play" className="h-8 w-auto" />
             )}
           </div>
         </div>
