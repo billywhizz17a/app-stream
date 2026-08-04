@@ -1,6 +1,7 @@
 import { ArrowRight, Calendar, Check, Clock, Heart, Mail, Newspaper, Rocket, Shield, Smartphone, Sparkles, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import SocialIcons from '../components/SocialIcons'
 
 function Home() {
   const [news, setNews] = useState([])
