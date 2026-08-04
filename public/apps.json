@@ -196,20 +196,5 @@
       "Screenshot_20260619_120919_KC Legacy Booking.jpg",
       "qr code.jpeg"
     ]
-  },
-  {
-    "id": "app_006",
-    "name": "UK News Now",
-    "platform": "Both",
-    "category": "General",
-    "description": "",
-    "features": [],
-    "app_store_url": "",
-    "google_play_url": "",
-    "target_audience": "General audience",
-    "hashtags": [],
-    "launch_date": "2026-07-11",
-    "icon": "",
-    "screenshots": []
   }
 ]
