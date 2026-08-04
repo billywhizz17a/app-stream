@@ -58,7 +58,7 @@ function Apps() {
         </div>
 
         {/* App Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-8">
           {apps.map((app) => {
             const launched = isAppLaunched(app)
             const hasScreenshot = app.screenshots && app.screenshots.length > 0
@@ -82,7 +82,7 @@ function Apps() {
                   className="group flex flex-col h-full bg-slate-900 border-2 border-blue-400/60 rounded-2xl overflow-hidden hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300 hover:-translate-y-1"
                 >
                   {/* Screenshot Banner */}
-                  <div className="relative h-56 bg-slate-950 overflow-hidden flex-shrink-0">
+                  <div className="relative h-72 bg-slate-950 overflow-hidden flex-shrink-0">
                     {hasScreenshot ? (
                       <img
                         src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${app.screenshots[0]}`}
@@ -143,8 +143,8 @@ function Apps() {
           })}
 
           {/* Placeholder cards to fill the grid to a multiple of 4 */}
-          {apps.length < 8 && (
-            Array.from({ length: 8 - apps.length }).map((_, i) => (
+          {apps.length < 6 && (
+            Array.from({ length: 6 - apps.length }).map((_, i) => (
               <div key={`placeholder-${i}`} className="flex flex-col h-full">
                 <div className="mb-2 flex justify-start">
                   <span className="flex items-center gap-1 bg-slate-700/90 backdrop-blur-sm text-gray-400 px-2.5 py-1 rounded-full text-xs font-medium">
@@ -155,7 +155,7 @@ function Apps() {
                   className="flex flex-col h-full bg-slate-900 border-2 border-blue-400/40 border-dashed rounded-2xl overflow-hidden opacity-60"
                 >
                   {/* Screenshot Banner - same h-44 as real cards */}
-                  <div className="relative h-56 bg-slate-950 overflow-hidden flex-shrink-0">
+                  <div className="relative h-72 bg-slate-950 overflow-hidden flex-shrink-0">
                     <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
                       <Smartphone className="text-slate-700" size={32} />
                     </div>
