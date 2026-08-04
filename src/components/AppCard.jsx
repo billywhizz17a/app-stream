@@ -21,9 +21,20 @@ function AppCard({ app, launched }) {
         to={`/apps/${app.id}`}
         className="group flex flex-col h-full bg-slate-900 border-2 border-blue-400/60 rounded-2xl overflow-hidden hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300 hover:-translate-y-1"
       >
-        {/* App Icon Banner */}
+        {/* App Icon Banner / Video Preview */}
         <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-950 overflow-hidden flex-shrink-0 flex items-center justify-center">
-          <AppIcon app={app} size={96} />
+          {app.video ? (
+            <video
+              src={`${import.meta.env.BASE_URL}images/${app.id}/videos/${app.video}`}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          ) : (
+            <AppIcon app={app} size={96} />
+          )}
         </div>
 
         {/* Card Body */}
