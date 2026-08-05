@@ -51,7 +51,7 @@
     ],
     "launch_date": "2026-07-19",
     "icon": "Kalo 1.png",
-    "video": "Image to Video_20260729_104729.mp4",
+    "video": "",
     "screenshots": [
       "Screenshot_20260628_215526_Kalo.jpg",
       "Screenshot_20260628_215725_Kalo.jpg",
@@ -99,25 +99,14 @@
     ],
     "launch_date": "2026-07-12",
     "icon": "newsicon.png",
-    "video": "Image to Video_20260705_124755.mp4",
+    "video": "",
     "screenshots": [
       "g2.png",
       "generated-image-4-1782303692774.png",
       "g3.png",
       "g4.png",
       "g5.png",
-      "g6.png",
-      "playstore-1024x500-1783932581926.png",
-      "playstore-1024x500-1784742796177.png",
-      "playstore-1080x1920-shot1-1783935161788.png",
-      "playstore-1080x1920-shot1-1783935180141.png",
-      "playstore-1080x1920-shot1-1783935189586.png",
-      "playstore-1080x1920-shot2-1783935190050.png",
-      "playstore-1080x1920-shot3-1783935190407.png",
-      "playstore-1080x1920-shot4-1783935163005.png",
-      "playstore-1080x1920-shot4-1783935190768.png",
-      "playstore-1125x2000-shot1-1783935396939.png",
-      "playstore-2000x1125-shot1-1783936055910.png"
+      "g6.png"
     ]
   },
   {
@@ -153,18 +142,14 @@
       "#professionaldevelopment"
     ],
     "launch_date": "2026-07-20",
-    "icon": "512x512.png",
-    "video": "Image to Video_20260723_182249.mp4",
+    "icon": "icon.png",
+    "video": "",
     "screenshots": [
-      "10.png",
-      "playstore-1024x500-1784111247169.png",
-      "Screenshot_20260629_132328_WriteAI.jpg",
-      "playstore-1080x1920-shot1-1784111869711.png",
-      "playstore-1080x1920-shot2-1784111870168.png",
-      "playstore-1080x1920-shot3-1784111870548.png",
-      "playstore-1080x1920-shot4-1784111870913.png",
+      "Screenshot_20260629_132202_WriteAI.jpg",
+      "Screenshot_20260629_132211_WriteAI.jpg",
       "Screenshot_20260629_132229_WriteAI.jpg",
-      "Screenshot_20260629_132252_WriteAI.jpg"
+      "Screenshot_20260629_132252_WriteAI.jpg",
+      "Screenshot_20260629_132328_WriteAI.jpg"
     ]
   },
   {
@@ -188,43 +173,29 @@
     ],
     "launch_date": "2026-07-13",
     "icon": "Play Store.jpg",
-    "video": "Image to Video_20260723_183154.mp4",
+    "video": "",
     "screenshots": [
-      "Screenshot_20260712_111609_Mind Scape.jpg",
-      "playstore-1080x1920-shot1-1783889869709.png",
-      "playstore-1080x1920-shot2-1783889856647.png",
-      "playstore-1080x1920-shot3-1783889879132.png",
-      "playstore-1080x1920-shot4-1783889890364.png",
-      "playstore-1125x2000-shot1-1783891302649.png",
-      "Screenshot_20260712_111604_Mind Scape.jpg",
-      "Screenshot_20260712_111606_Mind Scape.jpg"
+      "PS1.jpg",
+      "ps2.jpg",
+      "ps3.png"
     ]
   },
   {
     "id": "app_005",
     "name": "KC Legacy Booking",
     "platform": "Both",
-    "category": "Lifestyle",
-    "description": "KC Legacy Mobile Valeting Covering Chesterfield & Surrounding Area's\nhttps://kclegacy.pythonanywhere.com/",
-    "features": [
-      "Booking service"
-    ],
+    "category": "General",
+    "description": "",
+    "features": [],
     "app_store_url": "",
     "google_play_url": "",
-    "target_audience": "Residents of Chesterfield and surrounding areas",
-    "hashtags": [
-      "#valetingservice",
-      "#mobileapp",
-      "#lifestyle"
-    ],
+    "target_audience": "General audience",
+    "hashtags": [],
     "launch_date": "2026-06-29",
-    "icon": "AI_TextToImage_20260614_133242_3.png",
+    "icon": "klc1.png",
     "video": "",
     "screenshots": [
-      "AI_TextToImage_20260614_133242_3.png",
-      "AI_TextToImage_20260614_133242_4.png",
-      "AI_TextToImage_20260614_133242_1.png",
-      "AI_TextToImage_20260614_133242_2.png",
+      "header.png",
       "Screenshot_20260619_120838_KC Legacy Booking.jpg",
       "Screenshot_20260619_120851_KC Legacy Booking.jpg",
       "Screenshot_20260619_120919_KC Legacy Booking.jpg",
