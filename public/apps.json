@@ -196,5 +196,27 @@
       "AI_TextToImage_20260614_133242_3.png",
       "AI_TextToImage_20260614_133242_4.png"
     ]
+  },
+  {
+    "id": "app_007",
+    "name": "Camp Compass",
+    "platform": "Android",
+    "category": "Lifestyle",
+    "description": "Navigating Tool",
+    "features": [],
+    "app_store_url": "",
+    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.campcompass",
+    "target_audience": "General audience",
+    "hashtags": [],
+    "launch_date": null,
+    "icon": "cc1.png",
+    "video": "Camp Compass 2.mp4",
+    "screenshots": [
+      "Screenshot_20260805_170657_Camp Compass.jpg",
+      "Screenshot_20260805_170714_Camp Compass.jpg",
+      "Screenshot_20260805_170737_Camp Compass.jpg",
+      "Screenshot_20260805_170759_Camp Compass.jpg",
+      "Screenshot_20260805_170836_Camp Compass.jpg"
+    ]
   }
 ]
