@@ -21,7 +21,7 @@ function AppCard({ app, launched }) {
         to={`/apps/${app.id}`}
         className="group flex flex-col h-full bg-slate-900 border-2 border-blue-400/60 rounded-2xl overflow-hidden hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300 hover:-translate-y-1"
       >
-        {/* App Icon Banner / Video Preview */}
+        {/* App Icon Banner / Video Preview / Hero Screenshot */}
         <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-950 overflow-hidden flex-shrink-0 flex items-center justify-center">
           {app.video ? (
             <video
@@ -30,6 +30,12 @@ function AppCard({ app, launched }) {
               loop
               muted
               playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          ) : app.screenshots && app.screenshots.length > 0 ? (
+            <img
+              src={`${import.meta.env.BASE_URL}images/${app.id}/screenshots/${app.screenshots[0]}`}
+              alt={`${app.name} preview`}
               className="absolute inset-0 w-full h-full object-cover"
             />
           ) : (
