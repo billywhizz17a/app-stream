@@ -74,7 +74,9 @@ function AppCard({ app, launched }) {
               <span className="text-green-400 text-sm font-medium">Live</span>
             )}
             {app.google_play_url && (
-              <img src={`${import.meta.env.BASE_URL}google-play-badge.svg`} alt="Get it on Google Play" className="h-8 w-auto" />
+              <a href={app.google_play_url} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="hover:opacity-80 transition-opacity">
+                <img src={`${import.meta.env.BASE_URL}google-play-badge.svg`} alt="Get it on Google Play" className="h-8 w-auto" />
+              </a>
             )}
           </div>
         </div>
