@@ -51,22 +51,14 @@
     ],
     "launch_date": "2026-07-19",
     "icon": "Kalo 1.png",
-    "video": "",
+    "video": "Image to Video_20260729_104729.mp4",
     "screenshots": [
       "Screenshot_20260628_215526_Kalo.jpg",
       "Screenshot_20260628_215725_Kalo.jpg",
-      "Screenshot_20260628_214852_Kalo.jpg",
       "Screenshot_20260628_214901_Kalo.jpg",
       "Screenshot_20260628_214920_Kalo.jpg",
-      "Screenshot_20260628_215000_Kalo.jpg",
-      "playstore-1080x1920-shot1-1784134631477.png",
-      "playstore-1080x1920-shot1-1784134934045.png",
-      "playstore-1080x1920-shot2-1784134631894.png",
-      "playstore-1080x1920-shot2-1784134934461.png",
-      "playstore-1080x1920-shot3-1784134632318.png",
-      "playstore-1080x1920-shot3-1784134934866.png",
-      "playstore-1080x1920-shot4-1784134632709.png",
-      "playstore-1080x1920-shot4-1784134935268.png"
+      "Screenshot_20260628_214852_Kalo.jpg",
+      "Screenshot_20260628_215000_Kalo.jpg"
     ]
   },
   {
@@ -85,7 +77,7 @@
       "Disguised as a standard news reader app"
     ],
     "app_store_url": "",
-    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.uknews&pli=1",
+    "google_play_url": "",
     "target_audience": "Individuals in vulnerable domestic situations who need to gather evidence discreetly whilst staying informed about UK & world news",
     "hashtags": [
       "UKNews",
@@ -99,7 +91,7 @@
     ],
     "launch_date": "2026-07-12",
     "icon": "newsicon.png",
-    "video": "",
+    "video": "Image to Video_20260705_124755.mp4",
     "screenshots": [
       "g2.png",
       "generated-image-4-1782303692774.png",
@@ -143,7 +135,7 @@
     ],
     "launch_date": "2026-07-20",
     "icon": "512x512.png",
-    "video": "",
+    "video": "Image to Video_20260723_182249.mp4",
     "screenshots": [
       "Screenshot_20260629_132202_WriteAI.jpg",
       "Screenshot_20260629_132211_WriteAI.jpg",
@@ -173,7 +165,7 @@
     ],
     "launch_date": "2026-07-13",
     "icon": "Play Store.jpg",
-    "video": "",
+    "video": "Image to Video_20260723_183154.mp4",
     "screenshots": [
       "PS1.jpg",
       "ps2.jpg",
