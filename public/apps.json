@@ -204,13 +204,19 @@
     "id": "app_005",
     "name": "KC Legacy Booking",
     "platform": "Both",
-    "category": "General",
-    "description": "",
-    "features": [],
+    "category": "Lifestyle",
+    "description": "KC Legacy Mobile Valeting Covering Chesterfield & Surrounding Area's\nhttps://kclegacy.pythonanywhere.com/",
+    "features": [
+      "Booking service"
+    ],
     "app_store_url": "",
     "google_play_url": "",
-    "target_audience": "General audience",
-    "hashtags": [],
+    "target_audience": "Residents of Chesterfield and surrounding areas",
+    "hashtags": [
+      "#valetingservice",
+      "#mobileapp",
+      "#lifestyle"
+    ],
     "launch_date": "2026-06-29",
     "icon": "klc1.png",
     "video": "",
