@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
@@ -40,6 +40,9 @@ jobs:
           cp public/login.html dist/
           cp public/hero.jpg dist/
           cp public/google-play-badge.svg dist/
+          cp public/AppStream.png dist/
+          cp public/robots.txt dist/
+          cp public/sitemap.xml dist/
           mkdir -p dist/images
           cp -r public/images/* dist/images/ 2>/dev/null || true
 

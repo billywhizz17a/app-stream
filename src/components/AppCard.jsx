@@ -39,7 +39,13 @@ function AppCard({ app, launched }) {
               className="absolute inset-0 w-full h-full object-cover"
             />
           ) : (
-            <AppIcon app={app} size={96} />
+            app.google_play_url ? (
+              <a href={app.google_play_url} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="hover:scale-110 transition-transform duration-200">
+                <AppIcon app={app} size={96} />
+              </a>
+            ) : (
+              <AppIcon app={app} size={96} />
+            )
           )}
         </div>
 
