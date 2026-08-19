@@ -172,31 +172,6 @@
     ]
   },
   {
-    "id": "app_005",
-    "name": "KC Legacy Booking",
-    "platform": "Both",
-    "category": "General",
-    "description": "",
-    "features": [],
-    "app_store_url": "",
-    "google_play_url": "",
-    "target_audience": "General audience",
-    "hashtags": [],
-    "launch_date": "2026-06-29",
-    "icon": "klc1.png",
-    "video": "",
-    "screenshots": [
-      "AI_TextToImage_20260614_133242_1.png",
-      "Screenshot_20260619_120838_KC Legacy Booking.jpg",
-      "Screenshot_20260619_120851_KC Legacy Booking.jpg",
-      "Screenshot_20260619_120919_KC Legacy Booking.jpg",
-      "qr code.jpeg",
-      "AI_TextToImage_20260614_133242_2.png",
-      "AI_TextToImage_20260614_133242_3.png",
-      "AI_TextToImage_20260614_133242_4.png"
-    ]
-  },
-  {
     "id": "app_007",
     "name": "Camp Compass",
     "platform": "Android",
@@ -227,6 +202,31 @@
       "Screenshot_20260805_170737_Camp Compass.jpg",
       "Screenshot_20260805_170759_Camp Compass.jpg",
       "Screenshot_20260805_170836_Camp Compass.jpg"
+    ]
+  },
+  {
+    "id": "app_005",
+    "name": "KC Legacy Booking",
+    "platform": "Both",
+    "category": "General",
+    "description": "",
+    "features": [],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "General audience",
+    "hashtags": [],
+    "launch_date": "2026-06-29",
+    "icon": "klc1.png",
+    "video": "",
+    "screenshots": [
+      "AI_TextToImage_20260614_133242_1.png",
+      "Screenshot_20260619_120838_KC Legacy Booking.jpg",
+      "Screenshot_20260619_120851_KC Legacy Booking.jpg",
+      "Screenshot_20260619_120919_KC Legacy Booking.jpg",
+      "qr code.jpeg",
+      "AI_TextToImage_20260614_133242_2.png",
+      "AI_TextToImage_20260614_133242_3.png",
+      "AI_TextToImage_20260614_133242_4.png"
     ]
   }
 ]
