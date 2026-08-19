@@ -149,7 +149,7 @@
     "name": "MindScape",
     "platform": "Both",
     "category": "Health & Fitness",
-    "description": "MindScape is a neuroscience-based mental wellness app that uses clinically-researched binaural beats, vagal nerve stimulation, and somatic trauma release to regulate the nervous system. Unlike generic meditation apps that offer guided meditations with celebrity voices, MindScape is built on peer-reviewed neuroscience \u2014 every session targets specific brainwave states and neurological pathways proven to reduce stress and anxiety. The app is designed for users dealing with anxiety, sleep issues, trauma recovery (including C-PTSD), and those seeking peak mental performance. It combines audio therapy, visual entrainment (strobe), breathwork, and adaptive personalization into a single platform.",
+    "description": "MindScape is a neuroscience-based mental wellness app that uses clinically-researched binaural beats, vagal nerve stimulation, and somatic trauma release to regulate the nervous system. Unlike generic meditation apps that offer guided meditations with celebrity voices, MindScape is built on peer-reviewed neuroscience — every session targets specific brainwave states and neurological pathways proven to reduce stress and anxiety. The app is designed for users dealing with anxiety, sleep issues, trauma recovery (including C-PTSD), and those seeking peak mental performance. It combines audio therapy, visual entrainment (strobe), breathwork, and adaptive personalization into a single platform.",
     "features": [
       "Binaural beats audio therapy",
       "Vagal nerve stimulation",
@@ -183,7 +183,7 @@
     "name": "KC Legacy Booking",
     "platform": "Both",
     "category": "General",
-    "description": "KC Legacy Valeting\nCovering Chesterfield & Surrounding Area's\nDownload Our Booking App From The QR Code",
+    "description": "",
     "features": [],
     "app_store_url": "",
     "google_play_url": "",
@@ -201,28 +201,6 @@
       "AI_TextToImage_20260614_133242_2.png",
       "AI_TextToImage_20260614_133242_3.png",
       "AI_TextToImage_20260614_133242_4.png"
-    ]
-  },
-  {
-    "id": "app_007",
-    "name": "Camp Compass",
-    "platform": "Android",
-    "category": "Lifestyle",
-    "description": "Navigating Tool",
-    "features": [],
-    "app_store_url": "",
-    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.campcompass",
-    "target_audience": "General audience",
-    "hashtags": [],
-    "launch_date": null,
-    "icon": "cc1.png",
-    "video": "Camp Compass 2.mp4",
-    "screenshots": [
-      "Screenshot_20260805_170657_Camp Compass.jpg",
-      "Screenshot_20260805_170714_Camp Compass.jpg",
-      "Screenshot_20260805_170737_Camp Compass.jpg",
-      "Screenshot_20260805_170759_Camp Compass.jpg",
-      "Screenshot_20260805_170836_Camp Compass.jpg"
     ]
   }
 ]
