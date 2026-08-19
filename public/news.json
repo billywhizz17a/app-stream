@@ -14,20 +14,6 @@
     "created_at": "2026-08-19T10:00:00.000000"
   },
   {
-    "id": "news_002",
-    "title": "Kalo AI Photo Food Recognition Can Identify Your Meal in Seconds",
-    "summary": "Kalo 4-tier AI recognition chain uses FatSecret, Edamam, and Google Gemini 2.0 Flash to identify food from photos and estimate nutrition.",
-    "content": "One of Kalo's standout features is its 4-tier AI photo food recognition chain. When you snap a photo of your meal, the app first tries FatSecret Image Recognition against its verified database of 14M+ foods. If no match is found, it falls back to the Edamam Vision API, then to Google Gemini 2.0 Flash, a multimodal AI that can identify specific dishes like Chilli con Carne rather than just Stew, and estimate portions and nutrition. If all AI tiers fail, users get a manual entry fallback. This means you can photograph your plate and get accurate calorie and macro data in seconds, without typing anything. Combined with the barcode scanner for packaged foods and multi-API unified search, Kalo makes food logging faster than any competitor on the market.",
-    "source_url": "",
-    "category": "Feature Highlight",
-    "app_id": "app_001",
-    "app_name": "Kalo",
-    "date": "2026-08-19T10:05:00.000000",
-    "phase": "Live",
-    "website_published": true,
-    "created_at": "2026-08-19T10:05:00.000000"
-  },
-  {
     "id": "news_003",
     "title": "UK News Now: A Personal Safety App Disguised as a News Reader",
     "summary": "UK News Now provides covert evidence gathering, an AI companion, and encrypted vault features behind the appearance of a standard news app.",
@@ -40,20 +26,6 @@
     "phase": "Live",
     "website_published": true,
     "created_at": "2026-08-19T10:10:00.000000"
-  },
-  {
-    "id": "news_004",
-    "title": "UK News Now AI Companion Provides 24/7 Emotional Support Discreetly",
-    "summary": "Powered by OpenAI GPT-4o and ElevenLabs voice, the AI companion offers real-time emotional support from within a seemingly normal news app.",
-    "content": "One of UK News Now's most powerful features is its AI companion, available on the Silver tier and above. Powered by OpenAI GPT-4o with voice interaction via ElevenLabs TTS, the companion provides a real-time WebSocket voice connection for users to process thoughts, get coping strategies, and find emotional support at any hour. The AI is discreetly accessed from within what appears to be a standard news app, meaning users in vulnerable situations can seek support without arousing suspicion. The companion is available 24/7, offering a listening ear when human support may not be accessible. Combined with the app's encrypted journal, evidence vault, and safety planning features, UK News Now provides a comprehensive support system for individuals navigating domestic abuse and narcissistic abuse situations.",
-    "source_url": "",
-    "category": "Feature Highlight",
-    "app_id": "app_002",
-    "app_name": "UK News Now",
-    "date": "2026-08-19T10:15:00.000000",
-    "phase": "Live",
-    "website_published": true,
-    "created_at": "2026-08-19T10:15:00.000000"
   },
   {
     "id": "news_005",
@@ -70,20 +42,6 @@
     "created_at": "2026-08-19T10:20:00.000000"
   },
   {
-    "id": "news_006",
-    "title": "Write AI Resume Optimizer Beats ATS Systems with Smart Keyword Matching",
-    "summary": "Write AI scores your resume against job descriptions, identifies missing keywords, and rewrites content with strong action verbs to pass Applicant Tracking Systems.",
-    "content": "Applicant Tracking Systems (ATS) reject up to 75% of resumes before a human ever sees them. Write AI tackles this problem head-on with its Resume Optimizer and ATS Keyword Scoring features. The Resume Optimizer rewrites your resume to match any job description, optimising for ATS with keyword matching, using strong action verbs, and quantifying achievements, all while keeping information truthful. The ATS Keyword Scoring feature scores your content against the job description, shows a keyword match percentage, and identifies missing keywords so you know exactly what to add. Combined with the Cover Letter Generator (5 tones, 14 languages) and the Kanban-style Application Tracker, Write AI gives job seekers a complete toolkit from application to interview. The app also saves your last 10 generations for easy reuse, and offers a dedicated student discount tier, making it the only AI writing app with a student-specific plan.",
-    "source_url": "",
-    "category": "Feature Highlight",
-    "app_id": "app_003",
-    "app_name": "Write AI",
-    "date": "2026-08-19T10:25:00.000000",
-    "phase": "Live",
-    "website_published": true,
-    "created_at": "2026-08-19T10:25:00.000000"
-  },
-  {
     "id": "news_007",
     "title": "MindScape Brings Neuroscience-Based Mental Wellness to Android",
     "summary": "MindScape uses clinically-researched binaural beats, vagal nerve stimulation, and somatic trauma release to regulate the nervous system.",
@@ -96,20 +54,6 @@
     "phase": "Live",
     "website_published": true,
     "created_at": "2026-08-19T10:30:00.000000"
-  },
-  {
-    "id": "news_008",
-    "title": "MindScape Somatic Trauma Release Helps C-PTSD Survivors Where Meditation Apps Cannot",
-    "summary": "Using 4.5Hz theta waves with 528Hz Solfeggio carriers, MindScape somatic sessions gently discharge stored tension based on polyvagal theory.",
-    "content": "Most meditation apps offer breathing exercises and calming sounds. MindScape goes much further with its Somatic Trauma Release sessions, which combine 4.5Hz theta waves with 528Hz Solfeggio carrier frequencies to address trauma at a neurological level. Based on polyvagal theory, these sessions help restore the Ventral Vagal Complex, gently discharging stored tension and bypassing cognitive blocks that traditional talk therapy and meditation cannot reach. Sessions include Safe State, Freeze Release, Amygdala Calm, and Somatic Trauma Release, each with 5-level intensity ratings from Gentle to Extreme. This makes MindScape particularly valuable for users dealing with C-PTSD and trauma recovery, who often find generic meditation apps ineffective or even triggering. The app also features Vagal Nerve Stimulation using 250Hz carrier waves, the exact frequency used in medical VNS studies, to reduce inflammation and activate the parasympathetic nervous system. Available on Google Play with a free tier and premium subscription.",
-    "source_url": "",
-    "category": "Feature Highlight",
-    "app_id": "app_004",
-    "app_name": "MindScape",
-    "date": "2026-08-19T10:35:00.000000",
-    "phase": "Live",
-    "website_published": true,
-    "created_at": "2026-08-19T10:35:00.000000"
   },
   {
     "id": "news_009",
@@ -126,6 +70,20 @@
     "created_at": "2026-08-19T10:40:00.000000"
   },
   {
+    "id": "news_011",
+    "title": "Camp Compass: Your Outdoor Navigation Companion",
+    "summary": "Camp Compass provides directional guidance and location tracking for campers, hikers, and outdoor enthusiasts.",
+    "content": "Camp Compass is a navigation tool designed for outdoor enthusiasts and campers. The app provides directional guidance and location tracking to help users navigate trails, campsites, and outdoor adventures with confidence. Whether you are hiking unfamiliar trails, setting up camp in a remote location, or exploring new outdoor destinations, Camp Compass keeps you oriented and on track. Available now on Google Play.",
+    "source_url": "",
+    "category": "App Spotlight",
+    "app_id": "app_007",
+    "app_name": "Camp Compass",
+    "date": "2026-08-19T10:50:00.000000",
+    "phase": "Live",
+    "website_published": true,
+    "created_at": "2026-08-19T10:50:00.000000"
+  },
+  {
     "id": "news_010",
     "title": "App Stream: A Curated Collection of Thoughtful Mobile Apps",
     "summary": "From health tracking to personal safety, AI writing to neuroscience-based wellness, App Stream delivers apps that genuinely help their users.",
@@ -138,5 +96,61 @@
     "phase": "",
     "website_published": true,
     "created_at": "2026-08-19T10:45:00.000000"
+  },
+  {
+    "id": "news_002",
+    "title": "Kalo AI Photo Food Recognition Can Identify Your Meal in Seconds",
+    "summary": "Kalo 4-tier AI recognition chain uses FatSecret, Edamam, and Google Gemini 2.0 Flash to identify food from photos and estimate nutrition.",
+    "content": "One of Kalo's standout features is its 4-tier AI photo food recognition chain. When you snap a photo of your meal, the app first tries FatSecret Image Recognition against its verified database of 14M+ foods. If no match is found, it falls back to the Edamam Vision API, then to Google Gemini 2.0 Flash, a multimodal AI that can identify specific dishes like Chilli con Carne rather than just Stew, and estimate portions and nutrition. If all AI tiers fail, users get a manual entry fallback. This means you can photograph your plate and get accurate calorie and macro data in seconds, without typing anything. Combined with the barcode scanner for packaged foods and multi-API unified search, Kalo makes food logging faster than any competitor on the market.",
+    "source_url": "",
+    "category": "Feature Highlight",
+    "app_id": "app_001",
+    "app_name": "Kalo",
+    "date": "2026-08-19T10:05:00.000000",
+    "phase": "Live",
+    "website_published": true,
+    "created_at": "2026-08-19T10:05:00.000000"
+  },
+  {
+    "id": "news_004",
+    "title": "UK News Now AI Companion Provides 24/7 Emotional Support Discreetly",
+    "summary": "Powered by OpenAI GPT-4o and ElevenLabs voice, the AI companion offers real-time emotional support from within a seemingly normal news app.",
+    "content": "One of UK News Now's most powerful features is its AI companion, available on the Silver tier and above. Powered by OpenAI GPT-4o with voice interaction via ElevenLabs TTS, the companion provides a real-time WebSocket voice connection for users to process thoughts, get coping strategies, and find emotional support at any hour. The AI is discreetly accessed from within what appears to be a standard news app, meaning users in vulnerable situations can seek support without arousing suspicion. The companion is available 24/7, offering a listening ear when human support may not be accessible. Combined with the app's encrypted journal, evidence vault, and safety planning features, UK News Now provides a comprehensive support system for individuals navigating domestic abuse and narcissistic abuse situations.",
+    "source_url": "",
+    "category": "Feature Highlight",
+    "app_id": "app_002",
+    "app_name": "UK News Now",
+    "date": "2026-08-19T10:15:00.000000",
+    "phase": "Live",
+    "website_published": true,
+    "created_at": "2026-08-19T10:15:00.000000"
+  },
+  {
+    "id": "news_006",
+    "title": "Write AI Resume Optimizer Beats ATS Systems with Smart Keyword Matching",
+    "summary": "Write AI scores your resume against job descriptions, identifies missing keywords, and rewrites content with strong action verbs to pass Applicant Tracking Systems.",
+    "content": "Applicant Tracking Systems (ATS) reject up to 75% of resumes before a human ever sees them. Write AI tackles this problem head-on with its Resume Optimizer and ATS Keyword Scoring features. The Resume Optimizer rewrites your resume to match any job description, optimising for ATS with keyword matching, using strong action verbs, and quantifying achievements, all while keeping information truthful. The ATS Keyword Scoring feature scores your content against the job description, shows a keyword match percentage, and identifies missing keywords so you know exactly what to add. Combined with the Cover Letter Generator (5 tones, 14 languages) and the Kanban-style Application Tracker, Write AI gives job seekers a complete toolkit from application to interview. The app also saves your last 10 generations for easy reuse, and offers a dedicated student discount tier, making it the only AI writing app with a student-specific plan.",
+    "source_url": "",
+    "category": "Feature Highlight",
+    "app_id": "app_003",
+    "app_name": "Write AI",
+    "date": "2026-08-19T10:25:00.000000",
+    "phase": "Live",
+    "website_published": true,
+    "created_at": "2026-08-19T10:25:00.000000"
+  },
+  {
+    "id": "news_008",
+    "title": "MindScape Somatic Trauma Release Helps C-PTSD Survivors Where Meditation Apps Cannot",
+    "summary": "Using 4.5Hz theta waves with 528Hz Solfeggio carriers, MindScape somatic sessions gently discharge stored tension based on polyvagal theory.",
+    "content": "Most meditation apps offer breathing exercises and calming sounds. MindScape goes much further with its Somatic Trauma Release sessions, which combine 4.5Hz theta waves with 528Hz Solfeggio carrier frequencies to address trauma at a neurological level. Based on polyvagal theory, these sessions help restore the Ventral Vagal Complex, gently discharging stored tension and bypassing cognitive blocks that traditional talk therapy and meditation cannot reach. Sessions include Safe State, Freeze Release, Amygdala Calm, and Somatic Trauma Release, each with 5-level intensity ratings from Gentle to Extreme. This makes MindScape particularly valuable for users dealing with C-PTSD and trauma recovery, who often find generic meditation apps ineffective or even triggering. The app also features Vagal Nerve Stimulation using 250Hz carrier waves, the exact frequency used in medical VNS studies, to reduce inflammation and activate the parasympathetic nervous system. Available on Google Play with a free tier and premium subscription.",
+    "source_url": "",
+    "category": "Feature Highlight",
+    "app_id": "app_004",
+    "app_name": "MindScape",
+    "date": "2026-08-19T10:35:00.000000",
+    "phase": "Live",
+    "website_published": true,
+    "created_at": "2026-08-19T10:35:00.000000"
   }
 ]
