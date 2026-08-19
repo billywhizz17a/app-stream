@@ -67,40 +67,85 @@ function Home() {
               <p className="text-gray-400 text-sm">Updates, launches, and announcements</p>
             </div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {news.map((item, i) => {
-              const newsApp = apps.find(a => a.id === item.app_id)
-              return (
-                <div key={i} onClick={() => setSelectedNews(item)} className="cursor-pointer bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
-                  <div className="flex items-center gap-3 mb-4">
-                    {newsApp && newsApp.icon && (
-                      <img src={`${import.meta.env.BASE_URL}images/${item.app_id}/icons/${newsApp.icon}`} alt={item.app_name} className="w-10 h-10 rounded-xl object-cover flex-shrink-0" />
-                    )}
-                    <div className="min-w-0">
-                      {item.app_name && (
-                        <span className="inline-block text-xs bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full font-medium border border-blue-500/20">
-                          {item.app_name}
+
+          {/* Featured news item (first/latest) */}
+          {news[0] && (() => {
+            const featuredApp = apps.find(a => a.id === news[0].app_id)
+            return (
+              <div onClick={() => setSelectedNews(news[0])} className="cursor-pointer mb-8 bg-gradient-to-br from-slate-900 to-slate-800 border-2 border-blue-400/40 rounded-3xl overflow-hidden hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-400/20 transition-all duration-300">
+                <div className="flex flex-col md:flex-row">
+                  {featuredApp && featuredApp.icon && (
+                    <div className="md:w-64 h-48 md:h-auto bg-slate-800 flex items-center justify-center flex-shrink-0">
+                      <img src={`${import.meta.env.BASE_URL}images/${news[0].app_id}/icons/${featuredApp.icon}`} alt={news[0].app_name} className="w-32 h-32 rounded-3xl object-cover" />
+                    </div>
+                  )}
+                  <div className="p-8 flex-1">
+                    <div className="flex items-center gap-3 mb-4">
+                      {news[0].app_name && (
+                        <span className="inline-block text-xs bg-blue-500/10 text-blue-400 px-3 py-1.5 rounded-full font-medium border border-blue-500/20">
+                          {news[0].app_name}
                         </span>
                       )}
+                      <span className="inline-block text-xs bg-purple-500/10 text-purple-400 px-3 py-1.5 rounded-full font-medium border border-purple-500/20">
+                        Featured
+                      </span>
                     </div>
+                    <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
+                      <Calendar size={14} />
+                      <span>{formatDate(news[0].date)}</span>
+                      {news[0].phase && <span className="text-gray-600">· {news[0].phase}</span>}
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">{news[0].title}</h3>
+                    {news[0].summary && (
+                      <p className="text-blue-100/80 text-base mb-3 font-medium">{news[0].summary}</p>
+                    )}
+                    <p className="text-gray-400 text-sm line-clamp-3 leading-relaxed mb-4">{news[0].content}</p>
+                    <span className="inline-flex items-center gap-1 text-blue-400 text-sm font-medium">
+                      Read more <ArrowRight size={14} />
+                    </span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
-                    <Calendar size={14} />
-                    <span>{formatDate(item.date)}</span>
-                    {item.phase && <span className="text-gray-600">· {item.phase}</span>}
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                  {item.summary && (
-                    <p className="text-blue-100/70 text-sm mb-2 font-medium line-clamp-2">{item.summary}</p>
-                  )}
-                  <p className="text-gray-400 text-sm line-clamp-3 leading-relaxed">{item.content}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-blue-400 text-sm font-medium">
-                    Read more <ArrowRight size={14} />
-                  </span>
                 </div>
-              )
-            })}
-          </div>
+              </div>
+            )
+          })()}
+
+          {/* Remaining news items in grid */}
+          {news.length > 1 && (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {news.slice(1).map((item, i) => {
+                const newsApp = apps.find(a => a.id === item.app_id)
+                return (
+                  <div key={i} onClick={() => setSelectedNews(item)} className="cursor-pointer bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
+                    <div className="flex items-center gap-3 mb-4">
+                      {newsApp && newsApp.icon && (
+                        <img src={`${import.meta.env.BASE_URL}images/${item.app_id}/icons/${newsApp.icon}`} alt={item.app_name} className="w-10 h-10 rounded-xl object-cover flex-shrink-0" />
+                      )}
+                      <div className="min-w-0">
+                        {item.app_name && (
+                          <span className="inline-block text-xs bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full font-medium border border-blue-500/20">
+                            {item.app_name}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
+                      <Calendar size={14} />
+                      <span>{formatDate(item.date)}</span>
+                      {item.phase && <span className="text-gray-600">· {item.phase}</span>}
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                    {item.summary && (
+                      <p className="text-blue-100/70 text-sm mb-2 font-medium line-clamp-2">{item.summary}</p>
+                    )}
+                    <p className="text-gray-400 text-sm line-clamp-3 leading-relaxed">{item.content}</p>
+                    <span className="mt-3 inline-flex items-center gap-1 text-blue-400 text-sm font-medium">
+                      Read more <ArrowRight size={14} />
+                    </span>
+                  </div>
+                )
+              })}
+            </div>
+          )}
         </section>
       )}
 
