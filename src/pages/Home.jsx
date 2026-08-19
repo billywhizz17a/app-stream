@@ -119,7 +119,7 @@ function Home() {
           {[
             { icon: Smartphone, title: 'Built for Mobile', desc: 'Every app is designed for smooth, native-feeling experiences on Android and iOS.', color: 'blue' },
             { icon: Shield, title: 'Privacy First', desc: 'We keep your data where it belongs — with you. No unnecessary tracking or selling.', color: 'green' },
-            { icon: Heart, title: 'Made with Care', desc: 'From wellness tools to news, each app is crafted to genuinely help its users.', color: 'rose' },
+            { icon: Heart, title: 'Made with Care', desc: 'From wellness tools to news, each app is crafted to genuinely help its users.', color: 'red' },
           ].map((item) => (
             <div key={item.title} className="bg-slate-900/60 border-2 border-blue-400/60 p-6 rounded-2xl hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
               <div className={`bg-${item.color}-500/10 w-12 h-12 rounded-xl flex items-center justify-center mb-4 border border-${item.color}-500/20`}>
