@@ -41,7 +41,7 @@ function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="z-0">
-          <img src={`${import.meta.env.BASE_URL}hero.jpg`} alt="" className="w-full max-h-[60vh] object-contain object-center" />
+          <img src={`${import.meta.env.BASE_URL}hero.jpg`} alt="" className="w-full aspect-[16/9] object-cover object-center" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:py-12 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
