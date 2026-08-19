@@ -68,7 +68,7 @@ function Home() {
             </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {news.slice(0, 6).map((item, i) => {
+            {news.slice(0, 10).map((item, i) => {
               const newsApp = apps.find(a => a.id === item.app_id)
               return (
                 <div key={i} onClick={() => setSelectedNews(item)} className="cursor-pointer bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
