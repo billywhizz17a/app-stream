@@ -148,20 +148,26 @@
     "id": "app_004",
     "name": "MindScape",
     "platform": "Both",
-    "category": "Education",
-    "description": "MindScape is an immersive educational app that brings web-based learning to life. Explore interactive multimedia content, premium features, and audio-supported lessons across science, history, arts and more. Perfect for curious adults who love to learn on the go.",
+    "category": "Health & Fitness",
+    "description": "MindScape is a neuroscience-based mental wellness app that uses clinically-researched binaural beats, vagal nerve stimulation, and somatic trauma release to regulate the nervous system. Unlike generic meditation apps that offer guided meditations with celebrity voices, MindScape is built on peer-reviewed neuroscience \u2014 every session targets specific brainwave states and neurological pathways proven to reduce stress and anxiety. The app is designed for users dealing with anxiety, sleep issues, trauma recovery (including C-PTSD), and those seeking peak mental performance. It combines audio therapy, visual entrainment (strobe), breathwork, and adaptive personalization into a single platform.",
     "features": [
-      "Web-based content display",
-      "Premium features",
-      "Audio support"
+      "Binaural beats audio therapy",
+      "Vagal nerve stimulation",
+      "Somatic trauma release",
+      "Visual entrainment (strobe)",
+      "Breathwork sessions",
+      "Adaptive personalization"
     ],
     "app_store_url": "",
     "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.mindscape",
-    "target_audience": "Adults interested in learning through web-based content",
+    "target_audience": "Users dealing with anxiety, sleep issues, trauma recovery (including C-PTSD), and those seeking peak mental performance",
     "hashtags": [
-      "#education",
-      "#learning",
-      "#webbasedcontent"
+      "#mentalhealth",
+      "#neuroscience",
+      "#anxietyrelief",
+      "#binauralbeats",
+      "#traumarecovery",
+      "#mindfulness"
     ],
     "launch_date": "2026-07-13",
     "icon": "Play Store.jpg",
