@@ -74,11 +74,13 @@ function Home() {
             return (
               <div onClick={() => setSelectedNews(news[0])} className="cursor-pointer mb-8 bg-gradient-to-br from-slate-900 to-slate-800 border-2 border-blue-400/40 rounded-3xl overflow-hidden hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-400/20 transition-all duration-300">
                 <div className="flex flex-col md:flex-row">
-                  {featuredApp && featuredApp.icon && (
-                    <div className="md:w-64 h-48 md:h-auto bg-slate-800 flex items-center justify-center flex-shrink-0">
+                  <div className="md:w-64 h-48 md:h-auto bg-slate-800 flex items-center justify-center flex-shrink-0">
+                    {featuredApp && featuredApp.icon ? (
                       <img src={`${import.meta.env.BASE_URL}images/${news[0].app_id}/icons/${featuredApp.icon}`} alt={news[0].app_name} className="w-32 h-32 rounded-3xl object-cover" />
-                    </div>
-                  )}
+                    ) : (
+                      <img src={`${import.meta.env.BASE_URL}AppStream.png`} alt="App Stream" className="w-32 h-32 rounded-3xl object-cover" />
+                    )}
+                  </div>
                   <div className="p-8 flex-1">
                     <div className="flex items-center gap-3 mb-4">
                       {news[0].app_name && (
@@ -117,8 +119,10 @@ function Home() {
                 return (
                   <div key={i} onClick={() => setSelectedNews(item)} className="cursor-pointer bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
                     <div className="flex items-center gap-3 mb-4">
-                      {newsApp && newsApp.icon && (
+                      {newsApp && newsApp.icon ? (
                         <img src={`${import.meta.env.BASE_URL}images/${item.app_id}/icons/${newsApp.icon}`} alt={item.app_name} className="w-10 h-10 rounded-xl object-cover flex-shrink-0" />
+                      ) : (
+                        <img src={`${import.meta.env.BASE_URL}AppStream.png`} alt="App Stream" className="w-10 h-10 rounded-xl object-cover flex-shrink-0" />
                       )}
                       <div className="min-w-0">
                         {item.app_name && (
