@@ -40,8 +40,8 @@ function Home() {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img src={`${import.meta.env.BASE_URL}hero.png`} alt="" className="w-full h-full object-cover object-center" />
+        <div className="z-0">
+          <img src={`${import.meta.env.BASE_URL}hero.png`} alt="" className="w-full h-auto object-contain" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:py-12 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
@@ -49,11 +49,6 @@ function Home() {
               <Sparkles size={14} />
               <span>Apps designed for everyday life</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">
-              Discover apps from
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">App Stream</span>
-            </h1>
             <p className="text-base md:text-lg text-gray-300 mb-6 leading-relaxed">
               A curated collection of thoughtful Android and iOS apps — from trusted news to wellness tools — built with care and clarity.
             </p>
