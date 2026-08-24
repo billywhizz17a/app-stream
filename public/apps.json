@@ -106,7 +106,7 @@
     "name": "Write AI",
     "platform": "Both",
     "category": "Productivity",
-    "description": "Write AI is a multi-tool AI writing application powered by OpenAI's GPT-4o. It combines 7 specialised writing tools, an application tracker, and ATS keyword scoring into a single app available on both Android and Web. Unlike most AI writing apps that focus on one use case, Write AI covers the entire writing needs of job seekers, students, professionals, and anyone who needs to produce written content quickly — all in one place. The app is built with Next.js 14, Tailwind CSS, and TypeScript, with a native Android version powered by Capacitor.",
+    "description": "Write AI is a multi-tool AI writing application powered by OpenAI's GPT-4o. It combines 7 specialised writing tools, an application tracker, and ATS keyword scoring into a single app available on both Android and Web. Unlike most AI writing apps that focus on one use case, Write AI covers the entire writing needs of job seekers, students, professionals, and anyone who needs to produce written content quickly \u2014 all in one place. The app is built with Next.js 14, Tailwind CSS, and TypeScript, with a native Android version powered by Capacitor.",
     "features": [
       "7 specialised AI writing tools",
       "Application tracker",
@@ -142,7 +142,7 @@
     "name": "MindScape",
     "platform": "Both",
     "category": "Health & Fitness",
-    "description": "MindScape is a neuroscience-based mental wellness app that uses clinically-researched binaural beats, vagal nerve stimulation, and somatic trauma release to regulate the nervous system. Unlike generic meditation apps that offer guided meditations with celebrity voices, MindScape is built on peer-reviewed neuroscience — every session targets specific brainwave states and neurological pathways proven to reduce stress and anxiety. The app is designed for users dealing with anxiety, sleep issues, trauma recovery (including C-PTSD), and those seeking peak mental performance. It combines audio therapy, visual entrainment (strobe), breathwork, and adaptive personalization into a single platform.",
+    "description": "MindScape is a neuroscience-based mental wellness app that uses clinically-researched binaural beats, vagal nerve stimulation, and somatic trauma release to regulate the nervous system. Unlike generic meditation apps that offer guided meditations with celebrity voices, MindScape is built on peer-reviewed neuroscience \u2014 every session targets specific brainwave states and neurological pathways proven to reduce stress and anxiety. The app is designed for users dealing with anxiety, sleep issues, trauma recovery (including C-PTSD), and those seeking peak mental performance. It combines audio therapy, visual entrainment (strobe), breathwork, and adaptive personalization into a single platform.",
     "features": [
       "Binaural beats audio therapy",
       "Vagal nerve stimulation",
