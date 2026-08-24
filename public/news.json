@@ -1,17 +1,17 @@
 [
   {
     "id": "news_001",
-    "title": "Kalo Launches All-in-One Health & Nutrition Tracker for Android",
-    "summary": "Kalo combines calorie tracking, AI meal planning, exercise monitoring, and psychological wellness tools into a single Android app.",
-    "content": "Kalo is a comprehensive health, nutrition, and fitness tracking app that integrates the entire health journey into one platform. Unlike competitors that focus on a single area, Kalo combines multi-API food search (FatSecret, Edamam, OpenFoodFacts, USDA), AI photo food recognition using Google Gemini 2.0 Flash, calorie and macro tracking, meal planning with recipe libraries across 7 cuisines, real-time exercise tracking with wearable sensor support, and a unique psychology module featuring an AI Coach, Craving Decoder, and Emotional Eating Detector. The app also includes cycle tracking for women's health, intermittent fasting timers, body composition tracking with progress photos, and a gamification system with challenges and leaderboards. Built with Java and Kotlin, Kalo integrates with Samsung Health, Huawei Health Kit, and Health Connect for accurate active calorie data. Available now on Google Play with a freemium model offering Free, Plus, Pro, and Pro Bundle tiers.",
+    "title": "Get Ready to Elevate Your Health Game with Kalo",
+    "summary": "The ultimate health and fitness tracker is coming soon! Discover the features that will revolutionize your wellness journey.",
+    "content": "Are you tired of juggling multiple apps to track your diet, exercise, and sleep? Do you struggle to find healthy recipes or meal plans tailored to your needs? Look no further than Kalo, the upcoming mobile app that's about to change the game for health enthusiasts everywhere. Launching on July 19th, 2026, this comprehensive platform will allow users to monitor and manage various aspects of their well-being in one convenient place. With features like calorie and macro tracking, meal planning, and community challenges, Kalo is designed to empower individuals to take control of their fitness journey. Whether you're a seasoned athlete or just starting out on your wellness path, this app promises to provide a holistic approach to health and nutrition. Stay tuned for its launch date and get ready to experience the ultimate in health tracking and management.",
     "source_url": "",
-    "category": "Launch Announcement",
+    "category": "App Spotlight",
     "app_id": "app_001",
-    "app_name": "Kalo",
-    "date": "2026-08-19T10:00:00.000000",
-    "phase": "Live",
+    "app_name": "",
+    "date": "2026-06-28T22:20:04.471403",
+    "phase": "",
     "website_published": true,
-    "created_at": "2026-08-19T10:00:00.000000"
+    "created_at": "2026-06-28T22:20:04.471410"
   },
   {
     "id": "news_003",
@@ -99,17 +99,17 @@
   },
   {
     "id": "news_002",
-    "title": "Kalo AI Photo Food Recognition Can Identify Your Meal in Seconds",
-    "summary": "Kalo 4-tier AI recognition chain uses FatSecret, Edamam, and Google Gemini 2.0 Flash to identify food from photos and estimate nutrition.",
-    "content": "One of Kalo's standout features is its 4-tier AI photo food recognition chain. When you snap a photo of your meal, the app first tries FatSecret Image Recognition against its verified database of 14M+ foods. If no match is found, it falls back to the Edamam Vision API, then to Google Gemini 2.0 Flash, a multimodal AI that can identify specific dishes like Chilli con Carne rather than just Stew, and estimate portions and nutrition. If all AI tiers fail, users get a manual entry fallback. This means you can photograph your plate and get accurate calorie and macro data in seconds, without typing anything. Combined with the barcode scanner for packaged foods and multi-API unified search, Kalo makes food logging faster than any competitor on the market.",
+    "title": "Get Ready to Revolutionize Your Health with Kalo",
+    "summary": "The ultimate health and fitness app is coming soon, offering a comprehensive suite of features to track and optimize your well-being.",
+    "content": "Are you tired of juggling multiple apps to track your calorie intake, exercise routine, and mood? Do you struggle to make sense of the data and create meaningful changes in your life? Kalo, the upcoming mobile app, is here to revolutionize the way you approach health and fitness. Launching on July 19th, this powerful tool combines a wide range of features into one intuitive platform, making it easier than ever to take control of your well-being.\n\nWith Kalo, you'll be able to track your calorie and macro intake, micronutrients, exercise, sleep, mood, and more. The app also provides meal planning, recipe search, and community challenges to keep you motivated and engaged. But that's not all - Kalo's AI Coach will analyze your data to provide personalized recommendations for improvement, while its Correlation Insights feature helps you identify patterns and trends in your habits.\n\nIf you're someone who's serious about their health and fitness journey, Kalo is a must-have tool. Download it now and get ready to transform your body and mind. Stay tuned for the launch on July 19th - trust us, you won't want to miss out!",
     "source_url": "",
-    "category": "Feature Highlight",
+    "category": "App Spotlight",
     "app_id": "app_001",
-    "app_name": "Kalo",
-    "date": "2026-08-19T10:05:00.000000",
-    "phase": "Live",
+    "app_name": "",
+    "date": "2026-06-28T23:21:19.817315",
+    "phase": "",
     "website_published": true,
-    "created_at": "2026-08-19T10:05:00.000000"
+    "created_at": "2026-06-28T23:21:19.817322"
   },
   {
     "id": "news_004",
