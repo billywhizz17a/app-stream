@@ -106,7 +106,7 @@
     "name": "Write AI",
     "platform": "Both",
     "category": "Productivity",
-    "description": "Write AI is a multi-tool AI writing application powered by OpenAI's GPT-4o. It combines 7 specialised writing tools, an application tracker, and ATS keyword scoring into a single app available on both Android and Web. Unlike most AI writing apps that focus on one use case, Write AI covers the entire writing needs of job seekers, students, professionals, and anyone who needs to produce written content quickly \u2014 all in one place. The app is built with Next.js 14, Tailwind CSS, and TypeScript, with a native Android version powered by Capacitor.",
+    "description": "Hero image for Write AI launch announcement. Show the app interface with text 'Write anything with AI'. Use brand colours purple and white.",
     "features": [
       "7 specialised AI writing tools",
       "Application tracker",
