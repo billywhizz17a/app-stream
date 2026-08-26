@@ -43,6 +43,9 @@ jobs:
           cp public/AppStream.png dist/
           cp public/robots.txt dist/
           cp public/sitemap.xml dist/
+          cp public/404.html dist/
+          mkdir -p dist/dl
+          cp public/dl/links.json dist/dl/
           mkdir -p dist/images
           cp -r public/images/* dist/images/ 2>/dev/null || true
 
