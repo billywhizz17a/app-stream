@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirecting…</title>
+<style>
+body { background: #0f172a; color: #94a3b8; font-family: ui-sans-serif, system-ui, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+.spinner { width: 24px; height: 24px; border: 3px solid #1e293b; border-top-color: #3b82f6; border-radius: 50%; animation: spin 0.8s linear infinite; margin-right: 12px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.error { color: #ef4444; }
+</style>
+</head>
+<body>
+<div id="status" style="display:flex;align-items:center;">
+  <div class="spinner"></div>
+  <span>Redirecting…</span>
+</div>
+<script>
+(function() {
+  var path = window.location.pathname;
+  var dlMatch = path.match(/^\/dl\/([A-Za-z0-9_-]+)$/);
+
+  if (dlMatch) {
+    var shortCode = dlMatch[1];
+
+    // Try to ping Tony's tracking endpoint (works if on same network)
+    try {
+      fetch('http://127.0.0.1:4000/dl/' + shortCode, { method: 'GET', mode: 'no-cors' }).catch(function(){});
+    } catch(e) {}
+
+    // Look up destination from links.json
+    fetch('/dl/links.json')
+      .then(function(r) { return r.json(); })
+      .then(function(links) {
+        var dest = links[shortCode];
+        if (dest) {
+          window.location.replace(dest);
+        } else {
+          document.getElementById('status').innerHTML = '<span class="error">Link not found: ' + shortCode + '</span>';
+        }
+      })
+      .catch(function() {
+        document.getElementById('status').innerHTML = '<span class="error">Could not load link data.</span>';
+      });
+  } else {
+    // Not a /dl/ path — redirect to home
+    window.location.replace('/');
+  }
+})();
+</script>
+</body>
+</html>

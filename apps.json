@@ -40,7 +40,7 @@
       "Recipe Images (curated per-item)"
     ],
     "app_store_url": "",
-    "google_play_url": "",
+    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.kalo",
     "target_audience": "Individuals interested in tracking their health and fitness metrics",
     "hashtags": [
       "#healthandfitness",
@@ -51,6 +51,7 @@
     ],
     "launch_date": "2026-07-19",
     "icon": "Kalo 1.png",
+    "video": "Image to Video_20260729_104729.mp4",
     "screenshots": [
       "Screenshot_20260628_215526_Kalo.jpg",
       "Screenshot_20260628_215725_Kalo.jpg",
@@ -76,7 +77,7 @@
       "Disguised as a standard news reader app"
     ],
     "app_store_url": "",
-    "google_play_url": "",
+    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.uknews&pli=1",
     "target_audience": "Individuals in vulnerable domestic situations who need to gather evidence discreetly whilst staying informed about UK & world news",
     "hashtags": [
       "UKNews",
@@ -90,6 +91,7 @@
     ],
     "launch_date": "2026-07-12",
     "icon": "newsicon.png",
+    "video": "Image to Video_20260705_124755.mp4",
     "screenshots": [
       "g2.png",
       "generated-image-4-1782303692774.png",
@@ -104,35 +106,29 @@
     "name": "Write AI",
     "platform": "Both",
     "category": "Productivity",
-    "description": "The app appears to be a note-taking and organization tool with features for editing, image upload, search, backup, tracking, analytics, health, share, map, authentication, and article management. It also includes features for message handling, push notifications, and secure data storage.",
+    "description": "Write AI is a multi-tool AI writing application powered by OpenAI's GPT-4o. It combines 7 specialised writing tools, an application tracker, and ATS keyword scoring into a single app available on both Android and Web. Unlike most AI writing apps that focus on one use case, Write AI covers the entire writing needs of job seekers, students, professionals, and anyone who needs to produce written content quickly — all in one place. The app is built with Next.js 14, Tailwind CSS, and TypeScript, with a native Android version powered by Capacitor.",
     "features": [
-      "Edit",
-      "Image upload",
-      "Search",
-      "Backup",
-      "Tracking",
-      "Analytics",
-      "Health",
-      "Share",
-      "Map",
-      "Authentication",
-      "Article management",
-      "Message handling",
-      "Push notifications"
+      "7 specialised AI writing tools",
+      "Application tracker",
+      "ATS keyword scoring",
+      "GPT-4o powered",
+      "Android and Web platforms",
+      "Next.js 14 + Tailwind CSS + TypeScript"
     ],
     "app_store_url": "",
-    "google_play_url": "",
-    "target_audience": "Students or professionals seeking to optimize their workflow and productivity",
+    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.writeai",
+    "target_audience": "Job seekers, students, professionals, and anyone who needs to produce written content quickly",
     "hashtags": [
       "#productivity",
-      "#note-taking",
-      "#organization",
-      "#workflowoptimization",
-      "#studentlife",
-      "#professionaldevelopment"
+      "#aiwriting",
+      "#jobsearch",
+      "#ats",
+      "#gpt4o",
+      "#careertools"
     ],
     "launch_date": "2026-07-20",
-    "icon": "icon.png",
+    "icon": "512x512.png",
+    "video": "Image to Video_20260723_182249.mp4",
     "screenshots": [
       "Screenshot_20260629_132202_WriteAI.jpg",
       "Screenshot_20260629_132211_WriteAI.jpg",
@@ -145,23 +141,30 @@
     "id": "app_004",
     "name": "MindScape",
     "platform": "Both",
-    "category": "Education",
-    "description": "The app uses a full-screen WebView to display web content, suggesting it is designed for educational purposes. The presence of premium features and audio support implies that the app may offer interactive or multimedia content.",
+    "category": "Health & Fitness",
+    "description": "MindScape is a neuroscience-based mental wellness app that uses clinically-researched binaural beats, vagal nerve stimulation, and somatic trauma release to regulate the nervous system. Unlike generic meditation apps that offer guided meditations with celebrity voices, MindScape is built on peer-reviewed neuroscience — every session targets specific brainwave states and neurological pathways proven to reduce stress and anxiety. The app is designed for users dealing with anxiety, sleep issues, trauma recovery (including C-PTSD), and those seeking peak mental performance. It combines audio therapy, visual entrainment (strobe), breathwork, and adaptive personalization into a single platform.",
     "features": [
-      "Web-based content display",
-      "Premium features",
-      "Audio support"
+      "Binaural beats audio therapy",
+      "Vagal nerve stimulation",
+      "Somatic trauma release",
+      "Visual entrainment (strobe)",
+      "Breathwork sessions",
+      "Adaptive personalization"
     ],
     "app_store_url": "",
-    "google_play_url": "",
-    "target_audience": "Adults interested in learning through web-based content",
+    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.mindscape",
+    "target_audience": "Users dealing with anxiety, sleep issues, trauma recovery (including C-PTSD), and those seeking peak mental performance",
     "hashtags": [
-      "#education",
-      "#learning",
-      "#webbasedcontent"
+      "#mentalhealth",
+      "#neuroscience",
+      "#anxietyrelief",
+      "#binauralbeats",
+      "#traumarecovery",
+      "#mindfulness"
     ],
     "launch_date": "2026-07-13",
     "icon": "Play Store.jpg",
+    "video": "Image to Video_20260723_183154.mp4",
     "screenshots": [
       "PS1.jpg",
       "ps2.jpg",
@@ -169,24 +172,75 @@
     ]
   },
   {
+    "id": "app_007",
+    "name": "Camp Compass",
+    "platform": "Android",
+    "category": "Travel & Local",
+    "description": "Camp Compass is a navigation tool designed for outdoor enthusiasts and campers. The app provides directional guidance and location tracking to help users navigate trails, campsites, and outdoor adventures with confidence.",
+    "features": [
+      "Navigation and directional guidance",
+      "Location tracking",
+      "Trail and campsite navigation",
+      "Outdoor adventure companion"
+    ],
+    "app_store_url": "",
+    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.campcompass",
+    "target_audience": "Outdoor enthusiasts, campers, and hikers",
+    "hashtags": [
+      "#navigation",
+      "#camping",
+      "#outdoors",
+      "#hiking",
+      "#compass"
+    ],
+    "launch_date": "2026-08-05",
+    "icon": "cc1.png",
+    "video": "Camp Compass.mp4",
+    "screenshots": [
+      "Screenshot_20260805_170657_Camp Compass.jpg",
+      "Screenshot_20260805_170714_Camp Compass.jpg",
+      "Screenshot_20260805_170737_Camp Compass.jpg",
+      "Screenshot_20260805_170759_Camp Compass.jpg",
+      "Screenshot_20260805_170836_Camp Compass.jpg"
+    ]
+  },
+  {
     "id": "app_005",
     "name": "KC Legacy Booking",
     "platform": "Both",
-    "category": "General",
-    "description": "",
-    "features": [],
+    "category": "Auto & Vehicles",
+    "description": "KC Legacy Booking is a car valeting and detailing service booking app that lets customers schedule, manage, and track their vehicle cleaning appointments with ease. Users can browse available valeting packages, select preferred dates and times, and book services directly from their phone. The app provides real-time appointment status updates, service history, and payment management, making it simple for both customers and service providers to stay organised.",
+    "features": [
+      "Book car valeting appointments",
+      "Browse valeting and detailing packages",
+      "Real-time appointment status updates",
+      "Service history tracking",
+      "Payment management",
+      "Push notification reminders"
+    ],
     "app_store_url": "",
     "google_play_url": "",
-    "target_audience": "General audience",
-    "hashtags": [],
+    "target_audience": "Car owners looking for professional valeting and detailing services",
+    "hashtags": [
+      "#carvaleting",
+      "#cardetailing",
+      "#carcare",
+      "#bookingapp",
+      "#autodetailing",
+      "#valet"
+    ],
     "launch_date": "2026-06-29",
     "icon": "klc1.png",
+    "video": "",
     "screenshots": [
-      "header.png",
+      "AI_TextToImage_20260614_133242_1.png",
       "Screenshot_20260619_120838_KC Legacy Booking.jpg",
       "Screenshot_20260619_120851_KC Legacy Booking.jpg",
       "Screenshot_20260619_120919_KC Legacy Booking.jpg",
-      "qr code.jpeg"
+      "qr code.jpeg",
+      "AI_TextToImage_20260614_133242_2.png",
+      "AI_TextToImage_20260614_133242_3.png",
+      "AI_TextToImage_20260614_133242_4.png"
     ]
   }
 ]

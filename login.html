@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - App Stream</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .login-container {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 360px;
+    }
+    .login-container h1 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      margin-bottom: 0.25rem;
+      color: #94a3b8;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 0.625rem 0.75rem;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      color: #e2e8f0;
+      font-size: 0.875rem;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+    .btn {
+      width: 100%;
+      padding: 0.625rem;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    .btn:hover { background: #1d4ed8; }
+    .error {
+      color: #ef4444;
+      font-size: 0.75rem;
+      text-align: center;
+      margin-top: 0.75rem;
+      display: none;
+    }
+    .success {
+      color: #22c55e;
+      font-size: 0.875rem;
+      text-align: center;
+      margin-top: 0.75rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>App Stream Login</h1>
+    <form id="loginForm" method="post" action="/login.html">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <p class="error" id="error">Invalid credentials</p>
+      <p class="success" id="success">Login successful. Redirecting...</p>
+    </form>
+  </div>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      if (username === 'admin' && password === 'AppStream2024!') {
+        document.cookie = 'appstream_auth=authenticated; path=/; max-age=86400';
+        document.getElementById('error').style.display = 'none';
+        document.getElementById('success').style.display = 'block';
+        setTimeout(function() {
+          window.location.href = '/app-ads.txt';
+        }, 1000);
+      } else {
+        document.getElementById('error').style.display = 'block';
+        document.getElementById('success').style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
