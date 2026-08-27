@@ -16,6 +16,8 @@ body { background: #0f172a; color: #94a3b8; font-family: ui-sans-serif, system-u
   <div class="spinner"></div>
   <span>Redirecting…</span>
 </div>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 <script>
 (function() {
   var path = window.location.pathname;
@@ -24,12 +26,31 @@ body { background: #0f172a; color: #94a3b8; font-family: ui-sans-serif, system-u
   if (dlMatch) {
     var shortCode = dlMatch[1];
 
-    // Try to ping Tony's tracking endpoint (works if on same network)
-    try {
-      fetch('http://127.0.0.1:4000/dl/' + shortCode, { method: 'GET', mode: 'no-cors' }).catch(function(){});
-    } catch(e) {}
+    // Initialize Firebase (same project as EmilyApp)
+    var firebaseConfig = {
+      apiKey: 'AIzaSyC5JAI1hQfOstw1Bcaj0-wVBMKj4jKPMnQ',
+      authDomain: 'emily-pa-84815.firebaseapp.com',
+      projectId: 'emily-pa-84815',
+      storageBucket: 'emily-pa-84815.firebasestorage.app',
+      messagingSenderId: '1003937221612',
+      appId: '1:1003937221612:web:45907456e370df3fa84ec9',
+    };
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
 
-    // Look up destination from links.json
+    // Log the click to Firebase (fire-and-forget)
+    db.collection('deeplink_clicks').add({
+      shortCode: shortCode,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      userAgent: navigator.userAgent,
+      referrer: document.referrer,
+      language: navigator.language,
+      platform: navigator.platform || '',
+    }).catch(function(e) {
+      console.error('Click log error:', e);
+    });
+
+    // Look up destination from links.json and redirect
     fetch('/dl/links.json')
       .then(function(r) { return r.json(); })
       .then(function(links) {
