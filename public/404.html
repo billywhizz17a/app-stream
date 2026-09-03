@@ -1,74 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redirecting…</title>
-<style>
-body { background: #0f172a; color: #94a3b8; font-family: ui-sans-serif, system-ui, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
-.spinner { width: 24px; height: 24px; border: 3px solid #1e293b; border-top-color: #3b82f6; border-radius: 50%; animation: spin 0.8s linear infinite; margin-right: 12px; }
-@keyframes spin { to { transform: rotate(360deg); } }
-.error { color: #ef4444; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting…</title>
+  <style>
+    body {
+      background: #0f172a;
+      color: #94a3b8;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .spinner {
+      width: 24px;
+      height: 24px;
+      border: 3px solid #1e293b;
+      border-top-color: #3b82f6;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-right: 12px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .error {
+      color: #ef4444;
+    }
+  </style>
 </head>
+
 <body>
-<div id="status" style="display:flex;align-items:center;">
-  <div class="spinner"></div>
-  <span>Redirecting…</span>
-</div>
-<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
-<script>
-(function() {
-  var path = window.location.pathname;
-  var dlMatch = path.match(/^\/dl\/([A-Za-z0-9_-]+)$/);
+  <div id="status" style="display:flex;align-items:center;">
+    <div class="spinner"></div>
+    <span>Redirecting…</span>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      var dlMatch = path.match(/^\/dl\/([A-Za-z0-9_-]+)$/);
 
-  if (dlMatch) {
-    var shortCode = dlMatch[1];
+      if (dlMatch) {
+        var shortCode = dlMatch[1];
 
-    // Initialize Firebase (same project as EmilyApp)
-    var firebaseConfig = {
-      apiKey: 'AIzaSyC5JAI1hQfOstw1Bcaj0-wVBMKj4jKPMnQ',
-      authDomain: 'emily-pa-84815.firebaseapp.com',
-      projectId: 'emily-pa-84815',
-      storageBucket: 'emily-pa-84815.firebasestorage.app',
-      messagingSenderId: '1003937221612',
-      appId: '1:1003937221612:web:45907456e370df3fa84ec9',
-    };
-    firebase.initializeApp(firebaseConfig);
-    var db = firebase.firestore();
+        // Initialize Firebase (same project as EmilyApp)
+        var firebaseConfig = {
+          apiKey: 'AIzaSyC5JAI1hQfOstw1Bcaj0-wVBMKj4jKPMnQ',
+          authDomain: 'emily-pa-84815.firebaseapp.com',
+          projectId: 'emily-pa-84815',
+          storageBucket: 'emily-pa-84815.firebasestorage.app',
+          messagingSenderId: '1003937221612',
+          appId: '1:1003937221612:web:45907456e370df3fa84ec9',
+        };
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
 
-    // Log the click to Firebase (fire-and-forget)
-    db.collection('deeplink_clicks').add({
-      shortCode: shortCode,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      userAgent: navigator.userAgent,
-      referrer: document.referrer,
-      language: navigator.language,
-      platform: navigator.platform || '',
-    }).catch(function(e) {
-      console.error('Click log error:', e);
-    });
+        // Log the click to Firebase (fire-and-forget)
+        db.collection('deeplink_clicks').add({
+          shortCode: shortCode,
+          timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+          userAgent: navigator.userAgent,
+          referrer: document.referrer,
+          language: navigator.language,
+          platform: navigator.platform || '',
+        }).catch(function (e) {
+          console.error('Click log error:', e);
+        });
 
-    // Look up destination from links.json and redirect
-    fetch('/dl/links.json')
-      .then(function(r) { return r.json(); })
-      .then(function(links) {
-        var dest = links[shortCode];
-        if (dest) {
-          window.location.replace(dest);
-        } else {
-          document.getElementById('status').innerHTML = '<span class="error">Link not found: ' + shortCode + '</span>';
-        }
-      })
-      .catch(function() {
-        document.getElementById('status').innerHTML = '<span class="error">Could not load link data.</span>';
-      });
-  } else {
-    // Not a /dl/ path — redirect to home
-    window.location.replace('/');
-  }
-})();
-</script>
+        // Also ping Tony's server with click details (fire-and-forget)
+        try {
+          fetch('http://127.0.0.1:4000/api/deeplink-click', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              shortCode: shortCode,
+              referrer: document.referrer || '',
+              userAgent: navigator.userAgent || '',
+              language: navigator.language || '',
+            }),
+            mode: 'no-cors',
+          }).catch(function () { });
+        } catch (e) { }
+
+        // Look up destination from links.json and redirect
+        fetch('/dl/links.json')
+          .then(function (r) { return r.json(); })
+          .then(function (links) {
+            var dest = links[shortCode];
+            if (dest) {
+              window.location.replace(dest);
+            } else {
+              document.getElementById('status').innerHTML = '<span class="error">Link not found: ' + shortCode + '</span>';
+            }
+          })
+          .catch(function () {
+            document.getElementById('status').innerHTML = '<span class="error">Could not load link data.</span>';
+          });
+      } else {
+        // Not a /dl/ path — redirect to home
+        window.location.replace('/');
+      }
+    })();
+  </script>
 </body>
+
 </html>
