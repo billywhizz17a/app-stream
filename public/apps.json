@@ -427,5 +427,31 @@
     "icon": "",
     "video": "",
     "screenshots": []
+  },
+  {
+    "id": "app_026",
+    "name": "BBQ Grills Helper",
+    "platform": "Android",
+    "category": "Food & Drink",
+    "description": "BBQ Grills Helper provides grilling guides, timers, temperature charts and recipes for barbecue enthusiasts.",
+    "features": [
+      "Grilling guides",
+      "Timers",
+      "Temperature charts",
+      "BBQ recipes"
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "Barbecue enthusiasts",
+    "hashtags": [
+      "bbq",
+      "grilling",
+      "barbecue",
+      "recipes"
+    ],
+    "launch_date": null,
+    "icon": "",
+    "video": "",
+    "screenshots": []
   }
 ]
