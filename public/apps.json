@@ -183,7 +183,7 @@
     "description": "Navigating Tool",
     "features": [],
     "app_store_url": "",
-    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.campcompass",
+    "google_play_url": "",
     "target_audience": "General audience",
     "hashtags": [],
     "launch_date": null,
@@ -196,6 +196,36 @@
       "Screenshot_20260805_170759_Camp Compass.jpg",
       "Screenshot_20260805_170836_Camp Compass.jpg"
     ]
+  },
+  {
+    "id": "app_005",
+    "name": "KC Legacy Booking",
+    "platform": "Both",
+    "category": "Auto & Vehicles",
+    "description": "KC Legacy Booking is a car valeting and detailing service booking app that lets customers schedule, manage, and track their vehicle cleaning appointments with ease. Users can browse available valeting packages, select preferred dates and times, and book services directly from their phone. The app provides real-time appointment status updates, service history, and payment management, making it simple for both customers and service providers to stay organised.",
+    "features": [
+      "Book car valeting appointments",
+      "Browse valeting and detailing packages",
+      "Real-time appointment status updates",
+      "Service history tracking",
+      "Payment management",
+      "Push notification reminders"
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "Car owners looking for professional valeting and detailing services",
+    "hashtags": [
+      "#carvaleting",
+      "#cardetailing",
+      "#carcare",
+      "#bookingapp",
+      "#autodetailing",
+      "#valet"
+    ],
+    "launch_date": "2026-06-29",
+    "icon": "klc1.png",
+    "video": "",
+    "screenshots": []
   },
   {
     "id": "app_008",
@@ -225,7 +255,7 @@
       ""
     ],
     "app_store_url": "",
-    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.soundmind",
+    "google_play_url": "",
     "target_audience": "General audience",
     "hashtags": [],
     "launch_date": null,
@@ -243,7 +273,7 @@
       ""
     ],
     "app_store_url": "",
-    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.mindfulmate",
+    "google_play_url": "",
     "target_audience": "General audience",
     "hashtags": [],
     "launch_date": null,
@@ -300,7 +330,7 @@
       ""
     ],
     "app_store_url": "",
-    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.medminder",
+    "google_play_url": "",
     "target_audience": "General audience",
     "hashtags": [],
     "launch_date": null,
@@ -372,41 +402,11 @@
     "description": "",
     "features": [],
     "app_store_url": "",
-    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.aiwriter",
+    "google_play_url": "",
     "target_audience": "",
     "hashtags": [],
     "launch_date": null,
     "icon": "",
-    "video": "",
-    "screenshots": []
-  },
-  {
-    "id": "app_005",
-    "name": "KC Legacy Booking",
-    "platform": "Both",
-    "category": "Auto & Vehicles",
-    "description": "KC Legacy Booking is a car valeting and detailing service booking app that lets customers schedule, manage, and track their vehicle cleaning appointments with ease. Users can browse available valeting packages, select preferred dates and times, and book services directly from their phone. The app provides real-time appointment status updates, service history, and payment management, making it simple for both customers and service providers to stay organised.",
-    "features": [
-      "Book car valeting appointments",
-      "Browse valeting and detailing packages",
-      "Real-time appointment status updates",
-      "Service history tracking",
-      "Payment management",
-      "Push notification reminders"
-    ],
-    "app_store_url": "",
-    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.kclegacybooking",
-    "target_audience": "Car owners looking for professional valeting and detailing services",
-    "hashtags": [
-      "#carvaleting",
-      "#cardetailing",
-      "#carcare",
-      "#bookingapp",
-      "#autodetailing",
-      "#valet"
-    ],
-    "launch_date": "2026-06-29",
-    "icon": "klc1.png",
     "video": "",
     "screenshots": []
   },
@@ -418,7 +418,7 @@
     "description": "",
     "features": [],
     "app_store_url": "",
-    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.singlechef",
+    "google_play_url": "",
     "target_audience": "",
     "hashtags": [],
     "launch_date": null,
