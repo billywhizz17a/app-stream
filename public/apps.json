@@ -238,7 +238,7 @@
   },
   {
     "id": "app_008",
-    "name": "NewApp",
+    "name": "SoundScout",
     "platform": "Android",
     "category": "Music Discovery, Education",
     "description": "SoundScout is an AI-powered music discovery app that utilizes natural language processing (NLP) to help users explore and learn about various genres of music. Users can input keywords, emotions, or moods, and the app will suggest songs and artists that match their preferences.",
