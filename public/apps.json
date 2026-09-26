@@ -198,6 +198,40 @@
     ]
   },
   {
+    "id": "app_013",
+    "name": "MedMinder",
+    "platform": "Android",
+    "category": "Health and Wellness",
+    "description": "MedMinder is a personalized medication reminder app that uses AI-powered natural language processing to help users manage their medication regimens. The app will allow users to input their medication schedule, dosages, and any allergies or sensitivities, and will then provide personalized reminders, alerts, and medication tracking features.",
+    "features": [
+      ""
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "General audience",
+    "hashtags": [],
+    "launch_date": null,
+    "icon": "ic_launcher.png",
+    "video": "",
+    "screenshots": []
+  },
+  {
+    "id": "app_025",
+    "name": "Single Chef",
+    "platform": "Android",
+    "category": "Lifestyle",
+    "description": "",
+    "features": [],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "",
+    "hashtags": [],
+    "launch_date": null,
+    "icon": "icon.png",
+    "video": "",
+    "screenshots": []
+  },
+  {
     "id": "app_005",
     "name": "KC Legacy Booking",
     "platform": "Both",
@@ -321,24 +355,6 @@
     "screenshots": []
   },
   {
-    "id": "app_013",
-    "name": "MedMinder",
-    "platform": "Android",
-    "category": "Health and Wellness",
-    "description": "MedMinder is a personalized medication reminder app that uses AI-powered natural language processing to help users manage their medication regimens. The app will allow users to input their medication schedule, dosages, and any allergies or sensitivities, and will then provide personalized reminders, alerts, and medication tracking features.",
-    "features": [
-      ""
-    ],
-    "app_store_url": "",
-    "google_play_url": "",
-    "target_audience": "General audience",
-    "hashtags": [],
-    "launch_date": null,
-    "icon": "ic_launcher.png",
-    "video": "",
-    "screenshots": []
-  },
-  {
     "id": "app_017",
     "name": "SmartVoice",
     "platform": "Android",
@@ -407,22 +423,6 @@
     "hashtags": [],
     "launch_date": null,
     "icon": "",
-    "video": "",
-    "screenshots": []
-  },
-  {
-    "id": "app_025",
-    "name": "Single Chef",
-    "platform": "Android",
-    "category": "Lifestyle",
-    "description": "",
-    "features": [],
-    "app_store_url": "",
-    "google_play_url": "",
-    "target_audience": "",
-    "hashtags": [],
-    "launch_date": null,
-    "icon": "icon.png",
     "video": "",
     "screenshots": []
   },
