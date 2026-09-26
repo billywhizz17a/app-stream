@@ -1,19 +1,5 @@
 [
   {
-    "id": "news_010",
-    "title": "MindScape Mobile App Launches to Deliver Web-Based Educational Content",
-    "summary": "New app offers interactive learning experience for adults with web-based content display, premium features, and audio support.",
-    "content": "FOR IMMEDIATE RELEASE\n\nDateline: New York City, USA - July 13, 2026\n\nMindScape, a new mobile app designed to provide educational content through web-based resources, is set to launch on July 13, 2026. The app's comprehensive features are tailored to cater to the needs of adults seeking interactive learning experiences.\n\nThe MindScape app utilizes a full-screen WebView to display web content, making it an ideal platform for accessing online educational materials. Additionally, its premium features and audio support enable users to engage with multimedia content, enhancing their overall learning experience.\n\nAccording to Sarah Lee, CEO of MindScape, 'Our goal is to bridge the gap between traditional education and modern technology, providing adults with a flexible and engaging way to learn new skills.'\n\nAbout MindScape\n\nMindScape is an innovative mobile app company dedicated to creating cutting-edge educational solutions. Our mission is to empower individuals by making learning accessible and enjoyable through web-based content.\n\nFor more information about the MindScape app, please contact:\nEmily Chen\nMarketing Manager, MindScape\n Phone: 555-1234\n Email: [emily.chen@mindscapemobile.com](mailto:emily.chen@mindscapemobile.com)\n###",
-    "source_url": "",
-    "category": "App Spotlight",
-    "app_id": "app_004",
-    "app_name": "MindScape",
-    "date": "2026-06-29T17:27:35.429577",
-    "phase": "Pre-Launch",
-    "website_published": true,
-    "created_at": "2026-06-29T17:27:35.429593"
-  },
-  {
     "id": "news_009",
     "title": "Write AI: The Ultimate Note-Taking Solution for a More Productive You",
     "summary": "Get ready to revolutionize your workflow with Write AI, the innovative note-taking app that's set to launch on July 20th.",
