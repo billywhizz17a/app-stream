@@ -73,213 +73,211 @@ function Home() {
         </div>
       </section>
 
-      {/* News Section */}
-      {!loading && news.length > 0 && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
-          <div className="flex items-center gap-3 mb-6">
-            <Newspaper className="text-blue-400" size={28} />
-            <div>
-              <h2 className="text-3xl font-bold text-white">Latest News</h2>
-              <p className="text-gray-400 text-sm">Updates, launches, and announcements</p>
-            </div>
-          </div>
-
-          {/* Featured news item (first/latest) */}
-          {news[0] && (() => {
-            const featuredApp = apps.find(a => a.id === news[0].app_id)
-            return (
-              <div onClick={() => setSelectedNews(news[0])} className="cursor-pointer mb-8 bg-gradient-to-br from-slate-900 to-slate-800 border-2 border-blue-400/40 rounded-3xl overflow-hidden hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-400/20 transition-all duration-300">
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-64 h-48 md:h-auto bg-slate-800 flex items-center justify-center flex-shrink-0">
-                    {featuredApp && featuredApp.icon ? (
-                      <img src={`${import.meta.env.BASE_URL}images/${news[0].app_id}/icons/${featuredApp.icon}`} alt={news[0].app_name} className="w-32 h-32 rounded-3xl object-cover" />
-                    ) : (
-                      <img src={`${import.meta.env.BASE_URL}AppStream.png`} alt="App Stream" className="w-32 h-32 rounded-3xl object-cover" />
-                    )}
-                  </div>
-                  <div className="p-8 flex-1">
-                    <div className="flex items-center gap-3 mb-4">
-                      {news[0].app_name && (
-                        <span className="inline-block text-xs bg-blue-500/10 text-blue-400 px-3 py-1.5 rounded-full font-medium border border-blue-500/20">
-                          {news[0].app_name}
-                        </span>
-                      )}
-                      <span className="inline-block text-xs bg-purple-500/10 text-purple-400 px-3 py-1.5 rounded-full font-medium border border-purple-500/20">
-                        Featured
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
-                      <Calendar size={14} />
-                      <span>{formatDate(news[0].date)}</span>
-                      {news[0].phase && <span className="text-gray-600">· {news[0].phase}</span>}
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">{news[0].title}</h3>
-                    {news[0].summary && (
-                      <p className="text-blue-100/80 text-base mb-3 font-medium">{news[0].summary}</p>
-                    )}
-                    <p className="text-gray-400 text-sm line-clamp-3 leading-relaxed mb-4">{news[0].content}</p>
-                    <span className="inline-flex items-center gap-1 text-blue-400 text-sm font-medium">
-                      Read more <ArrowRight size={14} />
-                    </span>
-                  </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-8">
+        {/* Meet the Team — left sidebar */}
+        <aside className="lg:w-72 flex-shrink-0 pt-4 lg:sticky lg:top-6 self-start">
+          <h2 className="text-2xl font-bold text-white mb-4">Meet the Team</h2>
+          <div className="space-y-3">
+            {[
+              { name: 'Chris', role: 'Founder & Developer', email: null, link: 'https://github.com/billywhizz17a', photo: 'chris', gradient: 'from-blue-500 to-cyan-500' },
+              { name: 'Emily', role: 'Company Secretary', email: 'emily@appstream.uk', photo: 'emily', gradient: 'from-purple-500 to-pink-500' },
+              { name: 'Marj', role: 'Marketing', email: 'marj@appstream.uk', photo: 'marj', gradient: 'from-green-500 to-emerald-500' },
+              { name: 'Tony', role: 'Collaboration', email: 'tony@appstream.uk', photo: 'tony', gradient: 'from-amber-500 to-orange-500' },
+              { name: 'Mark', role: 'Development', email: 'mark@appstream.uk', photo: 'mark', gradient: 'from-red-500 to-rose-500' },
+              { name: 'Pete', role: 'Design', email: 'pete@appstream.uk', photo: 'pete', gradient: 'from-indigo-500 to-violet-500' },
+              { name: 'Andy', role: 'Engineering', email: 'andy@appstream.uk', photo: 'andy', gradient: 'from-teal-500 to-cyan-500' },
+              { name: 'Jo', role: 'Community & Support', email: 'jo@appstream.uk', photo: 'jo', gradient: 'from-fuchsia-500 to-purple-500' },
+              { name: 'Simon', role: 'Operations', email: 'simon@appstream.uk', photo: 'simon', gradient: 'from-sky-500 to-blue-500' },
+              { name: 'Sharon', role: 'People & HR', email: 'sharon@appstream.uk', photo: 'sharon', gradient: 'from-lime-500 to-green-500' },
+              { name: 'Lesley', role: 'Content', email: 'lesley@appstream.uk', photo: 'lesley', gradient: 'from-orange-500 to-red-500' },
+              { name: 'Kath', role: 'Finance', email: 'kath@appstream.uk', photo: 'kath', gradient: 'from-violet-500 to-fuchsia-500' },
+            ].map((member) => (
+              <div key={member.name} className="flex items-center gap-3 bg-slate-900/60 border-2 border-blue-400/60 p-3 rounded-xl hover:border-blue-400 transition-all duration-300">
+                <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${member.gradient} p-0.5 flex-shrink-0`}>
+                  <img src={`${import.meta.env.BASE_URL}team/${member.photo}.jpg`} alt={member.name} className="w-full h-full rounded-full object-cover" />
+                </div>
+                <div className="min-w-0">
+                  <h3 className="text-white font-semibold text-sm">{member.name}</h3>
+                  <p className="text-gray-400 text-xs">{member.role}</p>
+                  {member.email && (
+                    <a href={`mailto:${member.email}`} className="text-blue-400 hover:text-blue-300 text-xs transition-colors break-all">
+                      {member.email}
+                    </a>
+                  )}
                 </div>
               </div>
-            )
-          })()}
+            ))}
+          </div>
+        </aside>
 
-          {/* Remaining news items in grid */}
-          {news.length > 1 && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {news.slice(1).map((item, i) => {
-                const newsApp = apps.find(a => a.id === item.app_id)
+        <div className="flex-1 min-w-0">
+          {/* News Section */}
+          {!loading && news.length > 0 && (
+            <section className="pt-4 pb-12">
+              <div className="flex items-center gap-3 mb-6">
+                <Newspaper className="text-blue-400" size={28} />
+                <div>
+                  <h2 className="text-3xl font-bold text-white">Latest News</h2>
+                  <p className="text-gray-400 text-sm">Updates, launches, and announcements</p>
+                </div>
+              </div>
+
+              {/* Featured news item (first/latest) */}
+              {news[0] && (() => {
+                const featuredApp = apps.find(a => a.id === news[0].app_id)
                 return (
-                  <div key={i} onClick={() => setSelectedNews(item)} className="cursor-pointer bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
-                    <div className="flex items-center gap-3 mb-4">
-                      {newsApp && newsApp.icon ? (
-                        <img src={`${import.meta.env.BASE_URL}images/${item.app_id}/icons/${newsApp.icon}`} alt={item.app_name} className="w-10 h-10 rounded-xl object-cover flex-shrink-0" />
-                      ) : (
-                        <img src={`${import.meta.env.BASE_URL}AppStream.png`} alt="App Stream" className="w-10 h-10 rounded-xl object-cover flex-shrink-0" />
-                      )}
-                      <div className="min-w-0">
-                        {item.app_name && (
-                          <span className="inline-block text-xs bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full font-medium border border-blue-500/20">
-                            {item.app_name}
-                          </span>
+                  <div onClick={() => setSelectedNews(news[0])} className="cursor-pointer mb-8 bg-gradient-to-br from-slate-900 to-slate-800 border-2 border-blue-400/40 rounded-3xl overflow-hidden hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-400/20 transition-all duration-300">
+                    <div className="flex flex-col md:flex-row">
+                      <div className="md:w-64 h-48 md:h-auto bg-slate-800 flex items-center justify-center flex-shrink-0">
+                        {featuredApp && featuredApp.icon ? (
+                          <img src={`${import.meta.env.BASE_URL}images/${news[0].app_id}/icons/${featuredApp.icon}`} alt={news[0].app_name} className="w-32 h-32 rounded-3xl object-cover" />
+                        ) : (
+                          <img src={`${import.meta.env.BASE_URL}AppStream.png`} alt="App Stream" className="w-32 h-32 rounded-3xl object-cover" />
                         )}
                       </div>
+                      <div className="p-8 flex-1">
+                        <div className="flex items-center gap-3 mb-4">
+                          {news[0].app_name && (
+                            <span className="inline-block text-xs bg-blue-500/10 text-blue-400 px-3 py-1.5 rounded-full font-medium border border-blue-500/20">
+                              {news[0].app_name}
+                            </span>
+                          )}
+                          <span className="inline-block text-xs bg-purple-500/10 text-purple-400 px-3 py-1.5 rounded-full font-medium border border-purple-500/20">
+                            Featured
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
+                          <Calendar size={14} />
+                          <span>{formatDate(news[0].date)}</span>
+                          {news[0].phase && <span className="text-gray-600">· {news[0].phase}</span>}
+                        </div>
+                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">{news[0].title}</h3>
+                        {news[0].summary && (
+                          <p className="text-blue-100/80 text-base mb-3 font-medium">{news[0].summary}</p>
+                        )}
+                        <p className="text-gray-400 text-sm line-clamp-3 leading-relaxed mb-4">{news[0].content}</p>
+                        <span className="inline-flex items-center gap-1 text-blue-400 text-sm font-medium">
+                          Read more <ArrowRight size={14} />
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
-                      <Calendar size={14} />
-                      <span>{formatDate(item.date)}</span>
-                      {item.phase && <span className="text-gray-600">· {item.phase}</span>}
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                    {item.summary && (
-                      <p className="text-blue-100/70 text-sm mb-2 font-medium line-clamp-2">{item.summary}</p>
-                    )}
-                    <p className="text-gray-400 text-sm line-clamp-3 leading-relaxed">{item.content}</p>
-                    <span className="mt-3 inline-flex items-center gap-1 text-blue-400 text-sm font-medium">
-                      Read more <ArrowRight size={14} />
-                    </span>
                   </div>
                 )
-              })}
-            </div>
+              })()}
+
+              {/* Remaining news items in grid */}
+              {news.length > 1 && (
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {news.slice(1).map((item, i) => {
+                    const newsApp = apps.find(a => a.id === item.app_id)
+                    return (
+                      <div key={i} onClick={() => setSelectedNews(item)} className="cursor-pointer bg-slate-900/60 border-2 border-blue-400/60 rounded-2xl p-6 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
+                        <div className="flex items-center gap-3 mb-4">
+                          {newsApp && newsApp.icon ? (
+                            <img src={`${import.meta.env.BASE_URL}images/${item.app_id}/icons/${newsApp.icon}`} alt={item.app_name} className="w-10 h-10 rounded-xl object-cover flex-shrink-0" />
+                          ) : (
+                            <img src={`${import.meta.env.BASE_URL}AppStream.png`} alt="App Stream" className="w-10 h-10 rounded-xl object-cover flex-shrink-0" />
+                          )}
+                          <div className="min-w-0">
+                            {item.app_name && (
+                              <span className="inline-block text-xs bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full font-medium border border-blue-500/20">
+                                {item.app_name}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
+                          <Calendar size={14} />
+                          <span>{formatDate(item.date)}</span>
+                          {item.phase && <span className="text-gray-600">· {item.phase}</span>}
+                        </div>
+                        <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                        {item.summary && (
+                          <p className="text-blue-100/70 text-sm mb-2 font-medium line-clamp-2">{item.summary}</p>
+                        )}
+                        <p className="text-gray-400 text-sm line-clamp-3 leading-relaxed">{item.content}</p>
+                        <span className="mt-3 inline-flex items-center gap-1 text-blue-400 text-sm font-medium">
+                          Read more <ArrowRight size={14} />
+                        </span>
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
+            </section>
           )}
-        </section>
-      )}
 
-      {/* Why App Stream */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-white mb-3">Why App Stream?</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">We focus on apps that are useful, respectful, and easy to use — without unnecessary clutter or tracking.</p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          {[
-            { icon: Smartphone, title: 'Built for Mobile', desc: 'Every app is designed for smooth, native-feeling experiences on Android and iOS.', color: 'blue' },
-            { icon: Shield, title: 'Privacy First', desc: 'We keep your data where it belongs — with you. No unnecessary tracking or selling.', color: 'green' },
-            { icon: Heart, title: 'Made with Care', desc: 'From wellness tools to news, each app is crafted to genuinely help its users.', color: 'red' },
-          ].map((item) => (
-            <div key={item.title} className="bg-slate-900/60 border-2 border-blue-400/60 p-6 rounded-2xl hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
-              <div className={`bg-${item.color}-500/10 w-12 h-12 rounded-xl flex items-center justify-center mb-4 border border-${item.color}-500/20`}>
-                <item.icon className={`text-${item.color}-400`} size={24} />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+          {/* Why App Stream */}
+          <section className="pt-4 pb-12">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-white mb-3">Why App Stream?</h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">We focus on apps that are useful, respectful, and easy to use — without unnecessary clutter or tracking.</p>
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Meet the Team */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-white mb-3">Meet the Team</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">The people behind App Stream.</p>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { name: 'Chris', role: 'Founder & Developer', email: null, link: 'https://github.com/billywhizz17a', photo: 'chris', gradient: 'from-blue-500 to-cyan-500' },
-            { name: 'Emily', role: 'Company Secretary', email: 'emily@appstream.uk', photo: 'emily', gradient: 'from-purple-500 to-pink-500' },
-            { name: 'Marj', role: 'Marketing', email: 'marj@appstream.uk', photo: 'marj', gradient: 'from-green-500 to-emerald-500' },
-            { name: 'Tony', role: 'Collaboration', email: 'tony@appstream.uk', photo: 'tony', gradient: 'from-amber-500 to-orange-500' },
-            { name: 'Mark', role: 'Development', email: 'mark@appstream.uk', photo: 'mark', gradient: 'from-red-500 to-rose-500' },
-            { name: 'Pete', role: 'Design', email: 'pete@appstream.uk', photo: 'pete', gradient: 'from-indigo-500 to-violet-500' },
-            { name: 'Andy', role: 'Engineering', email: 'andy@appstream.uk', photo: 'andy', gradient: 'from-teal-500 to-cyan-500' },
-            { name: 'Jo', role: 'Community & Support', email: 'jo@appstream.uk', photo: 'jo', gradient: 'from-fuchsia-500 to-purple-500' },
-            { name: 'Simon', role: 'Operations', email: 'simon@appstream.uk', photo: 'simon', gradient: 'from-sky-500 to-blue-500' },
-            { name: 'Sharon', role: 'People & HR', email: 'sharon@appstream.uk', photo: 'sharon', gradient: 'from-lime-500 to-green-500' },
-            { name: 'Lesley', role: 'Content', email: 'lesley@appstream.uk', photo: 'lesley', gradient: 'from-orange-500 to-red-500' },
-            { name: 'Kath', role: 'Finance', email: 'kath@appstream.uk', photo: 'kath', gradient: 'from-violet-500 to-fuchsia-500' },
-          ].map((member) => (
-            <div key={member.name} className="bg-slate-900/60 border-2 border-blue-400/60 p-6 rounded-2xl text-center hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
-              <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br ${member.gradient} p-0.5`}>
-                <img src={`${import.meta.env.BASE_URL}team/${member.photo}.jpg`} alt={member.name} className="w-full h-full rounded-full object-cover" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-1">{member.name}</h3>
-              <p className="text-gray-400 text-sm mb-3">{member.role}</p>
-              {member.email && (
-                <a href={`mailto:${member.email}`} className="inline-flex items-center gap-1.5 text-blue-400 hover:text-blue-300 text-sm transition-colors">
-                  <Mail size={14} /> {member.email}
-                </a>
-              )}
-              {member.link && (
-                <a href={member.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-blue-400 hover:text-blue-300 text-sm transition-colors">
-                  GitHub
-                </a>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Launch Banner */}
-      {nextLaunch && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
-          <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20 rounded-2xl p-6 md:p-8 backdrop-blur-sm">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-4">
-                <div className="bg-blue-500/10 w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 border border-blue-500/20">
-                  <Rocket className="text-blue-400" size={28} />
-                </div>
-                <div>
-                  <div className="text-sm text-blue-400 font-medium mb-1">Coming Soon</div>
-                  <h3 className="text-2xl font-bold text-white">{nextLaunch.name}</h3>
-                  <p className="text-gray-400 text-sm mt-1">
-                    <Clock size={14} className="inline mr-1 -mt-0.5" />
-                    Launching {formatDate(nextLaunch.launch_date)}
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-3 items-center w-full md:w-auto">
-                {!waitlisted ? (
-                  <form onSubmit={handleWaitlist} className="flex gap-2 w-full md:w-auto">
-                    <input
-                      type="email"
-                      required
-                      value={waitlistEmail}
-                      onChange={(e) => setWaitlistEmail(e.target.value)}
-                      placeholder="Get notified at launch"
-                      className="flex-1 bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm"
-                    />
-                    <button type="submit" className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2.5 rounded-xl font-medium transition-colors text-sm whitespace-nowrap">
-                      <Mail size={16} /> Notify Me
-                    </button>
-                  </form>
-                ) : (
-                  <div className="flex items-center gap-2 text-green-400 text-sm bg-green-500/10 px-4 py-2.5 rounded-xl border border-green-500/20">
-                    <Check size={18} /> You're on the list!
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { icon: Smartphone, title: 'Built for Mobile', desc: 'Every app is designed for smooth, native-feeling experiences on Android and iOS.', color: 'blue' },
+                { icon: Shield, title: 'Privacy First', desc: 'We keep your data where it belongs — with you. No unnecessary tracking or selling.', color: 'green' },
+                { icon: Heart, title: 'Made with Care', desc: 'From wellness tools to news, each app is crafted to genuinely help its users.', color: 'red' },
+              ].map((item) => (
+                <div key={item.title} className="bg-slate-900/60 border-2 border-blue-400/60 p-6 rounded-2xl hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
+                  <div className={`bg-${item.color}-500/10 w-12 h-12 rounded-xl flex items-center justify-center mb-4 border border-${item.color}-500/20`}>
+                    <item.icon className={`text-${item.color}-400`} size={24} />
                   </div>
-                )}
-                <Link to={`/apps/${nextLaunch.id}`} className="text-blue-400 hover:text-blue-300 text-sm font-medium whitespace-nowrap">
-                  Learn more →
-                </Link>
-              </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+
+          {/* Launch Banner */}
+          {nextLaunch && (
+            <section className="pt-4 pb-12">
+              <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20 rounded-2xl p-6 md:p-8 backdrop-blur-sm">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-blue-500/10 w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 border border-blue-500/20">
+                      <Rocket className="text-blue-400" size={28} />
+                    </div>
+                    <div>
+                      <div className="text-sm text-blue-400 font-medium mb-1">Coming Soon</div>
+                      <h3 className="text-2xl font-bold text-white">{nextLaunch.name}</h3>
+                      <p className="text-gray-400 text-sm mt-1">
+                        <Clock size={14} className="inline mr-1 -mt-0.5" />
+                        Launching {formatDate(nextLaunch.launch_date)}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3 items-center w-full md:w-auto">
+                    {!waitlisted ? (
+                      <form onSubmit={handleWaitlist} className="flex gap-2 w-full md:w-auto">
+                        <input
+                          type="email"
+                          required
+                          value={waitlistEmail}
+                          onChange={(e) => setWaitlistEmail(e.target.value)}
+                          placeholder="Get notified at launch"
+                          className="flex-1 bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm"
+                        />
+                        <button type="submit" className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2.5 rounded-xl font-medium transition-colors text-sm whitespace-nowrap">
+                          <Mail size={16} /> Notify Me
+                        </button>
+                      </form>
+                    ) : (
+                      <div className="flex items-center gap-2 text-green-400 text-sm bg-green-500/10 px-4 py-2.5 rounded-xl border border-green-500/20">
+                        <Check size={18} /> You're on the list!
+                      </div>
+                    )}
+                    <Link to={`/apps/${nextLaunch.id}`} className="text-blue-400 hover:text-blue-300 text-sm font-medium whitespace-nowrap">
+                      Learn more →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+        </div>
+      </div>
 
       {/* News Modal */}
       {selectedNews && (
