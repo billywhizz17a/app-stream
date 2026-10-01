@@ -81,16 +81,16 @@ function Home() {
             {[
               { name: 'Chris', role: 'Founder & Developer', email: null, link: 'https://github.com/billywhizz17a', photo: 'chris.jpg', gradient: 'from-blue-500 to-cyan-500' },
               { name: 'Emily', role: 'Company Secretary', email: 'emily@appstream.uk', photo: 'emily.png', gradient: 'from-purple-500 to-pink-500' },
-              { name: 'Marj', role: 'Marketing', email: 'marj@appstream.uk', photo: 'marj.png', gradient: 'from-green-500 to-emerald-500' },
-              { name: 'Tony', role: 'Collaboration', email: 'tony@appstream.uk', photo: 'tony.png', gradient: 'from-amber-500 to-orange-500' },
-              { name: 'Mark', role: 'Development', email: 'mark@appstream.uk', photo: 'mark.png', gradient: 'from-red-500 to-rose-500' },
-              { name: 'Pete', role: 'Design', email: 'pete@appstream.uk', photo: 'pete.png', gradient: 'from-indigo-500 to-violet-500' },
-              { name: 'Andy', role: 'Engineering', email: 'andy@appstream.uk', photo: 'andy.png', gradient: 'from-teal-500 to-cyan-500' },
-              { name: 'Jo', role: 'Community & Support', email: 'jo@appstream.uk', photo: 'jo.png', gradient: 'from-fuchsia-500 to-purple-500' },
-              { name: 'Simon', role: 'Operations', email: 'simon@appstream.uk', photo: 'simon.png', gradient: 'from-sky-500 to-blue-500' },
-              { name: 'Sharon', role: 'People & HR', email: 'sharon@appstream.uk', photo: 'sharon.png', gradient: 'from-lime-500 to-green-500' },
-              { name: 'Lesley', role: 'Content', email: 'lesley@appstream.uk', photo: 'lesley.png', gradient: 'from-orange-500 to-red-500' },
-              { name: 'Kath', role: 'Finance', email: 'kath@appstream.uk', photo: 'kath.png', gradient: 'from-violet-500 to-fuchsia-500' },
+              { name: 'Marj', role: 'Head of Marketing & Advertising', email: 'marj@appstream.uk', photo: 'marj.png', gradient: 'from-green-500 to-emerald-500' },
+              { name: 'Tony', role: 'Partnerships & Collaboration', email: 'tony@appstream.uk', photo: 'tony.png', gradient: 'from-amber-500 to-orange-500' },
+              { name: 'Mark', role: 'App Development', email: 'mark@appstream.uk', photo: 'mark.png', gradient: 'from-red-500 to-rose-500' },
+              { name: 'Pete', role: 'Art Department', email: 'pete@appstream.uk', photo: 'pete.png', gradient: 'from-indigo-500 to-violet-500' },
+              { name: 'Andy', role: 'Software Engineering', email: 'andy@appstream.uk', photo: 'andy.png', gradient: 'from-teal-500 to-cyan-500' },
+              { name: 'Jo', role: 'Customer Support', email: 'jo@appstream.uk', photo: 'jo.png', gradient: 'from-fuchsia-500 to-purple-500' },
+              { name: 'Simon', role: 'Operations Manager', email: 'simon@appstream.uk', photo: 'simon.png', gradient: 'from-sky-500 to-blue-500' },
+              { name: 'Sharon', role: 'Human Resources', email: 'sharon@appstream.uk', photo: 'sharon.png', gradient: 'from-lime-500 to-green-500' },
+              { name: 'Lesley', role: 'Content & Editorial', email: 'lesley@appstream.uk', photo: 'lesley.png', gradient: 'from-orange-500 to-red-500' },
+              { name: 'Kath', role: 'Finance & Accounts', email: 'kath@appstream.uk', photo: 'kath.png', gradient: 'from-violet-500 to-fuchsia-500' },
             ].map((member) => (
               <div key={member.name} className="flex items-center gap-3 bg-slate-900/60 border-2 border-blue-400/60 p-3 rounded-xl hover:border-blue-400 transition-all duration-300">
                 <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${member.gradient} p-0.5 flex-shrink-0`}>
