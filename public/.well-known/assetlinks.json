@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.billywhizz17a.kalo",
+      "sha256_cert_fingerprints": [
+        "28:E3:D0:4B:BC:73:81:01:7E:7F:D1:35:20:62:2B:6E:6D:EC:E1:FF:B3:61:87:CE:0D:F3:1C:02:B8:1D:D0:A4"
+      ]
+    }
+  }
+]

@@ -45,6 +45,25 @@ function Contact() {
               </div>
             </div>
 
+            <div className="bg-slate-900/40 p-6 rounded-2xl border border-slate-800">
+              <h3 className="text-lg font-semibold text-white mb-3">Direct contacts</h3>
+              <ul className="space-y-3">
+                {[
+                  { label: 'Company Secretary', email: 'emily@appstream.uk' },
+                  { label: 'Marketing', email: 'marj@appstream.uk' },
+                  { label: 'Collaboration', email: 'tony@appstream.uk' },
+                  { label: 'Become an affiliate', email: 'affiliates@appstream.uk' },
+                ].map((contact) => (
+                  <li key={contact.email} className="flex items-center justify-between gap-4">
+                    <span className="text-gray-400 text-sm">{contact.label}</span>
+                    <a href={`mailto:${contact.email}`} className="text-blue-400 hover:text-blue-300 text-sm transition-colors">
+                      {contact.email}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
           </div>
 
           <div className="bg-slate-900/40 p-8 rounded-2xl border border-slate-800">

@@ -30,6 +30,11 @@ function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a href="/delete-account" className="text-gray-400 hover:text-white text-sm transition-colors">
+                  Delete Account
+                </a>
+              </li>
             </ul>
           </div>
 

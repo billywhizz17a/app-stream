@@ -10,6 +10,13 @@ function Home() {
   const [waitlistEmail, setWaitlistEmail] = useState('')
   const [waitlisted, setWaitlisted] = useState(false)
   const [selectedNews, setSelectedNews] = useState(null)
+  const heroVideoRef = useRef(null)
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      heroVideoRef.current?.pause()
+    }
+  }, [])
 
   useEffect(() => {
     Promise.all([
@@ -41,10 +48,19 @@ function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="z-0">
-          <img src={`${import.meta.env.BASE_URL}hero.jpg`} alt="" className="w-full aspect-[16/9] object-cover object-center" />
+          <video
+            ref={heroVideoRef}
+            src={`${import.meta.env.BASE_URL}hero.mp4`}
+            poster={`${import.meta.env.BASE_URL}hero.jpg`}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full aspect-[16/9] object-cover object-center"
+          />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:py-12 relative z-10">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 px-4 py-1.5 rounded-full text-sm font-medium mb-5">
               <Sparkles size={14} />
               <span>Apps designed for everyday life</span>
