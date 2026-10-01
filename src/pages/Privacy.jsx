@@ -1,4 +1,5 @@
 import { Eye, Lock, Shield } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 function Privacy() {
   return (
