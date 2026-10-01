@@ -13,7 +13,7 @@ function Privacy() {
           </div>
 
           <p className="text-gray-400 mb-6">
-            Last updated: {new Date().toLocaleDateString()}
+            Last updated: 1 October 2026
           </p>
 
           <div className="space-y-6 text-gray-300">
@@ -106,8 +106,9 @@ function Privacy() {
                 To request data deletion, you can:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Use our <a href="/delete-account" className="text-blue-400 hover:underline">delete account page</a></li>
                 <li>Email us at <a href="mailto:support@appstream.uk" className="text-blue-400 hover:underline">support@appstream.uk</a> with the subject "Data Deletion Request"</li>
-                <li>Use our <a href="/contact" className="text-blue-400 hover:underline">contact form</a> to submit a deletion request</li>
+                <li>Use our <Link to="/contact" className="text-blue-400 hover:underline">contact form</Link> to submit a deletion request</li>
               </ul>
               <p className="mt-3">
                 We will process your request within 30 days and confirm once your data has been
@@ -128,7 +129,7 @@ function Privacy() {
               <h2 className="text-xl font-semibold text-white mb-3">Contact Us</h2>
               <p>
                 For any questions about this Privacy Policy, please reach out through our
-                <a href="/contact" className="text-blue-400 hover:underline ml-1">contact page</a>.
+                <Link to="/contact" className="text-blue-400 hover:underline ml-1">contact page</Link>.
               </p>
             </section>
           </div>
