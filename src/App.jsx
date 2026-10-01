@@ -1,17 +1,10 @@
-import { useEffect } from 'react'
 import { Route, HashRouter as Router, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import AppDetail from './pages/AppDetail'
 import Apps from './pages/Apps'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
-
-function PrivacyRedirect() {
-  useEffect(() => {
-    window.location.replace('/privacy/')
-  }, [])
-  return null
-}
+import Privacy from './pages/Privacy'
 
 function App() {
   return (
@@ -23,7 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/apps" element={<Apps />} />
           <Route path="/apps/:id" element={<AppDetail />} />
-          <Route path="/privacy" element={<PrivacyRedirect />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

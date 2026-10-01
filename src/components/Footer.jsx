@@ -21,6 +21,7 @@ function Footer() {
               {[
                 { name: 'Home', path: '/' },
                 { name: 'Apps', path: '/apps' },
+                { name: 'Privacy', path: '/privacy' },
                 { name: 'Contact', path: '/contact' },
               ].map((item) => (
                 <li key={item.path}>
@@ -29,11 +30,6 @@ function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <a href="/privacy/" className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Privacy
-                </a>
-              </li>
               <li>
                 <a href="/delete-account" className="text-gray-400 hover:text-white text-sm transition-colors">
                   Delete Account

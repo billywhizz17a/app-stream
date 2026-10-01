@@ -9,7 +9,7 @@ function Navbar() {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Apps', path: '/apps' },
-    { name: 'Privacy', path: '/privacy/', external: true },
+    { name: 'Privacy', path: '/privacy' },
     { name: 'Contact', path: '/contact' },
   ]
 
@@ -28,13 +28,6 @@ function Navbar() {
                 ? 'text-white'
                 : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
                 }`
-              if (item.external) {
-                return (
-                  <a key={item.path} href={item.path} className={cls}>
-                    {item.name}
-                  </a>
-                )
-              }
               return (
                 <Link
                   key={item.path}
@@ -69,13 +62,6 @@ function Navbar() {
                 ? 'bg-slate-800/80 text-white border border-slate-700/50'
                 : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
                 }`
-              if (item.external) {
-                return (
-                  <a key={item.path} href={item.path} onClick={() => setIsOpen(false)} className={cls}>
-                    {item.name}
-                  </a>
-                )
-              }
               return (
                 <Link
                   key={item.path}
