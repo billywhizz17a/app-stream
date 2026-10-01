@@ -90,7 +90,7 @@ function Home() {
               { name: 'Simon', role: 'Operations Manager', email: 'simon@appstream.uk', photo: 'simon.png', gradient: 'from-sky-500 to-blue-500' },
               { name: 'Sharon', role: 'Human Resources', email: 'sharon@appstream.uk', photo: 'sharon.png', gradient: 'from-lime-500 to-green-500' },
               { name: 'Lesley', role: 'Content & Editorial', email: 'lesley@appstream.uk', photo: 'lesley.png', gradient: 'from-orange-500 to-red-500' },
-              { name: 'Kath', role: 'Finance & Accounts', email: 'kath@appstream.uk', photo: 'kath.png', gradient: 'from-violet-500 to-fuchsia-500' },
+              { name: 'Kath', role: 'Quality Assurance & Testing', email: 'kath@appstream.uk', photo: 'kath.png', gradient: 'from-violet-500 to-fuchsia-500' },
             ].map((member) => (
               <div key={member.name} className="flex items-center gap-3 bg-slate-900/60 border-2 border-blue-400/60 p-3 rounded-xl hover:border-blue-400 transition-all duration-300">
                 <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${member.gradient} p-0.5 flex-shrink-0`}>
