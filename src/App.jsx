@@ -1,10 +1,9 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { Route, HashRouter as Router, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Home from './pages/Home'
-import Apps from './pages/Apps'
 import AppDetail from './pages/AppDetail'
-import Privacy from './pages/Privacy'
+import Apps from './pages/Apps'
 import Contact from './pages/Contact'
+import Home from './pages/Home'
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/apps" element={<Apps />} />
           <Route path="/apps/:id" element={<AppDetail />} />
-          <Route path="/privacy" element={<Privacy />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

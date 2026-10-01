@@ -9,7 +9,7 @@ function Navbar() {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Apps', path: '/apps' },
-    { name: 'Privacy', path: '/privacy' },
+    { name: 'Privacy', path: '/privacy/', external: true },
     { name: 'Contact', path: '/contact' },
   ]
 
@@ -24,14 +24,22 @@ function Navbar() {
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => {
               const active = location.pathname === item.path
+              const cls = `relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${active
+                ? 'text-white'
+                : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
+                }`
+              if (item.external) {
+                return (
+                  <a key={item.path} href={item.path} className={cls}>
+                    {item.name}
+                  </a>
+                )
+              }
               return (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${active
-                    ? 'text-white'
-                    : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
-                    }`}
+                  className={cls}
                 >
                   {item.name}
                   {active && (
@@ -56,19 +64,29 @@ function Navbar() {
             }`}
         >
           <div className="py-2 space-y-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors ${location.pathname === item.path
-                  ? 'bg-slate-800/80 text-white border border-slate-700/50'
-                  : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
-                  }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const cls = `block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors ${location.pathname === item.path
+                ? 'bg-slate-800/80 text-white border border-slate-700/50'
+                : 'text-gray-400 hover:text-white hover:bg-slate-800/50'
+                }`
+              if (item.external) {
+                return (
+                  <a key={item.path} href={item.path} onClick={() => setIsOpen(false)} className={cls}>
+                    {item.name}
+                  </a>
+                )
+              }
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={cls}
+                >
+                  {item.name}
+                </Link>
+              )
+            })}
           </div>
         </div>
       </div>
