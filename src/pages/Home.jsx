@@ -192,6 +192,48 @@ function Home() {
         </div>
       </section>
 
+      {/* Meet the Team */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-white mb-3">Meet the Team</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">The people behind App Stream.</p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { name: 'Chris', role: 'Founder & Developer', email: null, link: 'https://github.com/billywhizz17a', photo: 'chris', gradient: 'from-blue-500 to-cyan-500' },
+            { name: 'Emily', role: 'Company Secretary', email: 'emily@appstream.uk', photo: 'emily', gradient: 'from-purple-500 to-pink-500' },
+            { name: 'Marj', role: 'Marketing', email: 'marj@appstream.uk', photo: 'marj', gradient: 'from-green-500 to-emerald-500' },
+            { name: 'Tony', role: 'Collaboration', email: 'tony@appstream.uk', photo: 'tony', gradient: 'from-amber-500 to-orange-500' },
+            { name: 'Mark', role: 'Development', email: 'mark@appstream.uk', photo: 'mark', gradient: 'from-red-500 to-rose-500' },
+            { name: 'Pete', role: 'Design', email: 'pete@appstream.uk', photo: 'pete', gradient: 'from-indigo-500 to-violet-500' },
+            { name: 'Andy', role: 'Engineering', email: 'andy@appstream.uk', photo: 'andy', gradient: 'from-teal-500 to-cyan-500' },
+            { name: 'Jo', role: 'Community & Support', email: 'jo@appstream.uk', photo: 'jo', gradient: 'from-fuchsia-500 to-purple-500' },
+            { name: 'Simon', role: 'Operations', email: 'simon@appstream.uk', photo: 'simon', gradient: 'from-sky-500 to-blue-500' },
+            { name: 'Sharon', role: 'People & HR', email: 'sharon@appstream.uk', photo: 'sharon', gradient: 'from-lime-500 to-green-500' },
+            { name: 'Lesley', role: 'Content', email: 'lesley@appstream.uk', photo: 'lesley', gradient: 'from-orange-500 to-red-500' },
+            { name: 'Kath', role: 'Finance', email: 'kath@appstream.uk', photo: 'kath', gradient: 'from-violet-500 to-fuchsia-500' },
+          ].map((member) => (
+            <div key={member.name} className="bg-slate-900/60 border-2 border-blue-400/60 p-6 rounded-2xl text-center hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
+              <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br ${member.gradient} p-0.5`}>
+                <img src={`${import.meta.env.BASE_URL}team/${member.photo}.jpg`} alt={member.name} className="w-full h-full rounded-full object-cover" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-1">{member.name}</h3>
+              <p className="text-gray-400 text-sm mb-3">{member.role}</p>
+              {member.email && (
+                <a href={`mailto:${member.email}`} className="inline-flex items-center gap-1.5 text-blue-400 hover:text-blue-300 text-sm transition-colors">
+                  <Mail size={14} /> {member.email}
+                </a>
+              )}
+              {member.link && (
+                <a href={member.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-blue-400 hover:text-blue-300 text-sm transition-colors">
+                  GitHub
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Launch Banner */}
       {nextLaunch && (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
