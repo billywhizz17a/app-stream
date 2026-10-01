@@ -52,7 +52,7 @@ function Contact() {
                   { label: 'Company Secretary', email: 'emily@appstream.uk' },
                   { label: 'Marketing', email: 'marj@appstream.uk' },
                   { label: 'Collaboration', email: 'tony@appstream.uk' },
-                  { label: 'Become an affiliate', email: 'affiliates@appstream.uk' },
+                  { label: 'Brand ambassador', email: 'affiliates@appstream.uk' },
                 ].map((contact) => (
                   <li key={contact.email} className="flex items-center justify-between gap-4">
                     <span className="text-gray-400 text-sm">{contact.label}</span>
