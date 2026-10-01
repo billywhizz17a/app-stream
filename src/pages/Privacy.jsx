@@ -17,7 +17,7 @@ function Privacy() {
             Last updated: 1 October 2026
           </p>
 
-          <div className="space-y-6 text-gray-300">
+          <div className="grid md:grid-cols-2 gap-8 text-gray-300">
             <section>
               <h2 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
                 <Eye size={20} className="text-blue-400" />
@@ -54,7 +54,7 @@ function Privacy() {
               </ul>
             </section>
 
-            <section>
+            <section className="md:col-span-2">
               <h2 className="text-xl font-semibold text-white mb-3">Health Data</h2>
               <p className="mb-3">
                 Some of our apps, such as Kalo, access and collect health-related data through
