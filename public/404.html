@@ -54,6 +54,46 @@
       if (dlMatch) {
         var shortCode = dlMatch[1];
 
+        // Work out which platform sent this click:
+        // 1. ?src=<platform> tag appended by Marj when posting (most reliable)
+        // 2. document.referrer (often stripped by social in-app browsers)
+        // 3. 'Direct'
+        var SRC_MAP = {
+          twitter: 'Twitter/X', x: 'Twitter/X', facebook: 'Facebook', fb: 'Facebook',
+          instagram: 'Instagram', ig: 'Instagram', tiktok: 'TikTok', reddit: 'Reddit',
+          linkedin: 'LinkedIn', threads: 'Threads', bluesky: 'Bluesky',
+          youtube: 'YouTube', youtube_shorts: 'YouTube', pinterest: 'Pinterest',
+          whatsapp: 'WhatsApp', telegram: 'Telegram', discord: 'Discord',
+        };
+        var params = new URLSearchParams(window.location.search);
+        var src = (params.get('src') || params.get('utm_source') || '').toLowerCase().trim();
+
+        function platformFromReferrer(ref) {
+          if (!ref) return '';
+          var r = ref.toLowerCase();
+          if (r.indexOf('t.co/') !== -1 || r.indexOf('twitter.com') !== -1 || r.indexOf('x.com') !== -1) return 'Twitter/X';
+          if (r.indexOf('facebook.com') !== -1 || r.indexOf('fb.com') !== -1) return 'Facebook';
+          if (r.indexOf('instagram.com') !== -1 || r.indexOf('l.instagram.com') !== -1) return 'Instagram';
+          if (r.indexOf('tiktok.com') !== -1) return 'TikTok';
+          if (r.indexOf('reddit.com') !== -1 || r.indexOf('redd.it') !== -1) return 'Reddit';
+          if (r.indexOf('linkedin.com') !== -1 || r.indexOf('lnkd.in') !== -1) return 'LinkedIn';
+          if (r.indexOf('youtube.com') !== -1 || r.indexOf('youtu.be') !== -1) return 'YouTube';
+          if (r.indexOf('threads.net') !== -1) return 'Threads';
+          if (r.indexOf('bsky.app') !== -1) return 'Bluesky';
+          if (r.indexOf('pinterest.') !== -1) return 'Pinterest';
+          if (r.indexOf('whatsapp') !== -1) return 'WhatsApp';
+          if (r.indexOf('t.me/') !== -1 || r.indexOf('telegram') !== -1) return 'Telegram';
+          if (r.indexOf('discord') !== -1) return 'Discord';
+          if (r.indexOf('google.') !== -1) return 'Google Search';
+          if (r.indexOf('bing.com') !== -1) return 'Bing';
+          if (r.indexOf('duckduckgo.com') !== -1) return 'DuckDuckGo';
+          return 'Other';
+        }
+
+        var sourcePlatform = src
+          ? (SRC_MAP[src] || src.charAt(0).toUpperCase() + src.slice(1))
+          : (platformFromReferrer(document.referrer) || 'Direct');
+
         // Initialize Firebase (same project as EmilyApp)
         var firebaseConfig = {
           apiKey: 'AIzaSyC5JAI1hQfOstw1Bcaj0-wVBMKj4jKPMnQ',
@@ -74,6 +114,8 @@
           referrer: document.referrer,
           language: navigator.language,
           platform: navigator.platform || '',
+          sourcePlatform: sourcePlatform,
+          src: src || '',
         }).catch(function (e) {
           console.error('Click log error:', e);
         });
@@ -88,6 +130,8 @@
               referrer: document.referrer || '',
               userAgent: navigator.userAgent || '',
               language: navigator.language || '',
+              src: src || '',
+              sourcePlatform: sourcePlatform,
             }),
             mode: 'no-cors',
           }).catch(function () { });
