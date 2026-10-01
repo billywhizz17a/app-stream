@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, Check, Clock, Heart, Mail, Newspaper, Rocket, Shield, Smartphone, Sparkles, X } from 'lucide-react'
+﻿import { ArrowRight, Calendar, Check, Clock, Heart, Mail, Newspaper, Rocket, Shield, Smartphone, Sparkles, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SocialIcons from '../components/SocialIcons'
@@ -66,7 +66,7 @@ function Home() {
               <span>Apps designed for everyday life</span>
             </div>
             <p className="text-base md:text-lg text-gray-300 mb-6 leading-relaxed">
-              A curated collection of thoughtful Android and iOS apps — from trusted news to wellness tools — built with care and clarity.
+              A curated collection of thoughtful Android and iOS apps â€” from trusted news to wellness tools â€” built with care and clarity.
             </p>
             <SocialIcons />
           </div>
@@ -74,27 +74,27 @@ function Home() {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:pl-2 lg:pr-8 flex flex-col lg:flex-row gap-8">
-        {/* Meet the Team — left sidebar */}
+        {/* Meet the Team â€” left sidebar */}
         <aside className="lg:w-72 flex-shrink-0 pt-4 lg:sticky lg:top-6 self-start">
           <h2 className="text-2xl font-bold text-white mb-4">Meet the Team</h2>
           <div className="space-y-3">
             {[
-              { name: 'Chris', role: 'Founder & Developer', email: null, link: 'https://github.com/billywhizz17a', photo: 'chris', gradient: 'from-blue-500 to-cyan-500' },
-              { name: 'Emily', role: 'Company Secretary', email: 'emily@appstream.uk', photo: 'emily', gradient: 'from-purple-500 to-pink-500' },
-              { name: 'Marj', role: 'Marketing', email: 'marj@appstream.uk', photo: 'marj', gradient: 'from-green-500 to-emerald-500' },
-              { name: 'Tony', role: 'Collaboration', email: 'tony@appstream.uk', photo: 'tony', gradient: 'from-amber-500 to-orange-500' },
-              { name: 'Mark', role: 'Development', email: 'mark@appstream.uk', photo: 'mark', gradient: 'from-red-500 to-rose-500' },
-              { name: 'Pete', role: 'Design', email: 'pete@appstream.uk', photo: 'pete', gradient: 'from-indigo-500 to-violet-500' },
-              { name: 'Andy', role: 'Engineering', email: 'andy@appstream.uk', photo: 'andy', gradient: 'from-teal-500 to-cyan-500' },
-              { name: 'Jo', role: 'Community & Support', email: 'jo@appstream.uk', photo: 'jo', gradient: 'from-fuchsia-500 to-purple-500' },
-              { name: 'Simon', role: 'Operations', email: 'simon@appstream.uk', photo: 'simon', gradient: 'from-sky-500 to-blue-500' },
-              { name: 'Sharon', role: 'People & HR', email: 'sharon@appstream.uk', photo: 'sharon', gradient: 'from-lime-500 to-green-500' },
-              { name: 'Lesley', role: 'Content', email: 'lesley@appstream.uk', photo: 'lesley', gradient: 'from-orange-500 to-red-500' },
-              { name: 'Kath', role: 'Finance', email: 'kath@appstream.uk', photo: 'kath', gradient: 'from-violet-500 to-fuchsia-500' },
+              { name: 'Chris', role: 'Founder & Developer', email: null, link: 'https://github.com/billywhizz17a', photo: 'chris.jpg', gradient: 'from-blue-500 to-cyan-500' },
+              { name: 'Emily', role: 'Company Secretary', email: 'emily@appstream.uk', photo: 'emily.png', gradient: 'from-purple-500 to-pink-500' },
+              { name: 'Marj', role: 'Marketing', email: 'marj@appstream.uk', photo: 'marj.png', gradient: 'from-green-500 to-emerald-500' },
+              { name: 'Tony', role: 'Collaboration', email: 'tony@appstream.uk', photo: 'tony.png', gradient: 'from-amber-500 to-orange-500' },
+              { name: 'Mark', role: 'Development', email: 'mark@appstream.uk', photo: 'mark.png', gradient: 'from-red-500 to-rose-500' },
+              { name: 'Pete', role: 'Design', email: 'pete@appstream.uk', photo: 'pete.png', gradient: 'from-indigo-500 to-violet-500' },
+              { name: 'Andy', role: 'Engineering', email: 'andy@appstream.uk', photo: 'andy.png', gradient: 'from-teal-500 to-cyan-500' },
+              { name: 'Jo', role: 'Community & Support', email: 'jo@appstream.uk', photo: 'jo.png', gradient: 'from-fuchsia-500 to-purple-500' },
+              { name: 'Simon', role: 'Operations', email: 'simon@appstream.uk', photo: 'simon.png', gradient: 'from-sky-500 to-blue-500' },
+              { name: 'Sharon', role: 'People & HR', email: 'sharon@appstream.uk', photo: 'sharon.png', gradient: 'from-lime-500 to-green-500' },
+              { name: 'Lesley', role: 'Content', email: 'lesley@appstream.uk', photo: 'lesley.png', gradient: 'from-orange-500 to-red-500' },
+              { name: 'Kath', role: 'Finance', email: 'kath@appstream.uk', photo: 'kath.png', gradient: 'from-violet-500 to-fuchsia-500' },
             ].map((member) => (
               <div key={member.name} className="flex items-center gap-3 bg-slate-900/60 border-2 border-blue-400/60 p-3 rounded-xl hover:border-blue-400 transition-all duration-300">
                 <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${member.gradient} p-0.5 flex-shrink-0`}>
-                  <img src={`${import.meta.env.BASE_URL}team/${member.photo}.jpg`} alt={member.name} className="w-full h-full rounded-full object-cover" />
+                  <img src={`${import.meta.env.BASE_URL}team/${member.photo}`} alt={member.name} className="w-full h-full rounded-full object-cover" />
                 </div>
                 <div className="min-w-0">
                   <h3 className="text-white font-semibold text-sm">{member.name}</h3>
@@ -149,7 +149,7 @@ function Home() {
                         <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
                           <Calendar size={14} />
                           <span>{formatDate(news[0].date)}</span>
-                          {news[0].phase && <span className="text-gray-600">· {news[0].phase}</span>}
+                          {news[0].phase && <span className="text-gray-600">Â· {news[0].phase}</span>}
                         </div>
                         <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">{news[0].title}</h3>
                         {news[0].summary && (
@@ -189,7 +189,7 @@ function Home() {
                         <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
                           <Calendar size={14} />
                           <span>{formatDate(item.date)}</span>
-                          {item.phase && <span className="text-gray-600">· {item.phase}</span>}
+                          {item.phase && <span className="text-gray-600">Â· {item.phase}</span>}
                         </div>
                         <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
                         {item.summary && (
@@ -211,12 +211,12 @@ function Home() {
           <section className="pt-4 pb-12">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-3">Why App Stream?</h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">We focus on apps that are useful, respectful, and easy to use — without unnecessary clutter or tracking.</p>
+              <p className="text-gray-400 max-w-2xl mx-auto">We focus on apps that are useful, respectful, and easy to use â€” without unnecessary clutter or tracking.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { icon: Smartphone, title: 'Built for Mobile', desc: 'Every app is designed for smooth, native-feeling experiences on Android and iOS.', color: 'blue' },
-                { icon: Shield, title: 'Privacy First', desc: 'We keep your data where it belongs — with you. No unnecessary tracking or selling.', color: 'green' },
+                { icon: Shield, title: 'Privacy First', desc: 'We keep your data where it belongs â€” with you. No unnecessary tracking or selling.', color: 'green' },
                 { icon: Heart, title: 'Made with Care', desc: 'From wellness tools to news, each app is crafted to genuinely help its users.', color: 'red' },
               ].map((item) => (
                 <div key={item.title} className="bg-slate-900/60 border-2 border-blue-400/60 p-6 rounded-2xl hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
@@ -269,7 +269,7 @@ function Home() {
                       </div>
                     )}
                     <Link to={`/apps/${nextLaunch.id}`} className="text-blue-400 hover:text-blue-300 text-sm font-medium whitespace-nowrap">
-                      Learn more →
+                      Learn more â†’
                     </Link>
                   </div>
                 </div>
@@ -307,7 +307,7 @@ function Home() {
               <div className="flex items-center gap-2 text-gray-500 text-sm mb-4">
                 <Calendar size={14} />
                 <span>{formatDate(selectedNews.date)}</span>
-                {selectedNews.phase && <span className="text-gray-600">· {selectedNews.phase}</span>}
+                {selectedNews.phase && <span className="text-gray-600">Â· {selectedNews.phase}</span>}
               </div>
               <h2 className="text-2xl font-bold text-white mb-3">{selectedNews.title}</h2>
               {selectedNews.summary && (
