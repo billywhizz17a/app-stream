@@ -95,7 +95,6 @@ function Privacy() {
           <p className={p}>You can request deletion of your account and personal data at any time:</p>
           <ul className={ul}>
             <li>Use our <a href="/delete-account" className={link}>delete account page</a></li>
-            <li>Email <a href="mailto:support@appstream.uk" className={link}>support@appstream.uk</a> with the subject &quot;Data Deletion Request&quot;</li>
           </ul>
           <p className={p}>
             Requests are processed within 30 days. Some data may be retained where required for legal,
