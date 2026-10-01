@@ -73,7 +73,7 @@ function Home() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:pl-2 lg:pr-8 lg:mx-0 lg:max-w-none flex flex-col md:flex-row gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:pl-0 lg:pr-8 lg:mx-0 lg:max-w-none flex flex-col md:flex-row gap-8">
         {/* Meet the Team - left sidebar */}
         <aside className="md:w-64 lg:w-72 flex-shrink-0 pt-4 md:sticky md:top-6 self-start">
           <h2 className="text-2xl font-bold text-white mb-4">Meet the Team</h2>
