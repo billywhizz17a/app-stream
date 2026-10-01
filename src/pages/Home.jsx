@@ -1,4 +1,4 @@
-﻿import { ArrowRight, Calendar, Check, Clock, Heart, Mail, Newspaper, Rocket, Shield, Smartphone, Sparkles, X } from 'lucide-react'
+import { ArrowRight, Calendar, Check, Clock, Heart, Mail, Newspaper, Rocket, Shield, Smartphone, Sparkles, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SocialIcons from '../components/SocialIcons'
@@ -66,16 +66,16 @@ function Home() {
               <span>Apps designed for everyday life</span>
             </div>
             <p className="text-base md:text-lg text-gray-300 mb-6 leading-relaxed">
-              A curated collection of thoughtful Android and iOS apps â€” from trusted news to wellness tools â€” built with care and clarity.
+              A curated collection of thoughtful Android and iOS apps - from trusted news to wellness tools - built with care and clarity.
             </p>
             <SocialIcons />
           </div>
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:pl-2 lg:pr-8 lg:mx-0 lg:max-w-none flex flex-col lg:flex-row gap-8">
-        {/* Meet the Team â€” left sidebar */}
-        <aside className="lg:w-72 flex-shrink-0 pt-4 lg:sticky lg:top-6 self-start">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:pl-2 lg:pr-8 lg:mx-0 lg:max-w-none flex flex-col md:flex-row gap-8">
+        {/* Meet the Team - left sidebar */}
+        <aside className="md:w-64 lg:w-72 flex-shrink-0 pt-4 md:sticky md:top-6 self-start">
           <h2 className="text-2xl font-bold text-white mb-4">Meet the Team</h2>
           <div className="space-y-3">
             {[
@@ -149,7 +149,7 @@ function Home() {
                         <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
                           <Calendar size={14} />
                           <span>{formatDate(news[0].date)}</span>
-                          {news[0].phase && <span className="text-gray-600">Â· {news[0].phase}</span>}
+                          {news[0].phase && <span className="text-gray-600">· {news[0].phase}</span>}
                         </div>
                         <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">{news[0].title}</h3>
                         {news[0].summary && (
@@ -189,7 +189,7 @@ function Home() {
                         <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
                           <Calendar size={14} />
                           <span>{formatDate(item.date)}</span>
-                          {item.phase && <span className="text-gray-600">Â· {item.phase}</span>}
+                          {item.phase && <span className="text-gray-600">· {item.phase}</span>}
                         </div>
                         <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
                         {item.summary && (
@@ -211,12 +211,12 @@ function Home() {
           <section className="pt-4 pb-12">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-3">Why App Stream?</h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">We focus on apps that are useful, respectful, and easy to use â€” without unnecessary clutter or tracking.</p>
+              <p className="text-gray-400 max-w-2xl mx-auto">We focus on apps that are useful, respectful, and easy to use - without unnecessary clutter or tracking.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { icon: Smartphone, title: 'Built for Mobile', desc: 'Every app is designed for smooth, native-feeling experiences on Android and iOS.', color: 'blue' },
-                { icon: Shield, title: 'Privacy First', desc: 'We keep your data where it belongs â€” with you. No unnecessary tracking or selling.', color: 'green' },
+                { icon: Shield, title: 'Privacy First', desc: 'We keep your data where it belongs - with you. No unnecessary tracking or selling.', color: 'green' },
                 { icon: Heart, title: 'Made with Care', desc: 'From wellness tools to news, each app is crafted to genuinely help its users.', color: 'red' },
               ].map((item) => (
                 <div key={item.title} className="bg-slate-900/60 border-2 border-blue-400/60 p-6 rounded-2xl hover:border-blue-400 hover:shadow-xl hover:shadow-blue-400/20 transition-all duration-300">
@@ -269,7 +269,7 @@ function Home() {
                       </div>
                     )}
                     <Link to={`/apps/${nextLaunch.id}`} className="text-blue-400 hover:text-blue-300 text-sm font-medium whitespace-nowrap">
-                      Learn more â†’
+                      Learn more →
                     </Link>
                   </div>
                 </div>
@@ -307,7 +307,7 @@ function Home() {
               <div className="flex items-center gap-2 text-gray-500 text-sm mb-4">
                 <Calendar size={14} />
                 <span>{formatDate(selectedNews.date)}</span>
-                {selectedNews.phase && <span className="text-gray-600">Â· {selectedNews.phase}</span>}
+                {selectedNews.phase && <span className="text-gray-600">· {selectedNews.phase}</span>}
               </div>
               <h2 className="text-2xl font-bold text-white mb-3">{selectedNews.title}</h2>
               {selectedNews.summary && (
