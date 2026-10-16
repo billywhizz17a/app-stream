@@ -4,7 +4,7 @@
     "name": "Kalo",
     "platform": "Both",
     "category": "Health & Fitness",
-    "description": "Kalo is a mobile app that allows users to track various health and fitness metrics, including calorie and macro intake, micronutrients, exercise, sleep, mood, and more. It also provides features such as meal planning, recipe search, and community challenges.",
+    "description": "Kalo is an all-in-one health, nutrition, and fitness tracking app for Android that combines calorie tracking, exercise monitoring, meal planning, AI coaching, and psychological wellness tools into ...",
     "features": [
       "Calorie & Macro Tracking",
       "Micronutrient Tracking (11+)",
@@ -35,7 +35,7 @@
       "YouTube Exercise Integration",
       "Smartwatch / Health Connect",
       "Daily Reminders",
-      "Psychology / Behavioural Tools - 28-day curriculum + daily quizzes",
+      "Psychology / Behavioural Tools - 28-day curriculum",
       "Diet Filters (6 diet + 7 health)",
       "Recipe Images (curated per-item)"
     ],
@@ -77,7 +77,7 @@
       "Disguised as a standard news reader app"
     ],
     "app_store_url": "",
-    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.uknews&pli=1",
+    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.uknews",
     "target_audience": "Individuals in vulnerable domestic situations who need to gather evidence discreetly whilst staying informed about UK & world news",
     "hashtags": [
       "UKNews",
@@ -106,18 +106,22 @@
     "name": "Write AI",
     "platform": "Both",
     "category": "Productivity",
-    "description": "Write AI is a multi-tool AI writing application powered by OpenAI's GPT-4o. It combines 7 specialised writing tools, an application tracker, and ATS keyword scoring into a single app available on both Android and Web. Unlike most AI writing apps that focus on one use case, Write AI covers the entire writing needs of job seekers, students, professionals, and anyone who needs to produce written content quickly — all in one place. The app is built with Next.js 14, Tailwind CSS, and TypeScript, with a native Android version powered by Capacitor.",
+    "description": "Updated data safety declaration to match guidance",
     "features": [
-      "7 specialised AI writing tools",
-      "Application tracker",
-      "ATS keyword scoring",
-      "GPT-4o powered",
-      "Android and Web platforms",
-      "Next.js 14 + Tailwind CSS + TypeScript"
+      "Cover Letter Generator",
+      "Resume Optimizer",
+      "LinkedIn Summary Generator",
+      "Follow-Up Email Writer",
+      "Cold Email Writer",
+      "Research & Essay Writer",
+      "Will Writer",
+      "Prenuptial Agreement Writer",
+      "Contract Writer",
+      "Grammar & Spell Checker"
     ],
     "app_store_url": "",
     "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.writeai",
-    "target_audience": "Job seekers, students, professionals, and anyone who needs to produce written content quickly",
+    "target_audience": "content creators and writers",
     "hashtags": [
       "#productivity",
       "#aiwriting",
@@ -142,7 +146,7 @@
     "name": "MindScape",
     "platform": "Both",
     "category": "Health & Fitness",
-    "description": "MindScape is a neuroscience-based mental wellness app that uses clinically-researched binaural beats, vagal nerve stimulation, and somatic trauma release to regulate the nervous system. Unlike generic meditation apps that offer guided meditations with celebrity voices, MindScape is built on peer-reviewed neuroscience — every session targets specific brainwave states and neurological pathways proven to reduce stress and anxiety. The app is designed for users dealing with anxiety, sleep issues, trauma recovery (including C-PTSD), and those seeking peak mental performance. It combines audio therapy, visual entrainment (strobe), breathwork, and adaptive personalization into a single platform.",
+    "description": "MindScape is a neuroscience-based mental wellness app that uses clinically-researched binaural beats, vagal nerve stimulation, and somatic trauma release to regulate the nervous system. Unlike generic meditation apps that offer guided meditations with celebrity voices, MindScape is built on peer-reviewed neuroscience \u00c3\u0192\u00c2\u00a2\u00c3\u00a2\u00e2\u20ac\u0161\u00c2\u00ac\u00c3\u00a2\u00e2\u201a\u00ac\u00c2\u009d every session targets specific brainwave states and neurological pathways proven to reduce stress and anxiety. The app is designed for users dealing with anxiety, sleep issues, trauma recovery (including C-PTSD), and those seeking peak mental performance. It combines audio therapy, visual entrainment (strobe), breathwork, and adaptive personalization into a single platform.",
     "features": [
       "Binaural beats audio therapy",
       "Vagal nerve stimulation",
@@ -175,27 +179,16 @@
     "id": "app_007",
     "name": "Camp Compass",
     "platform": "Android",
-    "category": "Travel & Local",
-    "description": "Camp Compass is a navigation tool designed for outdoor enthusiasts and campers. The app provides directional guidance and location tracking to help users navigate trails, campsites, and outdoor adventures with confidence.",
-    "features": [
-      "Navigation and directional guidance",
-      "Location tracking",
-      "Trail and campsite navigation",
-      "Outdoor adventure companion"
-    ],
+    "category": "Lifestyle",
+    "description": "Navigating Tool",
+    "features": [],
     "app_store_url": "",
-    "google_play_url": "https://play.google.com/store/apps/details?id=com.billywhizz17a.campcompass",
-    "target_audience": "Outdoor enthusiasts, campers, and hikers",
-    "hashtags": [
-      "#navigation",
-      "#camping",
-      "#outdoors",
-      "#hiking",
-      "#compass"
-    ],
-    "launch_date": "2026-08-05",
+    "google_play_url": "",
+    "target_audience": "General audience",
+    "hashtags": [],
+    "launch_date": null,
     "icon": "cc1.png",
-    "video": "Camp Compass.mp4",
+    "video": "Camp Compass 2.mp4",
     "screenshots": [
       "Screenshot_20260805_170657_Camp Compass.jpg",
       "Screenshot_20260805_170714_Camp Compass.jpg",
@@ -203,6 +196,40 @@
       "Screenshot_20260805_170759_Camp Compass.jpg",
       "Screenshot_20260805_170836_Camp Compass.jpg"
     ]
+  },
+  {
+    "id": "app_013",
+    "name": "MedMinder",
+    "platform": "Android",
+    "category": "Health and Wellness",
+    "description": "MedMinder is a personalized medication reminder app that uses AI-powered natural language processing to help users manage their medication regimens. The app will allow users to input their medication schedule, dosages, and any allergies or sensitivities, and will then provide personalized reminders, alerts, and medication tracking features.",
+    "features": [
+      ""
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "General audience",
+    "hashtags": [],
+    "launch_date": null,
+    "icon": "ic_launcher.png",
+    "video": "",
+    "screenshots": []
+  },
+  {
+    "id": "app_025",
+    "name": "Single Chef",
+    "platform": "Android",
+    "category": "Lifestyle",
+    "description": "",
+    "features": [],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "",
+    "hashtags": [],
+    "launch_date": null,
+    "icon": "icon.png",
+    "video": "",
+    "screenshots": []
   },
   {
     "id": "app_005",
@@ -232,15 +259,197 @@
     "launch_date": "2026-06-29",
     "icon": "klc1.png",
     "video": "",
-    "screenshots": [
-      "AI_TextToImage_20260614_133242_1.png",
-      "Screenshot_20260619_120838_KC Legacy Booking.jpg",
-      "Screenshot_20260619_120851_KC Legacy Booking.jpg",
-      "Screenshot_20260619_120919_KC Legacy Booking.jpg",
-      "qr code.jpeg",
-      "AI_TextToImage_20260614_133242_2.png",
-      "AI_TextToImage_20260614_133242_3.png",
-      "AI_TextToImage_20260614_133242_4.png"
-    ]
+    "screenshots": []
+  },
+  {
+    "id": "app_008",
+    "name": "SoundScout",
+    "platform": "Android",
+    "category": "Music Discovery, Education",
+    "description": "SoundScout is an AI-powered music discovery app that utilizes natural language processing (NLP) to help users explore and learn about various genres of music. Users can input keywords, emotions, or moods, and the app will suggest songs and artists that match their preferences.",
+    "features": [
+      ""
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "General audience",
+    "hashtags": [],
+    "launch_date": null,
+    "icon": "",
+    "video": "",
+    "screenshots": []
+  },
+  {
+    "id": "app_009",
+    "name": "SoundMind",
+    "platform": "Android",
+    "category": "Health & Fitness",
+    "description": "SoundMind is a mobile app that uses AI-powered music therapy to help users manage stress, anxiety, and insomnia. The app generates personalized soundscapes based on the user's mood, heart rate, and breathing patterns.",
+    "features": [
+      ""
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "General audience",
+    "hashtags": [],
+    "launch_date": null,
+    "icon": "",
+    "video": "",
+    "screenshots": []
+  },
+  {
+    "id": "app_010",
+    "name": "MindfulMate",
+    "platform": "Android",
+    "category": "Productivity/Wellness",
+    "description": "MindfulMate is a mental wellness app that uses AI-powered chatbots to guide users through mindfulness exercises, meditation sessions, and personalized productivity routines. The app aims to help users manage stress, anxiety, and burnout by providing a structured and engaging experience.",
+    "features": [
+      ""
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "General audience",
+    "hashtags": [],
+    "launch_date": null,
+    "icon": "",
+    "video": "",
+    "screenshots": []
+  },
+  {
+    "id": "app_011",
+    "name": "Dream Journal Pro",
+    "platform": "Android",
+    "category": "General",
+    "description": "A comprehensive dream journaling app that helps users track, analyze, and understand their dreams.",
+    "features": [
+      "Dream journal",
+      "AI-powered insights",
+      "Sleep quality tracking",
+      "Personalized recommendations"
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "General audience",
+    "hashtags": [],
+    "launch_date": null,
+    "icon": "",
+    "video": "",
+    "screenshots": []
+  },
+  {
+    "id": "app_012",
+    "name": "FocusFlow",
+    "platform": "Android",
+    "category": "Productivity",
+    "description": "FocusFlow is a cross-platform app that combines a Pomodoro timer, a task management system, and a personalized focus-enhancing toolset. Users can create custom work sessions, set reminders, and track their progress to stay focused and productive.",
+    "features": [
+      ""
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "General audience",
+    "hashtags": [],
+    "launch_date": null,
+    "icon": "",
+    "video": "",
+    "screenshots": []
+  },
+  {
+    "id": "app_017",
+    "name": "SmartVoice",
+    "platform": "Android",
+    "category": "Communication",
+    "description": "SmartVoice is an AI-powered virtual assistant that integrates with popular messaging apps (e.g., WhatsApp, Telegram) to automate and optimize communication. It uses advanced natural language processing (NLP) and machine learning to help users schedule meetings, send reminders, translate messages, and manage contacts more efficiently.",
+    "features": [
+      "- **Automated Meeting Scheduling**: Automatically schedules meetings based on user preferences and availability.",
+      "- **Message Translation**: Translates messages in real-time between different languages.",
+      "- **Reminder Management**: Sends reminders for upcoming meetings and deadlines.",
+      "- **Contact Management**: Organizes and categorizes contacts",
+      "suggesting relevant contacts for conversations.",
+      "- **Contextual Suggestions**: Provides contextually relevant suggestions for messages",
+      "based on the conversation history.",
+      "- **Integration with Popular Apps**: Seamless integration with WhatsApp",
+      "Telegram",
+      "and other messaging apps."
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "General audience",
+    "hashtags": [],
+    "launch_date": null,
+    "icon": "",
+    "video": "",
+    "screenshots": []
+  },
+  {
+    "id": "app_018",
+    "name": "Local Eats",
+    "platform": "Android",
+    "category": "Food & Dining",
+    "description": "Local Eats is an app that curates and shares unique dining experiences, events, and hidden gems in local neighborhoods. Users can discover new restaurants, cafes, and food events in their area, share their own experiences, and create local food challenges with friends.",
+    "features": [
+      "- **Discover Local Restaurants & Events**: Curated listings of local dining experiences",
+      "food events",
+      "and challenges.",
+      "- **User Reviews & Ratings**: Allow users to rate and review restaurants and events.",
+      "- **Personalized Recommendations**: Based on user preferences and location.",
+      "- **Local Challenges & Contests**: Users can participate in food challenges",
+      "create their own",
+      "and invite friends.",
+      "- **Social Sharing**: Share dining experiences directly to social media platforms.",
+      "- **Push Notifications**: Notifications for new events and challenges in the user\u2019s area.",
+      "- **Map Integration**: Show locations of local dining spots on a map.",
+      "- **Local Deals & Discounts**: Partner with local businesses to offer exclusive deals."
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "General audience",
+    "hashtags": [],
+    "launch_date": null,
+    "icon": "",
+    "video": "",
+    "screenshots": []
+  },
+  {
+    "id": "app_022",
+    "name": "AI Writer",
+    "platform": "Android",
+    "category": "Lifestyle",
+    "description": "",
+    "features": [],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "",
+    "hashtags": [],
+    "launch_date": null,
+    "icon": "",
+    "video": "",
+    "screenshots": []
+  },
+  {
+    "id": "app_026",
+    "name": "BBQ Grills Helper",
+    "platform": "Android",
+    "category": "Food & Drink",
+    "description": "BBQ Grills Helper provides grilling guides, timers, temperature charts and recipes for barbecue enthusiasts.",
+    "features": [
+      "Grilling guides",
+      "Timers",
+      "Temperature charts",
+      "BBQ recipes"
+    ],
+    "app_store_url": "",
+    "google_play_url": "",
+    "target_audience": "Barbecue enthusiasts",
+    "hashtags": [
+      "bbq",
+      "grilling",
+      "barbecue",
+      "recipes"
+    ],
+    "launch_date": null,
+    "icon": "",
+    "video": "",
+    "screenshots": []
   }
 ]

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Account &amp; Data - App Stream</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+    .container {
+      width: 100%;
+      max-width: 560px;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    p, li {
+      font-size: 0.875rem;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+    ul { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      margin-bottom: 0.25rem;
+      color: #94a3b8;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.625rem 0.75rem;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      color: #e2e8f0;
+      font-size: 0.875rem;
+      font-family: inherit;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .btn {
+      width: 100%;
+      padding: 0.625rem;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    .btn:hover { background: #1d4ed8; }
+    .btn:disabled { opacity: 0.6; cursor: default; }
+    .error {
+      color: #ef4444;
+      font-size: 0.75rem;
+      text-align: center;
+      margin-top: 0.75rem;
+      display: none;
+    }
+    .success {
+      color: #22c55e;
+      font-size: 0.875rem;
+      text-align: center;
+      margin-top: 0.75rem;
+      display: none;
+    }
+    a { color: #3b82f6; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Delete Your Account &amp; Data</h1>
+      <p>You can request deletion of your account and personal data for any of our apps (Kalo, UK News Now, Write AI, MindScape, Camp Compass, KC Legacy Booking).</p>
+      <h2 style="margin-top:1rem;">What gets deleted</h2>
+      <ul>
+        <li>Your account profile and sign-in details</li>
+        <li>Personal data stored in the app (health &amp; fitness logs, journal entries, preferences)</li>
+        <li>Any data linked to your email address on our servers</li>
+      </ul>
+      <p>Requests are processed within 30 days. Some anonymised analytics data may be retained.</p>
+    </div>
+
+    <div class="card">
+      <h2>Request deletion</h2>
+      <p style="margin-bottom:1rem;">Fill in the form below, or email <a href="mailto:support@appstream.uk?subject=Data%20Deletion%20Request">support@appstream.uk</a> with the subject "Data Deletion Request".</p>
+      <form id="deleteForm">
+        <div class="form-group">
+          <label for="app">Which app?</label>
+          <select id="app" name="app" required>
+            <option value="">Select an app…</option>
+            <option>Kalo</option>
+            <option>UK News Now</option>
+            <option>Write AI</option>
+            <option>MindScape</option>
+            <option>Camp Compass</option>
+            <option>KC Legacy Booking</option>
+            <option>Other / not sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="email">Email address used in the app</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label for="details">Anything else we should know? (optional)</label>
+          <textarea id="details" name="details" placeholder="e.g. username, device, what data you want removed"></textarea>
+        </div>
+        <button type="submit" class="btn" id="submitBtn">Submit deletion request</button>
+        <p class="error" id="error">Something went wrong — please email support@appstream.uk instead.</p>
+        <p class="success" id="success">Request received. We'll process it within 30 days and confirm by email.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: 'AIzaSyC5JAI1hQfOstw1Bcaj0-wVBMKj4jKPMnQ',
+      authDomain: 'emily-pa-84815.firebaseapp.com',
+      projectId: 'emily-pa-84815',
+      storageBucket: 'emily-pa-84815.firebasestorage.app',
+      messagingSenderId: '1003937221612',
+      appId: '1:1003937221612:web:45907456e370df3fa84ec9',
+    };
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+
+    document.getElementById('deleteForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      db.collection('deletion_requests').add({
+        app: document.getElementById('app').value,
+        email: document.getElementById('email').value,
+        details: document.getElementById('details').value,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        userAgent: navigator.userAgent,
+        status: 'pending',
+      }).then(function () {
+        document.getElementById('success').style.display = 'block';
+        document.getElementById('error').style.display = 'none';
+        document.getElementById('deleteForm').reset();
+      }).catch(function () {
+        document.getElementById('error').style.display = 'block';
+        document.getElementById('success').style.display = 'none';
+      }).finally(function () {
+        btn.disabled = false;
+      });
+    });
+  </script>
+</body>
+</html>
